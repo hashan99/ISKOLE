@@ -1,0 +1,145 @@
+/*Background Colour*/
+body{  
+    margin: 0;  
+    padding: 0;  
+    background:url(Chemistry.jpg) no-repeat; 
+    background-size: cover;
+    height: 100vh; 
+    font-family: 'Arial';  
+} 
+
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 90px; /* change it to desired width */
+    background-color: rgba(0, 159, 174, 0.8); /* change to desired color */
+}
+
+.navigation-bar > a {
+    float: right;
+    vertical-align: center;
+    margin-right: 20px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 80px;    /* if you want it vertically middle of the navbar */
+}
+
+#sign_in{
+    width: 200px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#sign_in:hover {
+  background-color: #4cd5db;
+  color: white;
+}
+
+#log_in{
+    width: 200px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#log_in:hover {
+  background-color: #4cd5db;
+  color: white;
+}
+
+/*signUp Box Colour*/
+.signup{  
+    width: 400px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px; 
+    padding: 80px;  
+    background: #6e7775;  
+    border-radius: 15px ;       
+}
+
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+} 
+
+/*Label Colours*/
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+} 
+
+/*Firstname Lastname Password & Email Settings*/
+#Fname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#Lname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;     
+}
+
+#Email{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#button {
+  width: 200px;  
+  height: 40px;
+  border: none;
+  border-radius: 17px;
+  color: rgba(105, 126, 143, 0.99);
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #ffbc38;
+  color: white;
+}
+
+#container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+#center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
