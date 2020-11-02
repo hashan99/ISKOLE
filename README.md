@@ -1,3 +1,3 @@
 # ISKOLE
 e-learning web platform
-[![HitCount](http://hits.dwyl.com/{username}/{project}.svg)](http://hits.dwyl.com/{username}/{project})
+[![HitCount](http://hits.dwyl.com/hashan99/ISKOLE.svg)](http://hits.dwyl.com/{username}/{project})
