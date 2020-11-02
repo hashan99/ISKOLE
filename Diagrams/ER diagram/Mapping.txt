@@ -22,8 +22,12 @@ Topic (topic_id, topic_name, subject_id, ad_id, cm_id)
 
 Content (content_id, content_name, topic_id, cm_id)
 
-Profile (student_id, ad_id, teacher_id, cm_id)  
+Profile (student_id, ad_id, teacher_id, cm_id) 
+ 
 Forum (forum_id, forum_name, subject_id)
+
 Thread (thread_id, t_date, t_description, t_title, student_id, teacher_id, admin_id)
+
 Reply (reply_id, reply_date, reply_message, up_votes, parent_id, children, thread_id, forum_id, reply_id)
+
 Forum_Reply_Thread (thread_id, forum_id, reply_id)
