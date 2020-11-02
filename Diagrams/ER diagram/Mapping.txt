@@ -1,0 +1,29 @@
+ER Diagram Mapping
+
+Student (student_id, first_name, last_name, email, password, status, grade_id)
+
+Teacher (teacher_id, first_name, last_name, status, password, email, cm_id, ad_id)
+
+Content_Manager (cm_id, user_name, email, password)
+
+Admin (ad_id, user_name, email, password)
+
+Availability (availability_id, teacher_id)
+
+Get_help (availability_id, student_id)
+ 
+Grade (grade_id, cm_id, ad_id)
+
+Quiz (quiz_id, mark, student_id, cm_id)
+
+Subject (subject_id, subject_name, ad_id)
+
+Topic (topic_id, topic_name, subject_id, ad_id, cm_id)
+
+Content (content_id, content_name, topic_id, cm_id)
+
+Profile (student_id, ad_id, teacher_id, cm_id)  
+Forum (forum_id, forum_name, subject_id)
+Thread (thread_id, t_date, t_description, t_title, student_id, teacher_id, admin_id)
+Reply (reply_id, reply_date, reply_message, up_votes, parent_id, children, thread_id, forum_id, reply_id)
+Forum_Reply_Thread (thread_id, forum_id, reply_id)
