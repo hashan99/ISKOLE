@@ -1,3 +1,5 @@
+<?php include '../Connection/connection.php'; ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,18 +10,67 @@
     </head>
     
     <body>
+
+      <?php 
+        if(isset($_POST['submitStudent']))
+        {
+          $fName = $_POST['firstName'];
+          $lName = $_POST['lastName'];
+          $email = $_POST['email'];
+          $password = $_POST['password'];
+          $enPassword = sha1($password);
+
+          //echo "$fName $password $enPassword";
+
+          $dbQuery = "INSERT into student (first_name, last_name, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
+
+          $result = mysqli_query($con, $dbQuery);
+
+          if($result)
+          {
+            //echo "Record is Added!";
+          }
+          else
+          {
+            echo "Record is not Added!";
+          }
+        }
+
+        if(isset($_POST['submitTeacher']))
+        {
+          $fName = $_POST['firstName'];
+          $lName = $_POST['lastName'];
+          $email = $_POST['email'];
+          $password = $_POST['password'];
+          $enPassword = sha1($password);
+
+          //echo "$fName $password $enPassword";
+
+          $dbQuery = "INSERT into teacher (first_name, last_name, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
+
+          $result = mysqli_query($con, $dbQuery);
+
+          if($result)
+          {
+            //echo "Record is Added!";
+          }
+          else
+          {
+            echo "Record is not Added!";
+          }
+        }
+      ?>  
       
       <nav class="navigation-bar">
-          <a href="../Login/login.html" id="logo"><img class="logo" src="../Images/logo.PNG" width="100" height="100"></a>
-          <a href="register.html"><button id="sign_in"><b>Register for Free</b></button></a>
+          <a href="../Login/login.php" id="logo"><img class="logo" src="../Images/logo.PNG" width="100" height="100"></a>
+          <a href="register.php"><button id="sign_in"><b>Register for Free</b></button></a>
           <a><button id="log_in" onclick="document.getElementById('id01').style.display='block' "><b>Login
           </button></a>
       </nav>
 
       <div id="id01"  class="modal">
   
-
-          <form class="modal-content animate" style="background-color:#F1F1FF" action="/action_page.php" method="post">
+          <form class="modal-content animate" style="background-color:#F1F1FF" action="login.php" method="POST">
             
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -27,8 +78,8 @@
             </div>
 
             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email Address" name="uname" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
@@ -51,7 +102,7 @@
       <!-- register as student model -->
       <div id="id02"  class="modal_stu">
   
-          <form class="modal-content animate" style="background-color:#F1F1FF" action="/action_page.php" method="post">
+          <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
 
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -60,18 +111,18 @@
 
             <div class="container">
                 <label for="uname"><b>First Name</b></label>
-                <input type="text" placeholder="Enter First Name" name="fname" required>
+                <input type="text" placeholder="Enter First Name" name="firstName" required>
 
                 <label for="uname"><b>Last Name</b></label>
-                <input type="text" placeholder="Enter Last Name" name="lname" required>
+                <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
                 <label for="uname"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="password" required>
         
-                <button type="submit" id="submit">Register As Student</button>
+                <button type="submit" name="submitStudent" id="submit">Register As Student</button>
                 <!-- <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label> -->
@@ -79,7 +130,7 @@
 
             <div class="container" style="background-color:#F1F1F1">
                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Already Registerd? <a href="../Login/login.html">Login</a></span>
+                <span class="psw">Already Registerd? <a href="../Login/login.php">Login</a></span>
             </div>
 
           </form>
@@ -89,7 +140,7 @@
       <!-- register as teacher model -->
       <div id="id03"  class="modal_tea">
   
-          <form class="modal-content animate" style="background-color:#F1F1FF" action="/action_page.php" method="post">
+          <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
 
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -98,18 +149,18 @@
 
             <div class="container">
                 <label for="uname"><b>First Name</b></label>
-                <input type="text" placeholder="Enter First Name" name="fname" required>
+                <input type="text" placeholder="Enter First Name" name="firstName" required>
 
                 <label for="uname"><b>Last Name</b></label>
-                <input type="text" placeholder="Enter Last Name" name="lname" required>
+                <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
                 <label for="uname"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="password" required>
         
-                <button type="submit" id="submit">Register As Teacher</button>
+                <button type="submit" name="submitTeacher"  id="submit">Register As Teacher</button>
                 <!-- <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label> -->
@@ -117,7 +168,7 @@
 
             <div class="container" style="background-color:#F1F1F1">
                 <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Already Registerd? <a href="../Login/login.html">Login</a></span>
+                <span class="psw">Already Registerd? <a href="../Login/login.php">Login</a></span>
             </div>
 
           </form>
@@ -178,3 +229,5 @@ window.onclick = function(event) {
     </body>
     
 </html> 
+
+ <?php mysqli_close($con); ?>
