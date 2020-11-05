@@ -1,0 +1,154 @@
+/*Background Settings*/
+body{  
+    margin: 0;  
+    padding: 0;  
+    background:url(submitContentBackgroung.JPG) no-repeat; 
+    background-size: cover;
+    height: 100vh; 
+    font-family: 'Arial';  
+} 
+
+/*Navigation bar settings*/
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 120px; /* change it to desired width */
+    background-color: rgba(0, 159, 174, 0.8); /* change to desired color */
+}
+
+.navigation-bar > a {
+    float: right;
+    vertical-align: center;
+    margin-right: 20px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 80px;    /* if you want it vertically middle of the navbar */
+}
+
+/*Profile and log out buttons settings*/
+#back{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#back:hover {
+  background-color: #4cd5db;
+  color: white;
+}
+
+#log_out{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#log_out:hover {
+  background-color: #4cd5db;
+  color: white;
+}
+
+/*Contained button settings*/
+#button {
+  width: 200px;  
+  height: 40px;
+  border: none;
+  border-radius: 17px;
+  color: rgba(105, 126, 143, 0.99);
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #ffbc38;
+  color: white;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: 'Arial';
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color:  white;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    width: 200px;  
+    height: 40px;
+    border: none;
+    border-radius: 17px;
+    color: rgba(105, 126, 143, 0.99);
+    padding: center;
+    text-align:center;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: rgba(105, 126, 143, 0.99);
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color:#ffbc38;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+#center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
