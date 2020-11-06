@@ -3,11 +3,20 @@
     <head>
         <title>Home</title>
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
+        <script>
+function myFunction() {
+  var txt;
+  var r = confirm("Are you sure you want to logout?");
+  if (r == true) {
+    location.replace("Profile/Profile.html");
+  }
+}
+</script>
     </head>
     <body>
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="120" height="120">
-            <a><button id="log_out"><b>Log out</b></button></a>
+            <a><button id="log_out" onclick="myFunction()"><b>Log out</b></button></a>
             <a href="Profile/Profile.html"><button id="log_out"><b>Profile</b></button></a>
         </nav>
 	
