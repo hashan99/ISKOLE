@@ -32,6 +32,7 @@ body{
     padding-right: 7px;  
     color:#ffbc38;
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #profile:hover {
@@ -47,6 +48,7 @@ body{
     padding-right: 7px;  
     color: rgba(105, 126, 143, 0.99);
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #log_out:hover {

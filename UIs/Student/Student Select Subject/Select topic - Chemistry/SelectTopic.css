@@ -11,7 +11,7 @@ body{
 .navigation-bar {
   width: 100%;  /* i'm assuming full width */
   height: 120px; /* change it to desired width */
-  background-color: rgba(0, 159, 174, 0.8); /* change to desired color */
+  background-color: rgb(NaN, 34, 58 ,0.8); /* change to desired color */
 }
 
 .navigation-bar > a {
@@ -30,10 +30,11 @@ body{
     padding-right: 7px;  
     color: rgba(105, 126, 143, 0.99);
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #log_out:hover {
-  background-color: #4cd5db;
+  background-color:#ffbc38;
   color: white;
 }
 
@@ -45,10 +46,11 @@ body{
     padding-right: 7px;  
     color: rgba(105, 126, 143, 0.99);
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #back:hover {
-  background-color: #4cd5db;
+  background-color:#ffbc38;
   color: white;
 }
 
@@ -125,7 +127,7 @@ label{
 }
 
 #button:hover {
-  background-color: #ffbc38;
+  background-color:rgba(89, 84, 122);
   color: white;
 }
 
