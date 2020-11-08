@@ -11,8 +11,8 @@ body{
 /*Navigation bar settings*/
 .navigation-bar {
     width: 100%;  /* i'm assuming full width */
-    height: 120px; /* change it to desired width */
-    background-color: rgba(0, 159, 174, 0.8); /* change to desired color */
+    height: 107px; /* change it to desired width */
+    background-color: rgba(0, 159, 174, 0.4); /* change to desired color */
 }
 
 .navigation-bar > a {
@@ -30,12 +30,12 @@ body{
     border: none;  
     border-radius: 17px;  
     padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
+    color:#ffbc38;
     font-size: 17px;
 }
 
 #profile:hover {
-  background-color: #4cd5db;
+  background-color:#ffbc38;
   color: white;
 }
 
@@ -50,7 +50,7 @@ body{
 }
 
 #log_out:hover {
-  background-color: #4cd5db;
+  background-color:#ffbc38;
   color: white;
 }
 
