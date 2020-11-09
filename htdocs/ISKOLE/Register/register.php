@@ -12,6 +12,86 @@
     <body>
 
       <?php 
+        
+        //login
+        // if(empty($_POST['email']) || empty($_POST['password']))
+        // {
+        //     $error="email or Password is invalid";
+        // }
+        // else
+        // {
+        if(isset($_POST['email']) AND isset($_POST['password']) == true)
+        {
+            $email = $_POST['email'];
+            $pw = $_POST['password'];
+            $enPw = sha1($pw);
+
+            $dbQueryStudent = "SELECT * FROM student WHERE email='$email' AND password='$enPw'";
+            $dbQueryTeacher = "SELECT * FROM teacher WHERE email='$email' AND password='$enPw'";
+
+            $resultStudent = mysqli_query($con, $dbQueryStudent);
+            $resultTeacher = mysqli_query($con, $dbQueryTeacher);
+
+            if($resultStudent)
+            {
+              $count = mysqli_num_rows($resultStudent);
+              // echo mysqli_num_rows($resultStudent);
+              // echo "<br>";
+                    
+              while($row = mysqli_fetch_assoc($resultStudent))
+              {
+                echo "<pre>";
+                print_r($row);
+                echo "</pre><br>";
+                $loggedUser = $row['first_name'];
+                // echo $loggedUser;
+              }
+
+              if($count==1)
+              {
+                echo "Logged as ".$loggedUser."!!";
+              }
+              else
+              {
+                // $error="email or password is invalid";
+                // echo "Login Failed!!";
+              }
+            }
+            
+
+            if($resultTeacher)
+            {
+              $count = mysqli_num_rows($resultTeacher);
+              // echo mysqli_num_rows($resultTeacher);
+              // echo "<br>";
+                    
+              while($row = mysqli_fetch_assoc($resultTeacher))
+              {
+                echo "<pre>";
+                print_r($row);
+                echo "</pre><br>";
+                $loggedUser = $row['first_name'];
+                // echo $loggedUser;
+              }
+
+              if($count==1)
+              {
+                echo "Logged as ".$loggedUser."!!";
+                // header('Location: http://localhost/HRMS/profile.php');
+              }
+              else
+              {
+                // $error="email or password is invalid";
+                // echo "Login Failed!!";
+              }
+            // }
+            // else
+            // {
+            //   echo "There is no data found!";
+            // }
+        }  
+       }
+        //register
         if(isset($_POST['submitStudent']))
         {
           $fName = $_POST['firstName'];
@@ -70,7 +150,7 @@
 
       <div id="id01"  class="modal">
   
-          <form class="modal-content animate" style="background-color:#F1F1FF" action="login.php" method="POST">
+          <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
             
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -79,12 +159,12 @@
 
             <div class="container">
                 <label for="uname"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email Address" name="uname" required>
+                <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="password" required>
         
-                <button type="submit" id="submit">Login</button>
+                <button type="submit" name="submit" id="submit">Login</button>
                 <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
