@@ -1,5 +1,6 @@
 <?php include '../Connection/connection.php'; ?>
 
+
 <!DOCTYPE html>
 <html>
   
@@ -13,22 +14,15 @@
 
   <body>
 
-    <?php 
-    // header('Location: http://localhost/ISKOLE/profile.php');    
-    ob_start();
-    session_start();
-    $error='';
-      // echo "Hello";
+    <?php
 
-       // if(isset($_POST['submit']))
-       // {
-    if(isset($_POST['submit']))
-    {
-        if(empty($_POST['email']) || empty($_POST['password']))
-        {
-            $error="email or Password is invalid";
-        }
-        else
+        // if(empty($_POST['email']) || empty($_POST['password']))
+        // {
+        //     $error="email or Password is invalid";
+        // }
+        // else
+        // {
+        if(isset($_POST['email']) AND isset($_POST['password']) == true)
         {
             $email = $_POST['email'];
             $pw = $_POST['password'];
@@ -40,20 +34,11 @@
             $resultStudent = mysqli_query($con, $dbQueryStudent);
             $resultTeacher = mysqli_query($con, $dbQueryTeacher);
 
-            // if($result)
-            // {
-            //     echo mysqli_num_rows($result);
-            // }
-            // else
-            // {
-            //     echo "Query is Failed!";
-            // }
-
             if($resultStudent)
             {
               $count = mysqli_num_rows($resultStudent);
-              echo mysqli_num_rows($resultStudent);
-              echo "<br>";
+              // echo mysqli_num_rows($resultStudent);
+              // echo "<br>";
                     
               while($row = mysqli_fetch_assoc($resultStudent))
               {
@@ -61,37 +46,26 @@
                 print_r($row);
                 echo "</pre><br>";
                 $loggedUser = $row['first_name'];
-                //echo $loggedUser;
+                // echo $loggedUser;
               }
 
               if($count==1)
               {
-                // $_SESSION['log_user']=$loggedUser;
-                //echo "Logged as ".$loggedUser."!!";
-                header('Location: http://localhost/ISKOLE/profile.php');    
-
-                // <meta http-equiv="refresh" content=".5; URL='http://localhost/ISKOLE/profile.php'"/> <!-- 
-                // REDIRECT TO profile.php IN HALF A SECOND -->
-
-                // echo "<a>";
-                // echo "</a>";
+                echo "Logged as ".$loggedUser."!!";
               }
               else
               {
-                $error="email or password is invalid";
-                //echo "Login Failed!!";
+                // $error="email or password is invalid";
+                // echo "Login Failed!!";
               }
             }
-            // else
-            // {
-            //   echo "There is no data found!";
-            // }
+            
 
-            else if($resultTeacher)
+            if($resultTeacher)
             {
               $count = mysqli_num_rows($resultTeacher);
-              echo mysqli_num_rows($resultTeacher);
-              echo "<br>";
+              // echo mysqli_num_rows($resultTeacher);
+              // echo "<br>";
                     
               while($row = mysqli_fetch_assoc($resultTeacher))
               {
@@ -99,28 +73,28 @@
                 print_r($row);
                 echo "</pre><br>";
                 $loggedUser = $row['first_name'];
-                //echo $loggedUser;
+                // echo $loggedUser;
               }
 
               if($count==1)
               {
                 echo "Logged as ".$loggedUser."!!";
-                header('Location: http://localhost/HRMS/profile.php');
+                // header('Location: http://localhost/HRMS/profile.php');
               }
               else
               {
-                $error="email or password is invalid";
-                //echo "Login Failed!!";
+                // $error="email or password is invalid";
+                // echo "Login Failed!!";
               }
-            }
+            // }
             // else
             // {
             //   echo "There is no data found!";
             // }
         }  
-      }// }
-      ob_end_flush();
+       }
     ?>
+    
 
     <nav class="navigation-bar">
         <a href="login.php" id="logo"><img class="logo" src="../Images/logo.PNG" width="100" height="100"></a>
@@ -146,7 +120,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="password" required>
         
-          <button type="submit" id="submit">Login</button>
+          <button type="submit" name="sumbit" id="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
