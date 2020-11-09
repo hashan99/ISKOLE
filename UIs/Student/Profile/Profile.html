@@ -8,7 +8,12 @@
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="120" height="120">
             <a><button id="log_out"><b>Log out</b></button></a>
-            
+            <a><button id="log_out" onclick="goBack()"> <b>Back </b></button></a>
+             <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
         </nav>
 	
 	    <div id="center">
