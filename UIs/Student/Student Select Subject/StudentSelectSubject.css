@@ -11,8 +11,8 @@ body{
 /*Navigation bar settings*/
 .navigation-bar {
     width: 100%;  /* i'm assuming full width */
-    height: 107px; /* change it to desired width */
-    background-color: rgba(0, 159, 174, 0.6); /* change to desired color */
+    height: 90px; /* change it to desired width */
+    background-color: rgba(0, 159, 174, 0.4); /* change to desired color */
 }
 
 .navigation-bar > a {
@@ -76,6 +76,69 @@ body{
 #button:hover {
   background-color:rgba(37, 133, 129);
   color: white;
+}
+
+#center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  position:relative;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+#button1 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #402045;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#button1:hover {
+  background-color:#a79de4;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #center {
