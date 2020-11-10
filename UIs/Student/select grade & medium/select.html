@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>Home</title>
+        <link href="StudentSelect.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav class="navigation-bar">
+        <img class="logo" src="logo.PNG" width="120" height="120">
+        <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
+        </nav>
+    <div class="transbox">
+    <div class="card">
+    <img src="th.jpg"  style="width:100%">
+    <h1>B Gunathilaka</h1>
+    </div>
+    </div>
+    <div class="container">
+      <h2>Select Grade</h2>
+
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input
+              type="radio"
+              class="radio"
+              id="automobiles"
+              name="category"
+            />
+            <label for="automobiles">Grade 09</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="film" name="category" />
+            <label for="film">Grade 10</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="science" name="category" />
+            <label for="science">Grade 11</label>
+          </div>
+
+          
+        </div>
+
+        <div class="selected">
+          Select Grade
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Start Typing..." />
+        </div>
+      </div>
+
+      <h2>Select Medium</h2>
+
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input
+              type="radio"
+              class="radio"
+              id="automobiles"
+              name="category"
+            />
+            <label for="automobiles">English</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="film" name="category" />
+            <label for="film">Sinhala</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="science" name="category" />
+            <label for="science">Tamil</label>
+          </div>
+
+         
+        </div>
+
+        <div class="selected">
+          Select Medium
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Start Typing..." />
+        </div>
+      </div>
+
+     
+
+        <div class="search-box">
+          <input type="text" placeholder="Start Typing..." />
+        </div>
+      </div>
+    </div>
+<button class="change">Change Password</button>
+    <script src="main.js"></script>
+  </body>
+</html>
