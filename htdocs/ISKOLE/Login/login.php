@@ -5,10 +5,9 @@
 <html>
   
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
       <title>Login</title>
-      <link rel = "icon" href = "../Images/logo.PNG" 
-        type = "image/x-icon"> 
+      <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon"> 
       <link href="login.css" rel="stylesheet" type="text/css">
   </head>
 
@@ -30,7 +29,15 @@
             $resultStudent = mysqli_query($con, $dbQueryStudent);
             $resultTeacher = mysqli_query($con, $dbQueryTeacher);
 
-            if($resultStudent)
+            if($_POST['email']=="admin" AND $_POST['password']=="admin123")
+            {
+              echo "Welcome Admin!";
+            }
+            else if($_POST['email']=="content-manager" AND $_POST['password']=="cm123")
+            {
+              echo "Welcome Content-Manager!";
+            }
+            else if($resultStudent)
             {
               $count = mysqli_num_rows($resultStudent);
               // echo mysqli_num_rows($resultStudent);
@@ -38,16 +45,16 @@
                     
               while($row = mysqli_fetch_assoc($resultStudent))
               {
-                // echo "<pre>";
-                // print_r($row);
-                // echo "</pre><br>";
+                echo "<pre>";
+                print_r($row);
+                echo "</pre><br>";
                 $loggedUser = $row['first_name'];
                 // echo $loggedUser;
               }
 
               if($count==1)
               {
-                // echo "Logged as ".$loggedUser."!!";
+                echo "Logged as ".$loggedUser."!!";
               }
               else
               {
@@ -61,16 +68,16 @@
                     
                   while($row = mysqli_fetch_assoc($resultTeacher))
                   {
-                    // echo "<pre>";
-                    // print_r($row);
-                    // echo "</pre><br>";
+                    echo "<pre>";
+                    print_r($row);
+                    echo "</pre><br>";
                     $loggedUser = $row['first_name'];
                     // echo $loggedUser;
                   }
 
                   if($count==1)
                   {
-                    // echo "Logged as ".$loggedUser."!!";
+                    echo "Logged as ".$loggedUser."!!";
                     // header('Location: http://localhost/HRMS/profile.php');
                   }
                   else
@@ -114,7 +121,9 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="password" required>
         
-          <button type="submit" name="sumbitLogin" id="submit">Login</button>
+          <!-- <a href="../Student/StudentHome.html"> -->
+            <button type="submit" name="sumbitLogin" id="submit">Login</button>
+          <!-- </a> -->
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
