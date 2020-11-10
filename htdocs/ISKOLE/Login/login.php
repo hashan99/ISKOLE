@@ -16,12 +16,8 @@
 
     <?php
 
-        // if(empty($_POST['email']) || empty($_POST['password']))
-        // {
-        //     $error="email or Password is invalid";
-        // }
-        // else
-        // {
+      // if(isset($_POST['submitLogin']))
+      // {
         if(isset($_POST['email']) AND isset($_POST['password']) == true)
         {
             $email = $_POST['email'];
@@ -42,57 +38,55 @@
                     
               while($row = mysqli_fetch_assoc($resultStudent))
               {
-                echo "<pre>";
-                print_r($row);
-                echo "</pre><br>";
+                // echo "<pre>";
+                // print_r($row);
+                // echo "</pre><br>";
                 $loggedUser = $row['first_name'];
                 // echo $loggedUser;
               }
 
               if($count==1)
               {
-                echo "Logged as ".$loggedUser."!!";
+                // echo "Logged as ".$loggedUser."!!";
               }
               else
               {
                 // $error="email or password is invalid";
                 // echo "Login Failed!!";
+                if($resultTeacher)
+                {
+                  $count = mysqli_num_rows($resultTeacher);
+                  // echo mysqli_num_rows($resultTeacher);
+                  // echo "<br>";
+                    
+                  while($row = mysqli_fetch_assoc($resultTeacher))
+                  {
+                    // echo "<pre>";
+                    // print_r($row);
+                    // echo "</pre><br>";
+                    $loggedUser = $row['first_name'];
+                    // echo $loggedUser;
+                  }
+
+                  if($count==1)
+                  {
+                    // echo "Logged as ".$loggedUser."!!";
+                    // header('Location: http://localhost/HRMS/profile.php');
+                  }
+                  else
+                  {
+                    // $error="email or password is invalid";
+                    echo "Login Failed!!";
+                  }
+                }  
               }
             }
-            
-
-            if($resultTeacher)
-            {
-              $count = mysqli_num_rows($resultTeacher);
-              // echo mysqli_num_rows($resultTeacher);
-              // echo "<br>";
-                    
-              while($row = mysqli_fetch_assoc($resultTeacher))
-              {
-                echo "<pre>";
-                print_r($row);
-                echo "</pre><br>";
-                $loggedUser = $row['first_name'];
-                // echo $loggedUser;
-              }
-
-              if($count==1)
-              {
-                echo "Logged as ".$loggedUser."!!";
-                // header('Location: http://localhost/HRMS/profile.php');
-              }
-              else
-              {
-                // $error="email or password is invalid";
-                // echo "Login Failed!!";
-              }
-            // }
-            // else
-            // {
-            //   echo "There is no data found!";
-            // }
-        }  
-       }
+        }      
+      // }
+      // else
+      // {
+      //   echo "Login Failed!!";
+      // }
     ?>
     
 
@@ -120,7 +114,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="password" required>
         
-          <button type="submit" name="sumbit" id="submit">Login</button>
+          <button type="submit" name="sumbitLogin" id="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
