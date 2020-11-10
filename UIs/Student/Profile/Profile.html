@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Profile</title>
-        <link href="StudentHome.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <nav class="navigation-bar">
-            <img class="logo" src="logo.PNG" width="120" height="120">
-            <a><button id="log_out"><b>Log out</b></button></a>
-            <a><button id="log_out" onclick="goBack()"> <b>Back </b></button></a>
-             <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+<html lang="en">
+  <head>
+    
+    
+    <title>Home</title>
+        <link href="StudentChoice.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav class="navigation-bar">
+        <img class="logo" src="logo.PNG" width="120" height="120">
+        <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
         </nav>
-	
-	    <div id="center">
-  		    <div class="button">
-    		   	<a style="text-decoration:none" href="Edit Profile/EditProfile.html" ><button id="button"><b>Edit Profile</button></a>
-  		    </div>
-	    </div>
-  
-    </body>
-</html> 
+    <div class="transbox">
+    <div class="card">
+    <img src="th.jpg"  style="width:100%">
+    <h1>B Gunathilaka</h1>
+    </div>
+    </div>
+    
+<a href="Edit Profile/EditProfile.html"><button class="change"><b>Edit Profile</b></button></a>
+<a href="select grade & medium/select.html"><button class="change"><b>Select Grade and Medium</b></button></a>
+    <script src="main.js"></script>
+ <button class="back">Back</button>
+<div class="text">
+<p>Grade:10</p>
+<p>Medium:English</p>
+</div>   
+  </body>
+</html>
