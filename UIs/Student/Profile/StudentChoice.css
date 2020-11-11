@@ -41,6 +41,20 @@ body{
   background-color: #4cd5db;
   color: white;
 }
+#back{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#back:hover {
+  background-color: #4cd5db;
+  color: white;
+}
 
 /*Contained button settings*/
 #button {
@@ -123,24 +137,24 @@ border-color:none;
 padding: 12px 30px;
 position: absolute;
 top: 86%;
-  left: 35%;
+  left: 32%;
  
-} /* Green */
+}
 .change:hover {
 background-color: #d8c5b4;
 }
-.back {
+.changeP {
 background-color: #f6893e;
 transition-duration: 0.4s;
 border-radius: 8px;
 border-color:none;
 padding: 12px 30px;
 position: absolute;
-top: 94%;
-  left: 15%;
+top: 86%;
+  left: 57%;
  
-} /* Green */
-.back:hover {
+}
+.changeP:hover {
 background-color: #d8c5b4;
 }
 .text {

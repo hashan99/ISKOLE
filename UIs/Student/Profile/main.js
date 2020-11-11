@@ -6,3 +6,6 @@ function myFunction1() {
     location.replace("Profile/Profile.html");
   }
 }
+function goBack() {
+                    window.history.back();
+                }

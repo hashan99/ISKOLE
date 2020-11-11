@@ -41,6 +41,20 @@ body{
   background-color: #4cd5db;
   color: white;
 }
+#back{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+}
+
+#back:hover {
+  background-color: #4cd5db;
+  color: white;
+}
 
 /*Contained button settings*/
 #button {
