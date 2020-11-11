@@ -25,9 +25,11 @@
 
             $dbQueryStudent = "SELECT * FROM student WHERE email='$email' AND password='$enPw'";
             $dbQueryTeacher = "SELECT * FROM teacher WHERE email='$email' AND password='$enPw'";
+            // $dbQueryAdmin = "SELECT * FROM admin WHERE username='$email' AND password='$enPw'";
 
             $resultStudent = mysqli_query($con, $dbQueryStudent);
             $resultTeacher = mysqli_query($con, $dbQueryTeacher);
+            // $resultAdmin = mysqli_query($con, $dbQueryAdmin);
 
             if($_POST['email']=="admin" AND $_POST['password']=="admin123")
             {
