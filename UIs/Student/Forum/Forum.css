@@ -17,11 +17,12 @@
 
   .box {
       width:70%;
-      height:100px;
+      height:100px auto;
       background:#FFF;
       margin:40px auto;
       box-sizing: border-box;
       padding-top: 10px;
+      border-radius: 10px;
   }
 
   .effect1{
@@ -53,6 +54,7 @@ body{
   color: #3498db;
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 .show-btn, .container{
   position: absolute;
@@ -64,12 +66,16 @@ body{
 input[type="checkbox"]{
   display: none;
 }
+
 .container{
   display: none;
-  background: #fff;
-  width: 1000px;
+  background: rgb(240, 239, 239);
+  width: 75%;
+  height: auto;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 #show:checked ~ .container{
   display: block;
@@ -107,26 +113,14 @@ form .data input{
   font-size: 17px;
   border: 1px solid silver;
 }
-form .data input:focus{
-  border-color: #3498db;
-  border-bottom-width: 2px;
-}
-form .forgot-pass{
-  margin-top: -8px;
-}
-form .forgot-pass a{
-  color: #3498db;
-  text-decoration: none;
-}
-form .forgot-pass a:hover{
-  text-decoration: underline;
-}
+
 form .btn{
   margin: 30px 0;
   height: 45px;
-  width: 100%;
+  width: 100px;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 form .btn .inner{
   height: 100%;
@@ -134,8 +128,8 @@ form .btn .inner{
   position: absolute;
   left: -100%;
   z-index: -1;
-  background: rgb(1, 1, 17);
-  /* transition: all 0.4s; */
+  background: rgb(1, 1, 17);   /*Styling of Post button */
+  transition: all 0.4s;
 }
 form .btn:hover .inner{
   left: 0;
