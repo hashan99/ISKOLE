@@ -4,8 +4,7 @@
 <html>
     <head>
         <title>Register for Free</title>
-        <link rel = "icon" href = "../Images/logo.PNG" 
-        type = "image/x-icon"> 
+        <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon"> 
         <link href="register.css" rel="stylesheet" type="text/css">
     </head>
     
@@ -28,7 +27,15 @@
             $resultStudent = mysqli_query($con, $dbQueryStudent);
             $resultTeacher = mysqli_query($con, $dbQueryTeacher);
 
-            if($resultStudent)
+            if($_POST['email']=="admin" AND $_POST['password']=="admin123")
+            {
+              echo "Welcome SuperUser!";
+            }
+            else if($_POST['email']=="content-manager" AND $_POST['password']=="cm123")
+            {
+              echo "Welcome Content-Manager!";
+            }
+            else if($resultStudent)
             {
               $count = mysqli_num_rows($resultStudent);
               // echo mysqli_num_rows($resultStudent);
@@ -36,16 +43,16 @@
                     
               while($row = mysqli_fetch_assoc($resultStudent))
               {
-                // echo "<pre>";
-                // print_r($row);
-                // echo "</pre><br>";
+                echo "<pre>";
+                print_r($row);
+                echo "</pre><br>";
                 $loggedUser = $row['first_name'];
                 // echo $loggedUser;
               }
 
               if($count==1)
               {
-                // echo "Logged as ".$loggedUser."!!";
+                echo "Logged as ".$loggedUser."!!";
               }
               else
               {
@@ -59,16 +66,16 @@
                     
                   while($row = mysqli_fetch_assoc($resultTeacher))
                   {
-                    // echo "<pre>";
-                    // print_r($row);
-                    // echo "</pre><br>";
+                    echo "<pre>";
+                    print_r($row);
+                    echo "</pre><br>";
                     $loggedUser = $row['first_name'];
                     // echo $loggedUser;
                   }
 
                   if($count==1)
                   {
-                    // echo "Logged as ".$loggedUser."!!";
+                    echo "Logged as ".$loggedUser."!!";
                     // header('Location: http://localhost/HRMS/profile.php');
                   }
                   else
@@ -79,12 +86,7 @@
                 }  
               }
             }  
-        }
-      // }
-      // else
-      // {
-      //    echo "Login Failed!!";
-      // } 
+        } 
         
         //register
         if(isset($_POST['submitStudent']))
