@@ -29,7 +29,7 @@
 
             if($_POST['email']=="admin" AND $_POST['password']=="admin123")
             {
-              echo "Welcome SuperUser!";
+              echo "Welcome Admin!";
             }
             else if($_POST['email']=="content-manager" AND $_POST['password']=="cm123")
             {
