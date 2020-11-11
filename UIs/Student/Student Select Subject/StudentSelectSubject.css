@@ -96,6 +96,11 @@ body{
   position:relative;
 }
 
+.card:hover{
+  transform: scale(1.1);
+  transition-duration: 0.4s;
+}
+
 .title {
   color: grey;
   font-size: 18px;
@@ -107,15 +112,54 @@ body{
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #402045;
+  background-color: #5dddd3;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  transition-duration: 0.4s;
 }
 
 #button1:hover {
-  background-color:#a79de4;
+  background-color:#3a8a84;
+  color: white;
+}
+
+#button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #4f5d73;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+#button2:hover {
+  background-color:#2a313d;
+  color: white;
+}
+
+#button3 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #90deaa;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+#button3:hover {
+  background-color:#5a8b6a;
   color: white;
 }
 
