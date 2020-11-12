@@ -382,3 +382,9 @@ span.psw {
   /*border-left: ;*/
   border-width: 5px;
 }
+
+.error
+{
+  color : #FF0000;
+  margin-bottom: 5px;
+}
