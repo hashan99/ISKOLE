@@ -1,3 +1,5 @@
+<?php include '../Connection/connection.php'; ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,3 +27,5 @@
 	    </div>   
     </body>
 </html> 
+
+<?php mysqli_close($con); ?>
