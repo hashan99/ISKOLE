@@ -45,7 +45,7 @@ form {
 }
 
 #sign_in:hover {
-  background-color: #4cd5db;
+  background-color: #ffbc38;
   color: white;
 }
 
@@ -60,7 +60,7 @@ form {
 }
 
 #log_in:hover {
-  background-color: #4cd5db;
+  background-color: #ffbc38;
   color: white;
 }
 
@@ -190,7 +190,7 @@ input[type=text], input[type=password] {
 }
 
 #button:hover {
-  background-color: #ffbc38;
+  background-color: #4cd5db;
   color: white;
 }
 
