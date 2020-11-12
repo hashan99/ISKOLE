@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2020 at 07:42 AM
+-- Generation Time: Nov 12, 2020 at 12:21 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.2.19
 
@@ -25,6 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ad_id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ad_id`, `username`, `email`, `password`) VALUES
+(1, 'admin', 'admin@gmail.com', 'f865b53623b121fd34ee5426c792e5c33af8c227');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `content_manager`
 --
 
@@ -34,26 +54,6 @@ CREATE TABLE `content_manager` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `moderator`
---
-
-CREATE TABLE `moderator` (
-  `ad_id` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `moderator`
---
-
-INSERT INTO `moderator` (`ad_id`, `username`, `email`, `password`) VALUES
-(1, 'admin', 'admin@gmail.com', 'f865b53623b121fd34ee5426c792e5c33af8c227');
 
 -- --------------------------------------------------------
 
@@ -120,16 +120,16 @@ INSERT INTO `teacher` (`teacher_id`, `first_name`, `last_name`, `email`, `passwo
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ad_id`);
+
+--
 -- Indexes for table `content_manager`
 --
 ALTER TABLE `content_manager`
   ADD PRIMARY KEY (`cm_id`);
-
---
--- Indexes for table `moderator`
---
-ALTER TABLE `moderator`
-  ADD PRIMARY KEY (`ad_id`);
 
 --
 -- Indexes for table `student`
@@ -148,16 +148,16 @@ ALTER TABLE `teacher`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `content_manager`
 --
 ALTER TABLE `content_manager`
   MODIFY `cm_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `moderator`
---
-ALTER TABLE `moderator`
-  MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `student`
