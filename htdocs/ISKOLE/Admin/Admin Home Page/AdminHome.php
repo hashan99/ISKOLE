@@ -1,6 +1,6 @@
-<!-- <?php 
-    // session_start();
-?> -->
+<?php include '../../Connection/connection.php'; ?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,23 +14,16 @@
             <a><button id="notifications"><b>Notifications</b></button></a>
             <a><button id="profile"><b>Profile</b></button></a>
         </nav>
-        <pre>
-    <!-- <?php 
-        // print_r($_SESSION);
-    // echo $_SESSION['un'];
-    ?> -->
-    </pre>
 	
 	    <div id="center">
   		    <div class="button">
                 <a><button style="margin:25px" id="button"> Forum </button></a>
-                <a style="text-decoration:none" href="Submit Content/SubmitContent.html"><button style="margin:25px" id="button">Submit Content</button></a>
-                <a style="text-decoration:none" href="Manage Users/ManageUsers.html"><button style="margin:25px" id="button">Manage Users</button></a>
+                <a style="text-decoration:none" href="Submit Content/SubmitContent.php"><button style="margin:25px" id="button">Submit Content</button></a>
+                <a style="text-decoration:none" href="Manage Users/ManageUsers.php"><button style="margin:25px" id="button">Manage Users</button></a>
 
   		    </div>
 	    </div>   
     </body>
 </html> 
-<!-- <?php 
-    // session_destroy();
-?> -->
+
+<?php mysqli_close($con); ?>
