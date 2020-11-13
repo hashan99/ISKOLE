@@ -80,9 +80,9 @@ body{
 
 #center {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position:absolute;
+  top: 55%;
+  left: 25%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -98,7 +98,7 @@ body{
 
 .card:hover{
   transform: scale(1.1);
-  transition-duration: 0.4s;
+  transition-duration: 0.9s;
 }
 
 .title {
