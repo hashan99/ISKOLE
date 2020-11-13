@@ -92,7 +92,7 @@
                         print_r($row);
                         echo "</pre><br>";
                         $loggedUser = $row['first_name'];
-                        $_SESSION['un'] = $loggedUser;
+                        // $_SESSION['un'] = $loggedUser;
                         // echo $loggedUser;
                       }
 
