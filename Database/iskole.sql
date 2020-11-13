@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2020 at 02:51 PM
+-- Generation Time: Nov 13, 2020 at 01:06 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.2.19
 
@@ -54,6 +54,13 @@ CREATE TABLE `content_manager` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `content_manager`
+--
+
+INSERT INTO `content_manager` (`cm_id`, `username`, `email`, `password`) VALUES
+(1, 'content-manager', 'content-manager@gmail.com', '71d60c2ae2e120e7e3b2060c29abde8a14bb2c2f');
 
 -- --------------------------------------------------------
 
@@ -157,13 +164,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `content_manager`
 --
 ALTER TABLE `content_manager`
-  MODIFY `cm_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `teacher`
