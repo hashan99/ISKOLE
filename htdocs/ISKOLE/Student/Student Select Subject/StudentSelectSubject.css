@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Background Settings*/
 body{  
     margin: 0;  
@@ -250,6 +251,8 @@ a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 =======
+=======
+>>>>>>> a85db6ee36933fb50fe341fa05b4ff81bf30b20a
 /*Background Settings*/
 body{  
     margin: 0;  
@@ -332,9 +335,9 @@ body{
 
 #center {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position:absolute;
+  top: 55%;
+  left: 25%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -440,7 +443,7 @@ a {
 #center {
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
