@@ -150,7 +150,7 @@ body{
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #90deaa;
+  background-color: #1a91a1;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -159,7 +159,64 @@ body{
 }
 
 #button3:hover {
-  background-color:#5a8b6a;
+  background-color:#0f525c;
+  color: white;
+}
+
+#button4 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #fb3742;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+#button4:hover {
+  background-color:#8f1f26;
+  color: white;
+}
+
+#button5{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #fb4f14;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+#button5:hover {
+  background-color:#99300c;
+  color: white;
+}
+
+#button6{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #ff926e;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+#button6:hover {
+  background-color:#ac634a;
   color: white;
 }
 
