@@ -11,10 +11,10 @@
             $pw = $_POST['password'];
             $enPw = sha1($pw);
 
-            $dbQueryAdmin = "SELECT * FROM admin WHERE username='$email' AND password='$enPw'";
-            $dbQueryCM = "SELECT * FROM content_manager WHERE username='$email' AND password='$enPw'";
-            $dbQueryStudent = "SELECT * FROM student WHERE email='$email' AND password='$enPw'";
-            $dbQueryTeacher = "SELECT * FROM teacher WHERE email='$email' AND password='$enPw'";
+            $dbQueryAdmin = "SELECT * FROM admin WHERE username='$email' AND password='$enPw' AND status=1";
+            $dbQueryCM = "SELECT * FROM content_manager WHERE username='$email' AND password='$enPw' AND status=1";
+            $dbQueryStudent = "SELECT * FROM student WHERE email='$email' AND password='$enPw' AND status=1";
+            $dbQueryTeacher = "SELECT * FROM teacher WHERE email='$email' AND password='$enPw' AND status=1";
 
             $resultAdmin = mysqli_query($con, $dbQueryAdmin);
             $resultCM = mysqli_query($con, $dbQueryCM);
@@ -39,9 +39,9 @@
                     
               while($row = mysqli_fetch_assoc($resultAdmin))
               {
-                echo "<pre>";
-                print_r($row);
-                echo "</pre><br>";
+                // echo "<pre>";
+                // print_r($row);
+                // echo "</pre><br>";
                 $loggedUser = $row['username'];
                 // $_SESSION['un'] = $loggedUser;
                 // echo $loggedUser;
@@ -50,7 +50,7 @@
               if($count==1)
               {
                 header("Location:Admin/Admin Home Page/AdminHome.php");
-                echo "Logged as ".$loggedUser."!!";
+                // echo "Logged as ".$loggedUser."!!";
                 // header('Location: http://localhost/HRMS/profile.php');
               }
               else
@@ -64,9 +64,9 @@
                     
                   while($row = mysqli_fetch_assoc($resultCM))
                   {
-                    echo "<pre>";
-                    print_r($row);
-                    echo "</pre><br>";
+                    // echo "<pre>";
+                    // print_r($row);
+                    // echo "</pre><br>";
                     $loggedUser = $row['username'];
                     // echo $loggedUser;
                   }
@@ -74,7 +74,7 @@
                   if($count==1)
                   {
                     header("Location:Content Manager/ContentManager Home Page/CMHome.html");
-                    echo "Logged as ".$loggedUser."!!";
+                    // echo "Logged as ".$loggedUser."!!";
                   }
                   else
                   {
@@ -88,9 +88,9 @@
                     
                       while($row = mysqli_fetch_assoc($resultStudent))
                       {
-                        echo "<pre>";
-                        print_r($row);
-                        echo "</pre><br>";
+                        // echo "<pre>";
+                        // print_r($row);
+                        // echo "</pre><br>";
                         $loggedUser = $row['first_name'];
                         // $_SESSION['un'] = $loggedUser;
                         // echo $loggedUser;
@@ -99,7 +99,7 @@
                       if($count==1)
                       {
                         header("Location:Student/StudentHome.html");
-                        echo "Logged as ".$loggedUser."!!";
+                        // echo "Logged as ".$loggedUser."!!";
                       }
                       else
                       {
@@ -113,9 +113,9 @@
                     
                           while($row = mysqli_fetch_assoc($resultTeacher))
                           {
-                            echo "<pre>";
-                            print_r($row);
-                            echo "</pre><br>";
+                            // echo "<pre>";
+                            // print_r($row);
+                            // echo "</pre><br>";
                             $loggedUser = $row['first_name'];
                             // echo $loggedUser;
                           }
@@ -123,12 +123,13 @@
                           if($count==1)
                           {
                             header("Location:Teacher/Teacher Home Page/TeacherHome.html");
-                            echo "Logged as ".$loggedUser."!!";
+                            // echo "Logged as ".$loggedUser."!!";
                             // header('Location: http://localhost/HRMS/profile.php');
                           }
                           else
                           {
                             // $error="email or password is invalid";
+                            // header("Location: Home/index.php");
                             echo "Login Failed!!";
                             // $error = 'Login Failed!!';
                             // $_SESSION['error'] = "Login Failed!!";
