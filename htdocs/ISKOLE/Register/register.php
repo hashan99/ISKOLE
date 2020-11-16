@@ -12,7 +12,8 @@
 
       <!-- php code here -->
       <?php
-        
+        // session_start();
+        // $success = "";
         //register
         if(isset($_POST['submitStudent']))
         {
@@ -54,13 +55,16 @@
 
           if($result)
           {
-            //echo "Record is Added!";
+            // echo "Record is Added!";
+            $success = "Record is Added!";
           }
           else
           {
             echo "Record is not Added!";
           }
         }
+
+        // session_destroy();
       ?>  
       
       <nav class="navigation-bar">
@@ -114,26 +118,49 @@
   
           <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
 
-            <!-- <div class="imgcontainer">
+            <div class="imgcontainer">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="ava.png" alt="Avatar" class="avatar">
-            </div> -->
+                <!-- <img src="ava.png" alt="Avatar" class="avatar"> -->
+            </div>
 
             <div class="container">
-                <label for="uname"><b>First Name</b></label>
+                <label for="fname"><b>First Name</b></label>
                 <input type="text" placeholder="Enter First Name" name="firstName" required>
 
-                <label for="uname"><b>Last Name</b></label>
+                <label for="lname"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
-                <label for="uname"><b>Grade</b></label>
-                <input type="text" placeholder="Enter Last Name" name="lastName" required>
+                <!-- <label for="gender"><b>Gender</b></label>
+                <select name="gender" id="gender" required>
+                  <option value=""></option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select> -->
 
-                <label for="uname"><b>Grade</b></label>
-                <input type="text" placeholder="Select Grade" name="lastName" required>
+                <label for="grade"><b>Grade</b></label>
+                <!-- <input type="text" placeholder="Enter Last Name" name="lastName" required> -->
+                <select name="grade" id="grade" required>
+                  <option value=""></option>
+                  <option value="grade5">Grade 5</option>
+                  <option value="grade6">Grade 6</option>
+                  <option value="grade7">Grade 7</option>
+                  <option value="grade8">Grade 8</option>
+                  <option value="grade9">Grade 9</option>
+                  <option value="grade10">Grade 10</option>
+                  <option value="grade11">Grade 11</option>
+                </select>
 
-                <label for="uname"><b>Medium</b></label>
-                <input type="text" placeholder="Select Medium" name="email" required>
+                <label for="medium"><b>Medium</b></label>
+                <!-- <input type="text" placeholder="Select Grade" name="lastName" required> -->
+                <select name="medium" id="medium" required>
+                  <option value=""></option>
+                  <option value="english">English</option>
+                  <option value="sinhala">Sinhala</option>
+                  <option value="tamil">Tamil</option>
+                </select>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
@@ -142,12 +169,14 @@
                 <!-- <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label> -->
-            </div>
-
-            <div class="container" style="background-color:#F1F1F1">
                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
                 <span class="psw">Already Registerd? <a href="../Home/index.php">Login</a></span>
             </div>
+
+            <!-- <div class="container" style="background-color:#F1F1F1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Already Registerd? <a href="../Home/index.php">Login</a></span>
+            </div> -->
 
           </form>
 
@@ -164,19 +193,27 @@
             </div>
 
             <div class="container">
-                <label for="uname"><b>First Name</b></label>
+                <label for="fname"><b>First Name</b></label>
                 <input type="text" placeholder="Enter First Name" name="firstName" required>
 
-                <label for="uname"><b>Last Name</b></label>
+                <label for="lname"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
-                <label for="uname"><b>Email</b></label>
+                <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
         
                 <button type="submit" name="submitTeacher"  id="submit">Register As Teacher</button>
+                
+                <!-- <div class="error" align="center"> -->
+                <!-- <?php 
+                  // echo $success; 
+                  // echo $_SESSION['error'];
+                ?> -->
+                <!-- </div> -->
+
                 <!-- <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label> -->

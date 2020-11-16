@@ -197,7 +197,7 @@ input[type=text], input[type=password] {
 
 #container {
   height: 200px;
-  width: 50%;
+  width: 100%;
   position: relative;
   border: 3px solid green;
 }
@@ -248,6 +248,7 @@ div{
   padding: 5px;
   /*margin: 40%;
   /*padding-top: 50px;*/
+  /*margin-left: 25%;*/
 }
 
 
@@ -263,7 +264,8 @@ div{
   /*overflow: auto;  Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 70px;
+  padding-top: 70px; /*70*/
+  /*margin-left: 25%;*/
   /*padding-left: 25%;
   padding-right: 25%;*/
 }
@@ -271,8 +273,9 @@ div{
 .modal_stu {
   display: none; /* Hidden by default */
   position: fixed;  /*Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1;  /*Sit on top */
   left: 0;
+  right: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
@@ -280,6 +283,7 @@ div{
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 0px;
+  /*margin-left: 25%;*/
   /*align-items: : center;*/
   /*padding-left: 25%;
   padding-right: 25%;*/
@@ -296,7 +300,8 @@ div{
   /*overflow: auto;  Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 65px;
+  padding-top: 80px;
+  /*margin-left: 25%;*/
   /*padding-left: 25%;
   padding-right: 25%;*/
 }
@@ -307,6 +312,7 @@ div{
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 60%; /* Could be more or less, depending on screen size */
+  /*padding-top: 0px;*/
 }
 
 /* The Close Button (x) */
@@ -388,6 +394,7 @@ span.psw {
 
 .error
 {
-  color : #FF0000;
+  color : #00FF00;
   margin-bottom: 5px;
+  /*align-items: center;*/
 }

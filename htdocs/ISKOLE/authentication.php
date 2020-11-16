@@ -129,9 +129,9 @@
                           else
                           {
                             // $error="email or password is invalid";
-                            // header("Location: Home/index.php");
+                            header("Location: Home/index.php");
                             echo "Login Failed!!";
-                            // $error = 'Login Failed!!';
+                            $error = 'Login Failed!!';
                             // $_SESSION['error'] = "Login Failed!!";
                           }
                         }  
@@ -150,4 +150,4 @@
       // }
         
     ?>
-    <?php mysqli_close($con); ?>
+    <? php mysqli_close($con); ?>

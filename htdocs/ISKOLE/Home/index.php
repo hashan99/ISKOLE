@@ -1,6 +1,7 @@
-<?php include '../connection.php'; ?>
+<? php include '../connection.php'; ?>
 <? php 
-    session_start();
+    // session_start();
+
 ?>
 
 
@@ -49,7 +50,8 @@
 
           <!-- <div class="error"> -->
               <!-- <?php 
-                // echo $_SESSION['error']; 
+                // echo $error; 
+                // echo $_SESSION['error'];
               ?> -->
           <!-- </div> -->
 
@@ -82,6 +84,6 @@ window.onclick = function(event) {
     </body>
 </html>
 <? php 
-    session_destroy();
+    // session_destroy();
 ?>
-<?php mysqli_close($con); ?>
+<? php mysqli_close($con); ?>
