@@ -11,6 +11,7 @@ body{
 form {
   /*background-color: black;*/
   border-radius: 5px;
+  /*width: 25%;*/
   /*style="background-color:black"*/
 
   /*padding: 20px;*/
@@ -196,6 +197,7 @@ input[type=text], input[type=password] {
 
 #container {
   height: 200px;
+  width: 50%;
   position: relative;
   border: 3px solid green;
 }
@@ -277,7 +279,8 @@ div{
   /*overflow: auto;  Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 65px;
+  padding-top: 0px;
+  /*align-items: : center;*/
   /*padding-left: 25%;
   padding-right: 25%;*/
 }
@@ -358,7 +361,7 @@ div{
 /* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+  /*margin: 24px 0 12px 0;*/
   position: relative;
 }
 

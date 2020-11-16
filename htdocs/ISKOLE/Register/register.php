@@ -114,10 +114,10 @@
   
           <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
 
-            <div class="imgcontainer">
+            <!-- <div class="imgcontainer">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <!-- <img src="ava.png" alt="Avatar" class="avatar"> -->
-            </div>
+                <img src="ava.png" alt="Avatar" class="avatar">
+            </div> -->
 
             <div class="container">
                 <label for="uname"><b>First Name</b></label>
@@ -126,8 +126,14 @@
                 <label for="uname"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
-                <label for="uname"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email Address" name="email" required>
+                <label for="uname"><b>Grade</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lastName" required>
+
+                <label for="uname"><b>Grade</b></label>
+                <input type="text" placeholder="Select Grade" name="lastName" required>
+
+                <label for="uname"><b>Medium</b></label>
+                <input type="text" placeholder="Select Medium" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
