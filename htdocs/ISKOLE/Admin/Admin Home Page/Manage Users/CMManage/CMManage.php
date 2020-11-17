@@ -36,7 +36,7 @@
     </nav>
 
 	<div class="container">
-  <h1 align="center">Manage Content-Manager Details</h1>
+  <h1 align="center">Manage Content-Managers</h1>
 
   <br>
   <!-- <br> -->

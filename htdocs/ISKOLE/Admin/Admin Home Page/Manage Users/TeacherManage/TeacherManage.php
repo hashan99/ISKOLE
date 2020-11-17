@@ -36,7 +36,7 @@
     </nav>
 
 	<div class="container">
-  <h1 align="center">Manage Teacher Details</h1>
+  <h1 align="center">Manage Teachers</h1>
 
   <br>
   <!-- <br> -->
