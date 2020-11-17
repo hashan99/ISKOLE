@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 07:07 AM
+-- Generation Time: Nov 17, 2020 at 07:57 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -156,10 +156,25 @@ CREATE TABLE `profile` (
 
 CREATE TABLE `quiz` (
   `quiz_id` int(11) NOT NULL,
-  `mark` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL,
-  `cm_id` int(11) NOT NULL
+  `que` text NOT NULL,
+  `option 1` varchar(222) NOT NULL,
+  `option 2` varchar(222) NOT NULL,
+  `option 3` varchar(222) NOT NULL,
+  `option 4` varchar(222) NOT NULL,
+  `ans` varchar(222) NOT NULL,
+  `userans` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `quiz`
+--
+
+INSERT INTO `quiz` (`quiz_id`, `que`, `option 1`, `option 2`, `option 3`, `option 4`, `ans`, `userans`) VALUES
+(1, 'Question 01', '01 Answer 01', '01 Answer 02', '01 Answer 03', '01 Answer 04', '01 Answer 03', '01 Answer 04'),
+(2, 'Question 02', '02 Answer 01', '02 Answer 02', '02 Answer 03', '02 Answer 04', '02 Answer 01', '02 Answer 01'),
+(3, 'Question 03', '03 Answer 01', '03 Answer 02', '03 Answer 03', '03 Answer 04', '03 Answer 03', '03 Answer 03'),
+(4, 'Question 04', '04 Answer 01', '04 Answer 02', '04 Answer 03', '04 Answer 04', '04 Answer 02', '04 Answer 04'),
+(5, 'Question 05', '05 Answer 01', '05 Answer 02', '05 Answer 03', '05 Answer 04', '05 Answer 01', '05 Answer 01');
 
 -- --------------------------------------------------------
 
@@ -355,9 +370,7 @@ ALTER TABLE `profile`
 -- Indexes for table `quiz`
 --
 ALTER TABLE `quiz`
-  ADD PRIMARY KEY (`quiz_id`),
-  ADD KEY `student_id` (`student_id`),
-  ADD KEY `cm_id` (`cm_id`);
+  ADD PRIMARY KEY (`quiz_id`);
 
 --
 -- Indexes for table `reply`
@@ -445,12 +458,6 @@ ALTER TABLE `profile`
   MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `quiz`
---
-ALTER TABLE `quiz`
-  MODIFY `quiz_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `reply`
 --
 ALTER TABLE `reply`
@@ -524,13 +531,6 @@ ALTER TABLE `profile`
   ADD CONSTRAINT `profile_ibfk_2` FOREIGN KEY (`cm_id`) REFERENCES `content_manager` (`cm_id`),
   ADD CONSTRAINT `profile_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
   ADD CONSTRAINT `profile_ibfk_4` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`);
-
---
--- Constraints for table `quiz`
---
-ALTER TABLE `quiz`
-  ADD CONSTRAINT `quiz_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
-  ADD CONSTRAINT `quiz_ibfk_2` FOREIGN KEY (`cm_id`) REFERENCES `content_manager` (`cm_id`);
 
 --
 -- Constraints for table `reply`
