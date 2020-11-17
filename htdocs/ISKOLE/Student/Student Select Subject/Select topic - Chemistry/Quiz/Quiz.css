@@ -1,0 +1,148 @@
+/*Background Settings*/
+body{  
+    margin: 0;  
+    padding: 0;  
+    background:url(QuizBackground.JPG) no-repeat; 
+    background-size: cover;
+    height: 100vh; 
+    font-family: 'Arial';  
+} 
+
+/*Navigation bar settings*/
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 90px; /* change it to desired width */
+    background-color: rgba(0, 159, 174, 0.4); /* change to desired color */
+}
+
+.navigation-bar > a {
+    float: right;
+    vertical-align: center;
+    margin-right: 20px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 80px;    /* if you want it vertically middle of the navbar */
+}
+
+#logo{
+    float: left;
+  }
+  
+
+/*Profile and log out buttons settings*/
+#cancel{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+    transition-duration: 0.4s;
+}
+
+#cancel:hover {
+  background-color: #ffbc38;
+  color: white;
+}
+
+/*Contained button settings*/
+#button {
+  width: 200px;  
+  height: 40px;
+  border: none;
+  border-radius: 17px;
+  color: rgba(105, 126, 143, 0.99);
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #ffbc38;
+  color: white;
+}
+
+#center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 250%;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242, 0.7);
+    padding: 16px;
+  }
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 500px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+   
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+   
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+   
+  .button:hover span {
+    padding-right: 25px;
+  }
+   
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .button3 {
+      border: none;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  .button3 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #f4e542;
+  }
+   
+  .button3:hover {
+      background-color: #f4e542;
+      color: Black;
+  }
