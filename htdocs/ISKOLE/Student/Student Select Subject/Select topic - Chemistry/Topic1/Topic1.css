@@ -105,7 +105,8 @@ body {
   padding: 30px;
   font-size: 40px;
   text-align: center;
-  background: white;
+  background:url(cells.JPG) no-repeat;
+  background-size: cover;
 }
 
 /* Create two unequal columns that floats next to each other */

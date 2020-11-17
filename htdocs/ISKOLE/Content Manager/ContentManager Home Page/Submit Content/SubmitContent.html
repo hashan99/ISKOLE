@@ -17,7 +17,8 @@
             </script>
         </nav>
 
-        
+      <form action="SubmitContent.php" method="POST">  
+
 	    <div id="center">
               <!--add the dropdown for grade and subject then the content -->
               <div class="container">
@@ -28,7 +29,7 @@
                     <label for="grade">Grade</label>
                   </div>
                   <div class="col-75">
-                    <select id="grade" name="grade">
+                    <select id="grade" name="Grade">
                       <option value="o1">Grade 01</option>
                       <option value="02">Grade 02</option>
                       <option value="03">Grade 03</option>
@@ -41,10 +42,23 @@
                     <label for="subject">Subject</label>
                   </div>
                   <div class="col-75">
-                    <select id="subject" name="subject">
+                    <select id="subject" name="Subject">
                       <option value="maths">Maths</option>
                       <option value="science">Science</option>
                       <option value="english">English</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-25">
+                    <label for="TopicNo">Topic Number</label>
+                  </div>
+                  <div class="col-75">
+                    <select id="topicNo" name="Topic_no">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
                     </select>
                   </div>
                 </div>
@@ -54,22 +68,35 @@
                     <label for="topic">Topic</label>
                   </div>
                   <div class="col-75">
-                    <input type="text" id="topic" name="topic" placeholder="Topic here...">
+                    <input type="text" id="topic" name="Topic" placeholder="Topic here...">
+                  </div>
+                </div>
+
+               
+                <div class="row">
+                  <div class="col-25">
+                    <label for="content">Further Reading( Links)</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="content" name="Furthur_Reading" placeholder="Write your content here.." style="height:200px"></textarea>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-25">
-                    <label for="content">Content</label>
+                    <label for="content">Presentation</label>
                   </div>
                   <div class="col-75">
-                    <textarea id="content" name="content" placeholder="Write your content here.." style="height:200px"></textarea>
+                    <textarea id="File" name="File" placeholder="Copy the published presentation" style="height:100px"></textarea>
                   </div>
                 </div>
+
+                
                 
                 <div class="row">
                   <div class="col-30">
-                    <a><button id="submitButton"> Submit </button></a>
+                    <a><button id="submitButton" input type="submit"> Submit </button></a>
+                     
                   </div>
                   <div class="col-70">
                     <a><button id="cancelButton"> Cancel </button></a>
@@ -80,6 +107,6 @@
               </div>
             
         </div> 
-          
+      </form>    
     </body>
 </html> 
