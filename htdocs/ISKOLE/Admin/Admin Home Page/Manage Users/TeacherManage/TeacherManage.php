@@ -93,9 +93,9 @@
         	<!-- echo "<td>"."<Button>Delete</Button>"."</td>";
         	echo "<td>"."<Button>Block</Button>"."</td>";
           echo "<td>"."<Button>Unblock</Button>"."</td>"; -->
-          <td><a style="text-decoration:none" href="delete.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Delete</button></a></td>
-          <td><a style="text-decoration:none" href="block.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Block</button></a></td>
-          <td><a style="text-decoration:none" href="unblock.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Unblock</button></a></td>
+          <td><a style="text-decoration:none" href="../delete.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Delete</button></a></td>
+          <td><a style="text-decoration:none" href="../block.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Block</button></a></td>
+          <td><a style="text-decoration:none" href="../unblock.php?tea_id=<?php echo $teacher_id; ?>"><button id="button">Unblock</button></a></td>
         	<?php echo "</tr>"; 
  		}
 
