@@ -51,8 +51,8 @@
         <th>Student_ID</th>
         <th>First_Name</th>
         <th>Last_Name</th>
-        <!-- <th>Grade</th>
-        <th>Medium</th> -->
+        <th>Grade</th>
+        <th>Medium</th>
         <th>Email</th>
         <!-- <th>enPw</th> -->
         <th>Status</th>
@@ -79,8 +79,8 @@
  			$student_id = $row['student_id'];
  			$first_name = $row['first_name'];
  			$last_name  = $row['last_name'];
-      // $grade      = $row['last_name'];
-      // $medium     = $row['last_name'];
+      $grade      = $row['grade'];
+      $medium     = $row['medium'];
  			$email 		  = $row['email'];
  			// $enPw 		= $row['password'];
  			$status 	  = $row['status'];
@@ -89,8 +89,8 @@
         	echo "<td>".$student_id."</td>";
         	echo "<td>".$first_name."</td>";
         	echo "<td>".$last_name."</td>";
-          // echo "<td>".$grade."</td>";
-          // echo "<td>".$medium."</td>";
+          echo "<td>".$grade."</td>";
+          echo "<td>".$medium."</td>";
         	echo "<td>".$email."</td>";
         	// echo "<td>".$password."</td>";
         	echo "<td>".$status."</td>"; ?>

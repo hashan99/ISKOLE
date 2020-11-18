@@ -19,13 +19,15 @@
         {
           $fName = $_POST['firstName'];
           $lName = $_POST['lastName'];
+          $grade = $_POST['grade'];
+          $medium = $_POST['medium'];
           $email = $_POST['email'];
           $password = $_POST['password'];
           $enPassword = sha1($password);
 
           //echo "$fName $password $enPassword";
 
-          $dbQuery = "INSERT into student (first_name, last_name, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
+          $dbQuery = "INSERT into student (first_name, last_name, grade, medium, email, password, status) VALUES ('$fName','$lName', '$grade', '$medium', '$email', '$enPassword', 1)";
 
           $result = mysqli_query($con, $dbQuery);
 
@@ -141,13 +143,13 @@
                 <!-- <input type="text" placeholder="Enter Last Name" name="lastName" required> -->
                 <select name="grade" id="grade" required>
                   <option value=""></option>
-                  <option value="grade5">Grade 5</option>
-                  <option value="grade6">Grade 6</option>
-                  <option value="grade7">Grade 7</option>
-                  <option value="grade8">Grade 8</option>
-                  <option value="grade9">Grade 9</option>
-                  <option value="grade10">Grade 10</option>
-                  <option value="grade11">Grade 11</option>
+                  <option value="5">Grade 5</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                  <option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option>
+                  <option value="11">Grade 11</option>
                 </select>
 
                 <label for="medium"><b>Medium</b></label>
