@@ -33,6 +33,7 @@ function myFunction() {
        <div class="header">
 
        <?php
+       
 	
 	// Database connection
 	$connection = new mysqli('localhost','root','','iskole');
@@ -41,7 +42,10 @@ function myFunction() {
 		die("Connection Failed : ". $connection->connect_error);
     }
 
-    $result = mysqli_query($connection,"SELECT Topic FROM content WHERE Topic_no=1");
+    $Topic_No = $_GET['topic_no'];
+       
+
+    $result = mysqli_query($connection,"SELECT Topic FROM content WHERE Topic_no=$Topic_No");
     if(!$result)
     {
      echo 'Could not load the data from database! ';
@@ -64,7 +68,6 @@ function myFunction() {
           
        </div>
        
-       
 
 <div class="row">
   <div class="leftcolumn">
@@ -72,7 +75,7 @@ function myFunction() {
 
     <?php 
 
-    $result = mysqli_query($connection,"SELECT Presentation FROM content WHERE Topic_no=1");
+    $result = mysqli_query($connection,"SELECT Presentation FROM content WHERE Topic_no=$Topic_No");
     if(!$result)
     {
      echo 'Could not load the data from database! ';
@@ -108,7 +111,7 @@ function myFunction() {
       <h2>Topics covered</h2>
      
       <?php
-      $result = mysqli_query($connection,"SELECT Areas FROM content WHERE Topic_no=1");
+      $result = mysqli_query($connection,"SELECT Areas FROM content WHERE Topic_no=$Topic_No");
     if(!$result)
     {
      echo 'Could not load the data from database! ';
@@ -135,7 +138,7 @@ function myFunction() {
       <h3>Further Reading</h3>
       <div>  
                <?php
-                    $result = mysqli_query($connection,"SELECT Further_Reading FROM content WHERE Topic_no=1");
+                    $result = mysqli_query($connection,"SELECT Further_Reading FROM content WHERE Topic_no=$Topic_No");
                         if(!$result)
                         {
                             echo 'Could not load the data from database! ';
@@ -150,7 +153,8 @@ function myFunction() {
                         {
                          while($row = mysqli_fetch_assoc($result))
                          {
-                             echo '<p>' .$row['Further_Reading']. '</p>';
+                             // echo '<p>' .$row['Further_Reading']. '</p>';
+                            echo '<p><a href="'.$row['Further_Reading'].'">'.$row['Further_Reading'].'  </a></p>';
                         }
                         }   
                         }
