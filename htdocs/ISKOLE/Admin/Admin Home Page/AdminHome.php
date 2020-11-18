@@ -34,7 +34,7 @@ function myFunction() {
 	    <div id="center">
   		    <div class="button">
                 <a><button style="margin:25px" id="button"> Forum </button></a>
-                <a style="text-decoration:none" href="Submit Content/SubmitContent.html"><button style="margin:25px" id="button">Submit Content</button></a>
+                <a style="text-decoration:none" href="../../Content Manager/ContentManager Home Page/Submit Content/SubmitContent.html"><button style="margin:25px" id="button">Submit Content</button></a>
                 <a style="text-decoration:none" href="Manage Users/ManageUsers.html"><button style="margin:25px" id="button">Manage Users</button></a>
 
   		    </div>
