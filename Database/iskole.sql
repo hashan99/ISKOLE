@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 07:57 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Nov 18, 2020 at 07:10 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -40,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`ad_id`, `username`, `email`, `status`, `password`) VALUES
-(1, 'admin', 'admin@gmail.com', 0, 'f865b53623b121fd34ee5426c792e5c33af8c227');
+(1, 'admin', 'admin@gmail.com', 1, 'f865b53623b121fd34ee5426c792e5c33af8c227');
 
 -- --------------------------------------------------------
 
@@ -171,10 +172,10 @@ CREATE TABLE `quiz` (
 
 INSERT INTO `quiz` (`quiz_id`, `que`, `option 1`, `option 2`, `option 3`, `option 4`, `ans`, `userans`) VALUES
 (1, 'Question 01', '01 Answer 01', '01 Answer 02', '01 Answer 03', '01 Answer 04', '01 Answer 03', '01 Answer 04'),
-(2, 'Question 02', '02 Answer 01', '02 Answer 02', '02 Answer 03', '02 Answer 04', '02 Answer 01', '02 Answer 01'),
-(3, 'Question 03', '03 Answer 01', '03 Answer 02', '03 Answer 03', '03 Answer 04', '03 Answer 03', '03 Answer 03'),
-(4, 'Question 04', '04 Answer 01', '04 Answer 02', '04 Answer 03', '04 Answer 04', '04 Answer 02', '04 Answer 04'),
-(5, 'Question 05', '05 Answer 01', '05 Answer 02', '05 Answer 03', '05 Answer 04', '05 Answer 01', '05 Answer 01');
+(2, 'Question 02', '02 Answer 01', '02 Answer 02', '02 Answer 03', '02 Answer 04', '02 Answer 01', '02 Answer 04'),
+(3, 'Question 03', '03 Answer 01', '03 Answer 02', '03 Answer 03', '03 Answer 04', '03 Answer 03', '03 Answer 04'),
+(4, 'Question 04', '04 Answer 01', '04 Answer 02', '04 Answer 03', '04 Answer 04', '04 Answer 02', '04 Answer 03'),
+(5, 'Question 05', '05 Answer 01', '05 Answer 02', '05 Answer 03', '05 Answer 04', '05 Answer 01', '05 Answer 03');
 
 -- --------------------------------------------------------
 
@@ -206,7 +207,7 @@ CREATE TABLE `student` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `status` tinyint(1) NOT NULL,
-  `grade` int(11) NOT NULL,
+  `grade` int(2) NOT NULL,
   `medium` varchar(10) NOT NULL,
   `mark` int(11) NOT NULL,
   `profile_pic` blob NOT NULL
@@ -226,8 +227,9 @@ INSERT INTO `student` (`student_id`, `first_name`, `last_name`, `email`, `passwo
 (19, 'Amaya', 'Kinivita', 'amaya@gmail.com', 'ca771caf60ab211d827f17a043e13668c225f5b6', 0, 0, '', 0, ''),
 (20, 'Shyamali', 'Pathirana', 'shyamali@gmail.com', '8ab65f5118e7b5e25f7396e8384000f8c0b26f36', 1, 0, '', 0, ''),
 (21, 'Nirushi', 'Pabasara', 'nirushi@gmail.com', 'c2a56b65b09f859ac15e0fbc595207cb4f74d36e', 1, 0, '', 0, ''),
-(22, 'Bhagya', 'Gunathilake', 'bhagya@gmail.com', 'c4fb139a80b0e554edabba1222e596cee2889e48', 0, 0, '', 0, ''),
-(23, 'Nirushi', 'Wijesiri', 'niru.pw98@gmail.com', '494d9e7cb689927af8001988bf020b01e0306be0', 1, 0, '', 0, '');
+(22, 'Bhagya', 'Gunathilake', 'bhagya@gmail.com', 'c4fb139a80b0e554edabba1222e596cee2889e48', 1, 0, '', 0, ''),
+(23, 'Nirushi', 'Wijesiri', 'niru.pw98@gmail.com', '494d9e7cb689927af8001988bf020b01e0306be0', 1, 0, '', 0, ''),
+(30, 'Nethmi', 'Dilshani', 'nethmidilshani@gmail.com', 'c46267fc232054efaa1d03bb7aa39499ea8e715f', 1, 11, 'english', 0, '');
 
 -- --------------------------------------------------------
 
@@ -467,7 +469,7 @@ ALTER TABLE `reply`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `subject`
