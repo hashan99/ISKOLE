@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 04:02 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.6
+-- Generation Time: Nov 18, 2020 at 10:20 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -60,7 +61,7 @@ CREATE TABLE `availability` (
 --
 
 CREATE TABLE `content` (
-  `Grade` int(11) NOT NULL,
+  `Grade` int(2) NOT NULL,
   `Subject` varchar(20) NOT NULL,
   `Topic_no` int(11) NOT NULL,
   `Topic` varchar(100) NOT NULL,
@@ -74,7 +75,8 @@ CREATE TABLE `content` (
 --
 
 INSERT INTO `content` (`Grade`, `Subject`, `Topic_no`, `Topic`, `Further_Reading`, `Presentation`, `Areas`) VALUES
-(0, 'science', 1, 'Cells', 'https://science.howstuffworks.com/\r\nhttps://www.exploratorium.edu/\r\nhttps://scitoys.com/', '\"https://docs.google.com/presentation/d/e/2PACX-1vRAfa4xwSpCF2a1UWt9Jez_fngoWqQ1AQUADBIk2LpYnKzYUw4aZ6EQnxaFCEjoPdvVi5mg_8p06wj9/embed?start=false&loop=false&delayms=3000\" frameborder=\"0\" width=\"100%\" height=\"600\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"', 'Chloroplasts are organelles that are crucial for plant cell function. These are the structures that carry out photosynthesis, using the energy from the sun to produce glucose. In doing so, the cells use carbon dioxide, and they release oxygen.');
+(6, 'science', 1, 'Cells', 'https://science.howstuffworks.com/\r\nhttps://www.exploratorium.edu/\r\nhttps://scitoys.com/', '\"https://docs.google.com/presentation/d/e/2PACX-1vRAfa4xwSpCF2a1UWt9Jez_fngoWqQ1AQUADBIk2LpYnKzYUw4aZ6EQnxaFCEjoPdvVi5mg_8p06wj9/embed?start=false&loop=false&delayms=3000\" frameborder=\"0\" width=\"100%\" height=\"600\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"', 'Chloroplasts are organelles that are crucial for plant cell function. These are the structures that carry out photosynthesis, using the energy from the sun to produce glucose. In doing so, the cells use carbon dioxide, and they release oxygen.'),
+(3, 'science', 2, 'The Atom', 'links here', 'presentation here', 'content here');
 
 -- --------------------------------------------------------
 
@@ -180,11 +182,11 @@ CREATE TABLE `quiz` (
 --
 
 INSERT INTO `quiz` (`quiz_id`, `que`, `option 1`, `option 2`, `option 3`, `option 4`, `ans`, `userans`) VALUES
-(1, 'Question 01', '01 Answer 01', '01 Answer 02', '01 Answer 03', '01 Answer 04', '01 Answer 03', '01 Answer 04'),
-(2, 'Question 02', '02 Answer 01', '02 Answer 02', '02 Answer 03', '02 Answer 04', '02 Answer 01', '02 Answer 04'),
-(3, 'Question 03', '03 Answer 01', '03 Answer 02', '03 Answer 03', '03 Answer 04', '03 Answer 03', '03 Answer 04'),
-(4, 'Question 04', '04 Answer 01', '04 Answer 02', '04 Answer 03', '04 Answer 04', '04 Answer 02', '04 Answer 03'),
-(5, 'Question 05', '05 Answer 01', '05 Answer 02', '05 Answer 03', '05 Answer 04', '05 Answer 01', '05 Answer 03');
+(1, 'Question 01', '01 Answer 01', '01 Answer 02', '01 Answer 03', '01 Answer 04', '01 Answer 03', '01 Answer 01'),
+(2, 'Question 02', '02 Answer 01', '02 Answer 02', '02 Answer 03', '02 Answer 04', '02 Answer 01', '02 Answer 02'),
+(3, 'Question 03', '03 Answer 01', '03 Answer 02', '03 Answer 03', '03 Answer 04', '03 Answer 03', '03 Answer 03'),
+(4, 'Question 04', '04 Answer 01', '04 Answer 02', '04 Answer 03', '04 Answer 04', '04 Answer 02', '04 Answer 04'),
+(5, 'Question 05', '05 Answer 01', '05 Answer 02', '05 Answer 03', '05 Answer 04', '05 Answer 01', '05 Answer 04');
 
 -- --------------------------------------------------------
 
