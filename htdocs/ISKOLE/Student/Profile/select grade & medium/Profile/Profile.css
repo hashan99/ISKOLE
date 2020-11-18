@@ -2,7 +2,7 @@
 body{  
     margin: 0;  
     padding: 0;  
-    background:url(classroom.JPG) no-repeat; 
+    background:url(students.JPG) no-repeat; 
     background-size: cover;
     height: 100vh; 
     font-family: 'Arial';  
@@ -35,10 +35,11 @@ body{
     padding-right: 7px;  
     color: rgba(105, 126, 143, 0.99);
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #log_out:hover {
-  background-color: #4cd5db;
+  background-color: #ffbc38;
   color: white;
 }
 #back{
@@ -49,10 +50,11 @@ body{
     padding-right: 7px;  
     color: rgba(105, 126, 143, 0.99);
     font-size: 17px;
+    transition-duration: 0.4s;
 }
 
 #back:hover {
-  background-color: #4cd5db;
+  background-color: #ffbc38;
   color: white;
 }
 
@@ -62,31 +64,25 @@ body{
   height: 40px;
   border: none;
   border-radius: 17px;
-  color: rgba(105, 126, 143, 0.99);
+  background-color: rgba(0, 159, 174, 0.8);
+  color:white;
   padding: center;
   text-align:center;
   text-decoration: none;
   display: block;
-  /*font-size: 20px;*/
+  font-size:20px;
   margin: 4px 2px;
   transition-duration: 0.4s;
-  cursor: pointer;
-  font-weight: 200;
-  font-size: 1.0rem;
-  color: black;
+  cursor: pointer; 
 }
-
-#button:hover {
-  background-color: #d95525;
-  color: white;
-  font-weight: 200;
-  font-size: 1.0rem;
-  color: black;
+#button:hover{
+  background-color: #ffbc38;
+  color: white; 
 }
 .transbox {
-   margin-left: 30%;
+  margin-left: 30%;
   margin-right: 30%;
- top:30%
+  top:30%
   width: 200px;  
   height: 600px;
   background-color:rgb(255,255,255,0.4);
@@ -110,7 +106,7 @@ body{
   font-weight: 200;
   font-size: 1.0rem;
   color: black;
-   text-align:right;
+  text-align:right;
 }
 #center {
   margin: 0;
@@ -130,39 +126,58 @@ body{
 }
 
 .change {
-background-color: #f6893e;
+width:260px;
+height:40px;
+border:none;
+border-radius: 17px;
+background-color:rgba(0, 159, 174, 0.8); 
+color:white;
+padding: center;
+text-align: center;
+text-decoration: none;
+display: block;
+font-size: 20px;
 transition-duration: 0.4s;
-border-radius: 8px;
-border-color:none;
-padding: 12px 30px;
+cursor: pointer;
 position: absolute;
 top: 86%;
-  left: 32%;
+left: 52%;
  
 }
 .change:hover {
-background-color: #d8c5b4;
+background-color: #ffbc38;
+color: white;
 }
 .changeP {
-background-color: #f6893e;
-transition-duration: 0.4s;
-border-radius: 8px;
-border-color:none;
+width:260px;
+height:40px;
+border:none;
+border-radius: 17px;
+background-color: #ffbc38;
+color:white;
+padding:center;
+text-align: center;
+text-decoration: none;
+display: block;
+font-size: 20px;
+transition-duration: 0.4s
+cursor:pointer;
 padding: 12px 30px;
 position: absolute;
 top: 86%;
-  left: 57%;
+left: 31%;
  
 }
 .changeP:hover {
-background-color: #d8c5b4;
+background-color: red;
+color:white;
 }
 .text {
-  color: black;
-  position: absolute;
-top: 55%;
-  left: 45%;
- font-size: 25px;
+color: black;
+position: absolute;
+top: 45%;
+left: 42%;
+font-size: 25px;
 font-weight: bold;
 }
 

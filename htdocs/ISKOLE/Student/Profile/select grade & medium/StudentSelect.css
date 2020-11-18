@@ -150,164 +150,149 @@ body {
   background-color: white;
   box-shadow: 0 4rem 4rem -3rem #495161;
 }
+.edit{
+  background-color: none;
+  /* width: 50%;
+  padding: 12px 20px;
+   margin: 10px 0px; 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+  /* position: absolute;
+top: 45%;
+left: 31.5%;
+font-size: 20px;  */ 
+padding-top: 45px;
+padding-right: 330px;
+padding-bottom: 55px;
+padding-left: 60px;
+position: absolute;
+top: 35%;
+left: 31.5%;
+font-size: 20px;
 
-h1 {
-  font-weight: 500;
-  font-size: 1.7rem;
-  color: black;
 }
+#fname{
+  width: 250px;  
+height: 35px;
+border:  1px solid #ccc;
+border-radius: 4px;
+background-color:white;
+color:  black;
+padding: center;
+text-align:center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+transition-duration: 0.4s;
+cursor: pointer;
+position: absolute;
+top: 10%;
+left: 45%; 
 
-input {
-  border: 2px solid #d3d9f0;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 0.3rem;
-  height: 3.2rem;
-  padding: 1rem;
 }
+#fname:hover {
+  background-color:white;
+  color:black;
+  }
+ #lname{
+  width: 250px;  
+  height: 35px;
+  border:  1px solid #ccc;
+  border-radius: 4px;
+  background-color:white;
+  color:  black;
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: absolute;
+  top: 28%;
+  left: 45%; 
 
-input:focus, button:focus {
-  border: 2px solid #;
 }
+#lname:hover {
+  background-color:white;
+  color:black;
+}
+#grade{
+  width: 250px;  
+  height: 35px;
+  border:  1px solid #ccc;
+  border-radius: 4px;
+  background-color:white;
+  color:  black;
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  left: 45%; 
+}
+#grade:hover {
+  background-color:white;
+  color:black;
+}
+#medium{
+  width: 250px;  
+  height: 35px;
+  border:  1px solid #ccc;
+  border-radius: 4px;
+  background-color:white;
+  color:  white;
+  padding: center;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 45%; 
+} 
+#medium:hover {
+  background-color:white;
+  color:black;
+}
+/* input[type=text], select {
+   width: 50%;
+  padding: 12px 20px;
+   margin: 10px 0px; 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+} */
 
-input[type=submit] {
+.save {
 width: 200px;  
 height: 40px;
 border: none;
 border-radius: 17px;
-background-color:#ffbc38 ;
+background-color: #ffbc38;
 color:  white;
+padding: center;
+text-align:center;
+text-decoration: none;
+display: block;
 font-size: 20px;
-
-} 
-
-label {
-  display: block;
-  padding: 2rem 0 0.5rem;
-}
-.container {
-padding: 32px;
-margin-left: 30%;
-margin-right: 30%;
+transition-duration: 0.4s;
+cursor: pointer;
 position: absolute;
-top: 30%;
-font-weight: 200;
-font-size: 1.0rem;
-color: black;
+top: 84%;
+left: 32%;
 }
 
-.select-box {
-position: relative;
-display: flex;
-width: 200px;  
-height: 40px;
-flex-direction: column;
-border-radius: 18px;
-}
-
-.select-box .options-container {
-background: rgba(0, 159, 174, 0.8);
-color: #f5f6fa;
-max-height: 0;
-opacity: 0;
-transition: all 0.4s;
-border-radius: 8px;
-overflow: hidden;
-order: 1;
-position: absolute;
-z-index: 100;
-}
-
-.selected {
-  
-  border-radius: 17px;
-  margin-bottom: 8px;
-  position: relative;
-  order: 0;
-  width: 150px;  
-  height: 30px;
-  border: none;
-  background-color:#ffbc38 ;
-  color:  white;
-  font-size: 20px;
-
-}
-
-.selected::after {
-  content: "";
-  background: url("img/arrow-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 150px;
-  width: 30px;
-  right: 10px;
-  top: 5px;
-  transition: all 0.4s;
-}
-
-.select-box .options-container.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: scroll;
-  margin-top: 104px;
-}
-
-.select-box .options-container.active + .selected::after {
-  transform: rotateX(180deg);
-  top: -6px;
-}
-
-.select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: rgba(0, 159, 174, 0.8);
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-  background: #ffbc38;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .option,
-.selected {
-  padding: 12px 24px;
-  cursor: pointer;
-}
-
-.select-box .option:hover {
-  background:rgba(0, 159, 174, 0.8) ;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  display: none;
-}
-
-/* Searchbox */
-
-.search-box input {
-  width: 100%;
-  padding: 12px 16px;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  position: absolute;
-  border-radius: 8px 8px 0 0;
-  z-index: 100;
-  border: 8px solid rgba(0, 159, 174, 0.8);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s;
-}
-
-.search-box input:focus {
-  outline: none;
-}
-
-.select-box .options-container.active ~ .search-box input {
-  opacity: 1;
-  pointer-events: auto;
+.save:hover {
+color: white;
+background-color: #1d6d21;
 }

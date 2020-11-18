@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-    <title>Select Grade and Medium</title>
+    <title>Edit Profile</title>
         <link href="StudentSelect.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -14,13 +14,13 @@
         <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
          <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
         </nav>
-    <div class="transbox">
+     <div class="transbox"> 
       <div class="card">
         <img src="Profile_img.jpg"  style="width:100%">
-        <h1>B Gunathilaka</h1>
+        <!-- <h1>B Gunathilaka</h1> -->
       </div>
-    </div>
-    <div class="container">
+    </div> 
+    <!-- <div class="container">
       <h2>Select Grade</h2>
 
       <div class="select-box">
@@ -77,8 +77,28 @@
           <input type="text" placeholder="Start Typing..." />
         </div>
         </div>
+        </div> -->
+        <div class="edit">
+          <form>
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name.."><br><br>
+        
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+        
+            <label for="grade">Grade</label><br>
+            <input type="text" id="grade" name="grade" placeholder="Your grade.."><br><br>
+            
+            <label for="medium">Medium</label><br>
+            <input type="text" id="medium" name="medium" placeholder="Your medium.."><br><br>
+            <!-- <div class="save">
+            <input type="submit" value="Save">
+            </div> -->
+            <!-- <button class="save">Save</button> -->
+          </form>
         </div>
-        <a href="Edit Profile/EditProfile.html"><button class="change"><b>Change Password</b></button></a>
+        <button class="save">Save</button>
+        <a href="Profile/Profile.html"><button class="change"><b>Discard</b></button></a>
         <script src="StudentSelect.js"></script>
   </body>
 </html>
