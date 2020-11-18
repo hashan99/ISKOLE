@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 07:10 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.2.19
+-- Generation Time: Nov 18, 2020 at 04:02 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -61,11 +60,21 @@ CREATE TABLE `availability` (
 --
 
 CREATE TABLE `content` (
-  `content_id` int(11) NOT NULL,
-  `content` varchar(10000) NOT NULL,
-  `topic_id` int(11) NOT NULL,
-  `cm_id` int(11) NOT NULL
+  `Grade` int(11) NOT NULL,
+  `Subject` varchar(20) NOT NULL,
+  `Topic_no` int(11) NOT NULL,
+  `Topic` varchar(100) NOT NULL,
+  `Further_Reading` varchar(800) NOT NULL,
+  `Presentation` varchar(1000) NOT NULL,
+  `Areas` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content`
+--
+
+INSERT INTO `content` (`Grade`, `Subject`, `Topic_no`, `Topic`, `Further_Reading`, `Presentation`, `Areas`) VALUES
+(0, 'science', 1, 'Cells', 'https://science.howstuffworks.com/\r\nhttps://www.exploratorium.edu/\r\nhttps://scitoys.com/', '\"https://docs.google.com/presentation/d/e/2PACX-1vRAfa4xwSpCF2a1UWt9Jez_fngoWqQ1AQUADBIk2LpYnKzYUw4aZ6EQnxaFCEjoPdvVi5mg_8p06wj9/embed?start=false&loop=false&delayms=3000\" frameborder=\"0\" width=\"100%\" height=\"600\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"', 'Chloroplasts are organelles that are crucial for plant cell function. These are the structures that carry out photosynthesis, using the energy from the sun to produce glucose. In doing so, the cells use carbon dioxide, and they release oxygen.');
 
 -- --------------------------------------------------------
 
@@ -321,9 +330,7 @@ ALTER TABLE `availability`
 -- Indexes for table `content`
 --
 ALTER TABLE `content`
-  ADD PRIMARY KEY (`content_id`),
-  ADD KEY `cm_id` (`cm_id`),
-  ADD KEY `topic_id` (`topic_id`);
+  ADD PRIMARY KEY (`Topic_no`);
 
 --
 -- Indexes for table `content_manager`
@@ -436,12 +443,6 @@ ALTER TABLE `availability`
   MODIFY `availability_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `content`
---
-ALTER TABLE `content`
-  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `content_manager`
 --
 ALTER TABLE `content_manager`
@@ -504,13 +505,6 @@ ALTER TABLE `topic`
 --
 ALTER TABLE `availability`
   ADD CONSTRAINT `availability_ibfk_1` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`);
-
---
--- Constraints for table `content`
---
-ALTER TABLE `content`
-  ADD CONSTRAINT `content_ibfk_1` FOREIGN KEY (`cm_id`) REFERENCES `content_manager` (`cm_id`),
-  ADD CONSTRAINT `content_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `topic` (`topic_id`);
 
 --
 -- Constraints for table `forum`
