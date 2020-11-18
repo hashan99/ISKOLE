@@ -16,8 +16,9 @@
 		$stmt = $connection->prepare("insert into content(Grade, Subject, Topic_no, Topic, Further_Reading, Presentation, Areas) values(?, ?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("isissss", $Grade, $Subject, $Topic_no, $Topic, $Further_Reading, $Presentation, $Areas);
 		$execval = $stmt->execute(); 
-		echo $execval;
-		echo "Content added successfully!";
+		// echo $execval;
+		// echo "Content added successfully!";
+		header("Location:../CMHome.html");
 		$stmt->close();
 		$connection->close();
 	}
