@@ -10,7 +10,7 @@
         <body>
 
         <nav class="navigation-bar">
-            <a href="../../../../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
+            <a href="../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
             <a><button id="cancel"><b>Cancel</b></button></a>
         </nav>
         
@@ -62,7 +62,7 @@
         <?php } ?> 
         
         <form>
-        <?php if($_SESSION['clicks']>5){ 
+        <?php if($_SESSION['clicks']==6){ 
 	        $qry3 = "SELECT `ans`, `userans` FROM `quiz`;";
 	        $result3 = mysqli_query($con,$qry3);
 	        $storeArray = Array();
@@ -74,9 +74,13 @@
  
             <h2>Result</h2>
             <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; 
-            session_unset(); ?></span><br>
-            <span>Your Score:&nbsp<?php echo $no*2; ?></span>
+                session_unset(); ?>
+            </span><br>
+            <span>Your Score:&nbsp<?php echo $no*2; ?></span><br><br><br>
+            <a style="text-decoration:none" href="Review.php"><button id="cancel"><b>Review</b></button></a>
         <?php } ?>
+
+
  <!-- <script type="text/javascript">
     function radioValidation(){
 		/* var useransj = document.getElementById('rd').value;
