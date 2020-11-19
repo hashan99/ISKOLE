@@ -38,6 +38,22 @@ body{
   background-color: #ffbc38;
   color: white;
 }
+#back{
+    width: 200px;  
+    height: 50px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: rgba(105, 126, 143, 0.99);
+    font-size: 17px;
+    transition-duration: 0.4s;
+}
+
+#back:hover {
+  background-color: #ffbc38;
+  color: white;
+}
+
 .transbox {
   position: center;
   margin-left: 30%;

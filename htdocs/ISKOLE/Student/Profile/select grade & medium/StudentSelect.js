@@ -1,3 +1,14 @@
+function myFunction1() {
+  var txt;
+  var r = confirm("Are you sure you want to logout?");
+  if (r == true) {
+    location.replace("../../../Home/index.php");
+  }
+}
+function goBack() {
+                    window.history.back();
+                }
+
 const selectedAll = document.querySelectorAll(".selected");
 
 selectedAll.forEach((selected) => {
@@ -50,13 +61,3 @@ selectedAll.forEach((selected) => {
     });
   };
 });
-function myFunction1() {
-  var txt;
-  var r = confirm("Are you sure you want to logout?");
-  if (r == true) {
-    location.replace("Profile/Profile.html");
-  }
-}
-function goBack() {
-                    window.history.back();
-                }
