@@ -1,0 +1,169 @@
+body{
+    background-color: rgb(41, 41, 41);
+}
+
+.thread-container {
+  width:80%;
+  height:100px auto;
+  background:white;
+  margin:40px auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.box2 {
+width:auto;
+height:auto;
+background:white;
+/* margin-top:0; */
+margin-bottom: 20px;
+box-sizing: border-box;
+border-radius: 10px;
+align-self: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.box3 {
+    width:auto;
+    height:auto;
+    background:rgb(228, 228, 228);
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    align-self: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+.section{
+display:flex;
+padding-bottom: 5px;
+padding-top: 10px;
+margin-left: 20px;
+margin-right: 20px;
+height:auto;
+}
+
+.question-name{
+width:70%;
+height: auto;
+padding-top: 15px;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 15px;
+color:black;
+}
+
+.question-date{
+text-align: right;
+height: auto;
+width:300px;
+padding-top: 20px;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 12px;
+color:grey;
+}
+
+.question-title{
+font-weight: bold;
+padding-top: 5px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.question-description{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.question-avatar{
+width: 60px auto;
+height: 40px;
+margin: 5px 5px 0 5px;
+}
+
+.reply-info{
+height: auto;
+width:100%;
+padding-top: 45px;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 12px;
+color:grey;
+}
+
+.reply-button{
+margin-top: 30px;
+margin-bottom: 10px;
+padding:10px 15px 10px 15px;
+border-radius: 10px;
+font-weight: 700;
+color:white;
+background-color: rgb(110, 189, 253);
+border:none;
+}
+
+.reply-button:hover{
+background-color: rgba(100, 100, 100, 0.897) ;
+color:white;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 500px ;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
