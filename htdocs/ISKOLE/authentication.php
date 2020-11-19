@@ -92,7 +92,14 @@
                         // print_r($row);
                         // echo "</pre><br>";
                         $loggedUser = $row['first_name'];
-                        // $_SESSION['un'] = $loggedUser;
+                        $lname      = $row['last_name'];
+                        $grade      = $row['grade'];
+                        $medium     = $row['medium'];
+                        $_SESSION['fname']  = $loggedUser;
+                        $_SESSION['lname']  = $lname;
+                        $_SESSION['grade']  = $grade;
+                        $_SESSION['medium'] = $medium;
+
                         // echo $loggedUser;
                       }
 
