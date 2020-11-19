@@ -15,6 +15,7 @@
         </nav>
         
         <div id="center">
+        
         <?php 															
 			if (isset($_POST['click']) || isset($_GET['start'])) {
 				@$_SESSION['clicks'] += 1 ;
@@ -47,7 +48,8 @@
                 $row = mysqli_fetch_array($result,MYSQLI_ASSOC); 
             }
             ?>
-            
+        
+        <div>
         <tr>
             <td>
                 <h3><br><?php echo @$row['que'];?></h3>
@@ -62,7 +64,7 @@
         <?php } ?> 
         
         <form>
-        <?php if($_SESSION['clicks']==6){ 
+        <?php if($_SESSION['clicks']>5){ 
 	        $qry3 = "SELECT `ans`, `userans` FROM `quiz`;";
 	        $result3 = mysqli_query($con,$qry3);
 	        $storeArray = Array();
@@ -74,13 +76,9 @@
  
             <h2>Result</h2>
             <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; 
-                session_unset(); ?>
-            </span><br>
-            <span>Your Score:&nbsp<?php echo $no*2; ?></span><br><br><br>
-            <a style="text-decoration:none" href="Review.php"><button id="cancel"><b>Review</b></button></a>
+            session_unset(); ?></span><br>
+            <span>Your Score:&nbsp<?php echo $no*2; ?></span>
         <?php } ?>
-
-
  <!-- <script type="text/javascript">
     function radioValidation(){
 		/* var useransj = document.getElementById('rd').value;
@@ -97,6 +95,7 @@
     }
 </script> -->
         </dev>
+
         </body>
     </html> 
     <?php mysqli_close($con); ?>

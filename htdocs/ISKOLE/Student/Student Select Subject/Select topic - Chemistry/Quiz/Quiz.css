@@ -2,7 +2,8 @@
 body{  
     margin: 0;  
     padding: 0;  
-    background:url(QuizBackground.JPG) no-repeat; 
+    /*background:url(QuizBackground.JPG) no-repeat;*/ 
+    background-color: blue;
     background-size: cover;
     height: 100vh; 
     font-family: 'Arial';  
