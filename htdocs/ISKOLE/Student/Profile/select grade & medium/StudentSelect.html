@@ -20,77 +20,36 @@
         <!-- <h1>B Gunathilaka</h1> -->
       </div>
     </div> 
-    <!-- <div class="container">
-      <h2>Select Grade</h2>
-
-      <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <label for="grade 09">Grade 09</label>
-          </div>
-
-          <div class="option">
-            <label for="grade 09">Grade 10</label>
-          </div>
-
-          <div class="option">
-            <label for="grade 11">Grade 11</label>
-        </div>
-
-      </div>
-
-        <div class="selected">
-          Select Grade
-        </div>
-
-        <div class="search-box">
-          <input type="text" placeholder="Start Typing..." />
-        </div>
-      </div>
-
-      <h2>Select Medium</h2>
-
-      <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <label for="english">English</label>
-          </div>
-
-          <div class="option">
-            <label for="sinhala">Sinhala</label>
-          </div>
-
-          <div class="option">
-            <label for="tamil">Tamil</label>
-          </div>
-        </div>
-
-        <div class="selected">
-          Select Medium
-        </div>
-
-        <div class="search-box">
-          <input type="text" placeholder="Start Typing..." />
-        </div>
-        </div>
-        <div class="search-box">
-          <input type="text" placeholder="Start Typing..." />
-        </div>
-        </div>
-        </div> -->
+    
         <div class="edit">
           <form>
             <label for="fname">First Name</label><br>
-            <input type="text" id="fname" name="firstname" placeholder="Your first name.."><br><br>
+            <input type="text" id="fname" name="firstname"><br><br>
         
             <label for="lname">Last Name</label><br>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+            <input type="text" id="lname" name="lastname" ><br><br>
         
             <label for="grade">Grade</label><br>
-            <input type="text" id="grade" name="grade" placeholder="Your grade.."><br><br>
+            <select id="grade" name="grade" required >
+              <option value=""></option>
+              <option value="5">Grade 5</option>
+              <option value="6">Grade 6</option>
+              <option value="7">Grade 7</option>
+              <option value="7">Grade 9</option>
+              <option value="7">Grade 10</option>
+              <option value="7">Grade 11</option>
+            </select><br><br>
             
             <label for="medium">Medium</label><br>
-            <input type="text" id="medium" name="medium" placeholder="Your medium.."><br><br>
+            <select id="medium" name="medium" required>
+              <option value=""></option>
+              <option value="english">English</option>
+              <option value="sinhala">Sinhala</option>
+              <option value="tamil">Tamil</option>
+              <!-- <option value="7">Grade 9</option>
+              <option value="7">Grade 10</option>
+              <option value="7">Grade 11</option> -->
+            </select><br><br>
             <!-- <div class="save">
             <input type="submit" value="Save">
             </div> -->
@@ -98,7 +57,7 @@
           </form>
         </div>
         <button class="save">Save</button>
-        <a href="Profile/Profile.html"><button class="change"><b>Discard</b></button></a>
+        <a href="Student/Profile/Profile.html"><button class="change"><b>Discard</b></button></a>
         <script src="StudentSelect.js"></script>
   </body>
 </html>
