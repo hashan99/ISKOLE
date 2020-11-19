@@ -156,9 +156,9 @@
                 <!-- <input type="text" placeholder="Select Grade" name="lastName" required> -->
                 <select name="medium" id="medium" required>
                   <option value=""></option>
-                  <option value="english">English</option>
-                  <option value="sinhala">Sinhala</option>
-                  <option value="tamil">Tamil</option>
+                  <option value="English">English</option>
+                  <option value="Sinhala">Sinhala</option>
+                  <option value="Tamil">Tamil</option>
                 </select>
 
                 <label for="email"><b>Email</b></label>
