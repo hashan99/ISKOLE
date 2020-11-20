@@ -1,8 +1,8 @@
 body 
 {
     font-family: Arial, Helvetica, sans-serif;
-    /*background:url(../../../../Images/login_cover.jpg) no-repeat;*/
-    background-color:whitesmoke;
+    background:url(review.JPG) no-repeat;
+    
     background-size: cover;
 
  }
@@ -10,7 +10,7 @@ body
  .navigation-bar {
     width: 100%;  /* i'm assuming full width */
     height: 90px; /* change it to desired width */
-    background-color: rgba(0, 159, 174, 0.8); /* change to desired color */
+    background-color: rgba(38, 118, 126, 0); /* change to desired color */
     border-radius: 5px ; 
 }
 
@@ -95,7 +95,7 @@ button:hover {
   margin: 0;
   position: absolute;
   top: 75%;
-  left: 50%;
+  left: 70%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
