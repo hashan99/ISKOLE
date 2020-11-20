@@ -12,7 +12,7 @@ body{
 .navigation-bar {
     width: 100%;  /* i'm assuming full width */
     height: 90px; /* change it to desired width */
-    background-color: rgba(0, 159, 174, 0.4); /* change to desired color */
+    background-color: rgba(42, 131, 139, 0); /* change to desired color */
 }
 
 .navigation-bar > a {
@@ -119,7 +119,7 @@ label {
 }
 
 .container {
-  width: 250%;
+  width: 200%;
   border-radius: 5px;
   background-color: rgb(242, 242, 242, 0.7);
   padding: 16px;
@@ -169,7 +169,7 @@ label {
   margin: 0;
   position: absolute;
   top: 55%;
-  left: 25%;
+  left: 55%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
