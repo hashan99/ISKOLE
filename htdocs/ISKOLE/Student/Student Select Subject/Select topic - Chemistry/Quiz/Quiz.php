@@ -4,6 +4,7 @@
 
         <head>
             <title>Quiz</title>
+            <link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon">
             <link href="Quiz.css" rel="stylesheet" type="text/css">
         </head>
 
@@ -11,11 +12,9 @@
 
         <nav class="navigation-bar">
             <a href="../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
-            <a><button id="cancel"><b>Cancel</b></button></a>
         </nav>
         
         <div id="center">
-        
         <?php 															
 			if (isset($_POST['click']) || isset($_GET['start'])) {
 				@$_SESSION['clicks'] += 1 ;
@@ -48,8 +47,7 @@
                 $row = mysqli_fetch_array($result,MYSQLI_ASSOC); 
             }
             ?>
-        
-        <div>
+            
         <tr>
             <td>
                 <h3><br><?php echo @$row['que'];?></h3>
@@ -72,30 +70,25 @@
                 if($row3['ans']==$row3['userans']){
 		            @$_SESSION['score'] += 1 ;
 	             }
-            }?> 
+            }
+            ?>  
  
             <h2>Result</h2>
-            <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; 
-            session_unset(); ?></span><br>
-            <span>Your Score:&nbsp<?php echo $no*2; ?></span>
+            <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; ?></span><br>
+            <span>Your Score:&nbsp<?php echo $no*2; ?></span><br><br><br>
+            <a ><button id="cancel"><b>Review</b></button></a>
         <?php } ?>
- <!-- <script type="text/javascript">
-    function radioValidation(){
-		/* var useransj = document.getElementById('rd').value;
-        //document.cookie = "username = " + userans;
-		alert(useransj); */
-		var uans = document.getElementsByName('userans');
-		var tok;
-		for(var i = 0; i < uans.length; i++){
-			if(uans[i].checked){
-				tok = uans[i].value;
-				alert(tok);
-			}
-		}
-    }
-</script> -->
+        
         </dev>
 
+        <?php if($_SESSION['clicks']==7){ ?>
+            <?php session_unset();?>
+            <?php
+            header("Location: Review.php");
+            exit();
+            ?>
+        <?php } ?>
+        
         </body>
     </html> 
     <?php mysqli_close($con); ?>

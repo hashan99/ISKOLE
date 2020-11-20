@@ -21,48 +21,34 @@
 
 <body>
 
-	<nav class="navigation-bar">
-        <a href="../../../../Home/index.php" id="logo"><img class="logo" src="../../../../Images/logo.PNG" width="100" height="100"></a>
-        <a><button id="sign_in" onclick="logout()"><b>Log out</b></button></a>
-        <a href="../ManageUsers.html"><button id="log_in"><b>Back</button></a>
-    </nav>
+<nav class="navigation-bar">
+            <a href="../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
+        </nav>
 
-	<div class="container">
-  
- 
-
-<?php 
- 		
-?>
-             
+        <div class="container">
+        <h1 align="center">Quiz Review</h1>
   <table id="customers" width="100%" border="1">
     
       <tr align="center" class="info">
         <th>Question</th>
-        <!-- <th>Last_Name</th> -->
-        <th>Answer</th>
-        <!-- <th>enPw</th> -->
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
       </tr>
 
 <?php
-	$query = "SELECT que,ans FROM quiz";
+	$query = "SELECT que,ans,userans FROM quiz";
  		$result = mysqli_query($con, $query);
       if($result)
       {
-      	// echo mysqli_num_rows($result);
  		while($row = mysqli_fetch_assoc($result))
  		{
- 			// echo "<pre>";
- 			// print_r($row);
- 			// echo "</pre><br>";
- 			// echo "<button>Delete</button>";
- 			// echo "&nbsp";
- 			// echo "<button>Update</button>";
- 			$question = $row['que'];
+       $question = $row['que'];
+       $useranswer = $row['userans'];
  			$answer = $row['ans'];
 
  			echo "<tr>";
-        	echo "<td>".$question."</td>";
+          echo "<td>".$question."</td>";
+          echo "<td>".$useranswer."</td>";
         	echo "<td>".$answer."</td>";
         	 ?>
 
@@ -76,33 +62,11 @@
  		}
 ?>
     
-    
-      
-   <!--  <?php
-      // foreach ($data as $row)
-      // {
-      //   echo "<tr>";
-      //   echo "<td>".$row->Member_ID."</td>";
-      //   echo "<td>".$row->First_Name."</td>";
-      //   echo "<td>".$row->Last_Name."</td>";
-      //   echo "<td>".$row->IGN."</td>";
-      //   echo "<td>".$row->Contact_Number."</td>";
-      //   echo "<td>".$row->Primary_Game."</td>";
-      //   echo "<td><a href='deletedata?Member_ID=".$row-> Member_ID."'>Delete</a></td>";
-      //   // echo "<td><a href='updatedata?Member_ID=".$row-> Member_ID."'>Update</a></td>";
-      //   echo "</tr>";
-      // }
-
-    ?> -->
-    
   </table>
-
-
-  
-</div>
-
-	
-
+  <div id="center">
+  <a><button id="cancel"><b>Back to content</b></button></a>
+  </div>
+  </div>
 </body>
 </html>
 
