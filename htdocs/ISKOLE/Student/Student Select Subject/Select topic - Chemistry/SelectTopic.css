@@ -162,8 +162,8 @@ a {
 }
 
 .column {
-  float: right;
-  width: 25%;
+  float: left;
+  width: 28%;
   padding: 0 10px;
 }
 

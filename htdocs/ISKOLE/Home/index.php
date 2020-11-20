@@ -20,12 +20,30 @@
     
     <!-- php code here -->
 
-    <nav class="navigation-bar">
+    <!-- <nav class="navigation-bar">
         <a href="index.php" id="logo"><img class="logo" src="../Images/logo.PNG" width="100" height="100"></a>
         <a href="../Register/register.php"><button id="sign_in"><b>Register for Free</b></button></a>
         <a><button id="log_in" onclick="document.getElementById('id01').style.display='block' "><b>Login
         </button></a>
-    </nav>
+    </nav> -->
+
+    <div class="relative">
+      <div class="absolute1" align="center">
+        <a href="index.php"><img src="../Images/logo.PNG" width="250" height="250"></a> 
+      </div>
+      <div class="absolute2" align="center">
+        <p class="serif thick">I S K O L E</p>
+      </div>
+      <div class="absolute4" align="center">
+        <p class="monospace thick">Self learning website for Sri Lankan students</p>
+      </div>
+      <div class="absolute3" align="center">
+        <a><button id="log_in" onclick="document.getElementById('id01').style.display='block' "><b>Login
+        </button></a>
+        &nbsp &nbsp &nbsp
+        <a href="../Register/register.php"><button id="sign_in"><b>Register for Free</b></button></a>
+      </div>
+    </div>
 
     <!-- login model -->
     <div id="id01"  class="modal">

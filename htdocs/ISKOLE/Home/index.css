@@ -39,13 +39,15 @@ form {
     border: none;  
     border-radius: 17px;  
     padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
+    color: #00004d;
     font-size: 17px;
+    border: 3px solid #00004d;
 }
 
 #sign_in:hover {
-  background-color: #ffbc38;
+  background-color: #00004d;
   color: white;
+  border: 3px solid #00004d;
 }
 
 #log_in{
@@ -54,13 +56,15 @@ form {
     border: none;  
     border-radius: 17px;  
     padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
+    color: #00004d;
     font-size: 17px;
+    border: 3px solid #00004d;
 }
 
 #log_in:hover {
-  background-color: #ffbc38;
+  background-color: #00004d;
   color: white;
+  border: 3px solid #00004d;
 }
 
 #submit{
@@ -177,7 +181,7 @@ span.psw {
   /*overflow: auto;  Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 /* Modal Content/Box */
@@ -235,4 +239,77 @@ span.psw {
 {
   color : #FF0000;
   margin-bottom: 5px;
+}
+
+
+div.relative {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  padding : 60px;
+  margin-top : 60px;
+  /*border: 3px solid #73AD21;*/
+} 
+
+div.absolute1 {
+  position: absolute;
+  top: 50px;
+  right: 200;
+  left: 200;
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute2 {
+  position: absolute;
+  top: 200px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute4 {
+  position: absolute;
+  top: 350px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute3 {
+  position: absolute;
+  top: 400px;
+  /*padding: 10px 10px;*/
+  padding-top: 15px;
+  width: 600px;
+  height: 100px;
+  /*border: 3px solid #73AD21;*/
+}
+
+.serif {
+  font-family: "Times New Roman", Times, serif;
+  /*font-weight: 2000;*/
+  font-size: 70px;
+  color: #ff9900;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #b3b3cc;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 18px;
+  color: #b3b3cc;
+}
+
+p.thick {
+  font-weight: bold;
 }

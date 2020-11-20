@@ -232,11 +232,11 @@
 	
 
 	    
-  		<div style="background-color:#5c8a8a; margin-top: -3%" id="center" class="button">
+  		<div  id="center" class="relative" align="center">
     	
           <!-- <table id="center"> -->
             <!-- <td> -->
-              <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a>
+              <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a><br>
             <!-- </td> -->
             <!-- <td></td><td><div class="vl"></div></td><td></td> -->
             <!-- <td> -->

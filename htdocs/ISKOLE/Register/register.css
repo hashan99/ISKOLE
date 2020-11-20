@@ -175,11 +175,12 @@ input[type=text], input[type=password] {
 }
 
 #button {
-  width: 200px;  
+  width: 230px;  
   height: 40px;
   border: none;
   border-radius: 17px;
-  color: rgba(105, 126, 143, 0.99);
+  padding-right: 12px;
+  color: #4cd5db;
   padding: center;
   text-align:center;
   text-decoration: none;
@@ -188,6 +189,7 @@ input[type=text], input[type=password] {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border: 3px solid #4cd5db;
 }
 
 #button:hover {
@@ -205,8 +207,8 @@ input[type=text], input[type=password] {
 #center {
   margin: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 30%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -244,7 +246,7 @@ input[type=submit] {
 
 div{
   border-radius: 5px;
-  background-color: #f2f2ff;
+  /*background-color: #f2f2ff;*/
   padding: 5px;
   /*margin: 40%;
   /*padding-top: 50px;*/
@@ -398,3 +400,12 @@ span.psw {
   margin-bottom: 5px;
   /*align-items: center;*/
 }
+
+div.relative {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding : 100px;
+  margin-top : 100px;
+  /*border: 3px solid #73AD21;*/
+} 

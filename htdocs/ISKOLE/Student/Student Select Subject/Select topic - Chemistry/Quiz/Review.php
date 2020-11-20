@@ -22,7 +22,7 @@
 <body>
 
 <nav class="navigation-bar">
-            <a href="../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
+            <a href="../../../../Home/index.php" id="logo"><img class="logo" src="logo.PNG" width="100" height="100"></a>
         </nav>
 
         <div class="container">
