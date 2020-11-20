@@ -26,8 +26,8 @@
         </nav>
 
         <div class="container">
-        <h1 align="center">Quiz Review</h1>
-  <table id="customers" width="100%" border="1">
+        <h1 style="color:rgba(0, 159, 174, 0.8)" align="center">Quiz Review</h1>
+  <table align = "center" id="answers" width="80%" border="1">
     
       <tr align="center" class="info">
         <th>Question</th>
@@ -64,7 +64,7 @@
     
   </table>
   <div id="center">
-  <a><button id="cancel"><b>Back to content</b></button></a>
+  <a><button id="back"><b>Back to content</b></button></a>
   </div>
   </div>
 </body>

@@ -54,10 +54,10 @@
             </td>
         </tr> 
         <?php if($_SESSION['clicks'] > 0 && $_SESSION['clicks'] < 6){ ?>
-            <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 1'];?>">&nbsp;<?php echo $row['option 1']; ?><br>
-            <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 2'];?>">&nbsp;<?php echo $row['option 2'];?></td></tr>
-            <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 3'];?>">&nbsp;<?php echo $row['option 3']; ?></td></tr>
-            <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 4'];?>">&nbsp;<?php echo $row['option 4']; ?><br><br><br></td></tr>
+            <tr><td><h4><input required type="radio" name="userans" value="<?php echo $row['option 1'];?>">&nbsp;<?php echo $row['option 1']; ?></h4></td></tr>
+            <tr><td><h4><input required type="radio" name="userans" value="<?php echo $row['option 2'];?>">&nbsp;<?php echo $row['option 2'];?></h4></td></tr>
+            <tr><td><h4><input required type="radio" name="userans" value="<?php echo $row['option 3'];?>">&nbsp;<?php echo $row['option 3']; ?></h4></td></tr>
+            <tr><td><h4><input required type="radio" name="userans" value="<?php echo $row['option 4'];?>">&nbsp;<?php echo $row['option 4']; ?></h4><br><br><br></td></tr>
             <tr><td><button class="button3" name="click" >Next</button></td></tr> 
         <?php } ?> 
         
@@ -73,10 +73,10 @@
             }
             ?>  
  
-            <h2>Result</h2>
-            <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; ?></span><br>
-            <span>Your Score:&nbsp<?php echo $no*2; ?></span><br><br><br>
-            <a ><button id="cancel"><b>Review</b></button></a>
+            <h1>Result</h1>
+            <span><h2>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; ?></h2></span><br>
+            <span><h2>Your Score:&nbsp<?php echo $no*2; ?></span><h2><br><br><br>
+            <a ><button id="review"><b>Review</b></button></a>
         <?php } ?>
         
         </dev>
