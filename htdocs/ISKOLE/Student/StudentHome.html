@@ -15,40 +15,41 @@ function myFunction2() {
 </script>
 
 <script>
-  /* When the user clicks on the button, 
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-    var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-    }
-  }
+  /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
   </script>
     </head>
     <body>
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="100" height="100">
-            <div class="dropdown">
-              <button class="dropbtn" onclick="myFunction()"><b>Menu</b>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content" id="myDropdown">
-                <a href="StudentHome.html"><b>Home</b></a>
-                <a href="Student Select Subject/StudentSelectSubject.html"><b>Subjects</b></a>
-                <a href="Forum/ForumHome.html"><b>Forum</b></a>
-                <a href="#"><b>Get Help</b></a>
-                <a href="Profile/Profile.html"><b>Profile</b></a>
-                <a onclick="myFunction2()"><b>Log out</b></a>
-              </div>
-              </div> 
+            <div id="mySidepanel" class="sidepanel">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="StudentHome.html">Home</a>
+                <a href="Student Select Subject/StudentSelectSubject.html">Subjects</a>
+                <a href="Forum/ForumHome.html">Forum</a>
+                <a href="#">Get Help</a>
+                <a href="Profile/Profile.html">Profile</a>
+                <a onclick="myFunction2()">Log out</a>
+            </div>
+            
+            <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
             
         </nav>  
+
+        <div id="center">
+  		    <div class="button">
+                <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.html"><button style="margin:25px" id="button"> Subject </button></a>
+                <a style="text-decoration:none" href="Forum/ForumHome.html"><button style="margin:25px" id="button">Forum</button></a>
+                
+  		    </div>
+	    </div>
+
     </body>
 </html> 
