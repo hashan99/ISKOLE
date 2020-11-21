@@ -2,7 +2,7 @@
 body{  
     margin: 0;  
     padding: 0;  
-    background:url(students.JPG) no-repeat; 
+    background: url(students.jpg) no-repeat; 
     background-size: cover;
     height: 100vh; 
     font-family: 'Arial';  
@@ -79,106 +79,99 @@ body{
   background-color: #ffbc38;
   color: white; 
 }
-.transbox {
-  margin-left: 30%;
-  margin-right: 30%;
-  top:30%
-  width: 200px;  
-  height: 600px;
-  background-color:rgb(255,255,255,0.4);
-  border: 2px solid white;
-  
-}
-/*Transparent box*/
-.transbox p {
-  margin: 10%;
-  font-weight: bold;
-  color: #d95525;
-}
-/*Profile card*/
-.card {
-  margin-left: 35%;
-  margin-right: 35%;
-  max-width: 150px;
-  max-height:100px;
-  text-align:top;
-  font-family: arial;
-  font-weight: 200;
-  font-size: 1.0rem;
-  color: black;
-  text-align:right;
-}
-#center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+
+/* Transparent container */
+.container {
+  width:50%;
+  height:100px auto;
+  background: rgba(2, 2, 2, 0.945);
+  margin:40px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  }
+
+.section{
+  display:flex;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  height:auto;
+  border-color: rgb(0, 0, 0);
 }
 
-
-.btn {
-   
-  color: white; /* Add a text color */
-  padding: 14px 30px; /* Add some padding */
-  cursor: pointer; /* Add a pointer cursor on mouse-over */
+.pro-pic{
+  width: auto;
+  height: 110px;
+  margin: auto;
+  border-radius: 50%;
 }
 
-.change {
-width:260px;
-height:40px;
-border:none;
-border-radius: 17px;
-background-color:rgba(0, 159, 174, 0.8); 
-color:white;
-padding: center;
-text-align: center;
-text-decoration: none;
-display: block;
-font-size: 20px;
-transition-duration: 0.4s;
-cursor: pointer;
-position: absolute;
-top: 86%;
-left: 52%;
- 
-}
-.change:hover {
-background-color: #ffbc38;
-color: white;
-}
-.changeP {
-width:260px;
-height:40px;
-border:none;
-border-radius: 17px;
-background-color: #ffbc38;
-color:white;
-padding:center;
-text-align: center;
-text-decoration: none;
-display: block;
-font-size: 20px;
-transition-duration: 0.4s
-cursor:pointer;
-padding: 12px 30px;
-position: absolute;
-top: 86%;
-left: 31%;
- 
-}
-.changeP:hover {
-background-color: red;
-color:white;
-}
-.text {
-color: black;
-position: absolute;
-top: 45%;
-left: 42%;
-font-size: 25px;
-font-weight: bold;
+.name{
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 15px 0 5px;
+  color:rgb(7, 148, 141);
 }
 
+.points{
+  font-size: 16px;
+	/* font-weight: 500; */
+  margin: 15px 0 5px;
+  font-style: italic;
+  color:grey;
+  margin-top: 3px;
+}
 
+.basic-info{
+  margin: 30px auto;
+  height: auto;
+  border-radius: 10px;
+  border-color: rgb(7, 148, 141);
+  border-width: 5 px;
+  border-style: solid;
+  font-size: 16px;
+  color:black;
+  text-align: left;
+  max-width: 500px;
+  padding: 5px 10px 10px 5px;
+  background-color: transparent;
+
+}
+
+.general{
+  font-size: 16px;
+	font-weight: 700;
+  margin-top: 0px;
+  font-style: italic;
+  color:rgb(7, 148, 141);
+}
+
+.info{
+  font-size: 16px;
+	font-weight: 600;
+  margin-top: 10px;
+  color:grey;
+  text-align: center;
+  width: auto;
+}
+
+.btn{
+  background-color: rgb(7, 148, 141);
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10px 10px;
+  color: white;
+  border: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn:hover{
+  background-color: white;
+  color:rgb(7, 148, 141) ;
+}

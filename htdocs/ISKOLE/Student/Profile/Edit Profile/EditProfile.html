@@ -15,25 +15,22 @@
         <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
     </nav>
 
-          <div class="transbox">
-            <div class="card">
-            <img src="profile_img.jpg"  style="width:100%">
-            <h1>B Gunathilaka</h1>
+          <div class="container">
+            <img src="profile_img.jpg" class="pro-pic">
+            <h1 class="name">Bhagya Gunathilaka</h1>
+            <div class="pwd">
+              <form>
+              <label class="pw-label">Current Password:</label>
+              <input type="password" class="textbox" name="pwd1" minlength="8"><br><br>
+              <label class="pw-label">New Password:</label>
+              <input type="password" class="textbox" name="pwd2" minlength="8"><br><br>
+              <label class="pw-label">Re-Enter Password:</label>
+              <input type="password" class="textbox" name="pwd3" minlength="8"><br><br>
+            </form>
             </div>
-          </div>
-    
-          <a href="../Profile.php"><button class="discard">Discard</button></a>
-          <button class="save">Save</button>
+          <a href="../Profile.php"><button class="btn">Discard</button></a>
+          <button class="btn">Save</button>
   
-          <div class="pwd">
-            <form>
-            <label for="pwd1">Current Password:</label>
-            <input type="pwd1" id="pwd1" name="pwd1" minlength="8"><br><br>
-            <label for="pwd2">New Password:</label>
-            <input type="pwd2" id="pwd2" name="pwd2" minlength="8"><br><br>
-            <label for="pwd3">Re-Enter Password:</label>
-            <input type="pwd3" id="pwd3" name="pwd3" minlength="8"><br><br>
-          </form>
-          </div>
-    
+
+        </div>
 </html>
