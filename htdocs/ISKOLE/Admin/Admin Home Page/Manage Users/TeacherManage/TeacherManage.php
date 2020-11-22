@@ -9,31 +9,45 @@
     <link href="TeacherManage.css" rel="stylesheet" type="text/css">
 
     <script>
-		function logout() {
-  		var txt;
-  		var r = confirm("Are you sure you want to logout?");
-  		if (r == true) {
-    	location.replace("../../../../Home/index.php");
-  	}
-}
-
-// function stu_delete() {
-//       var txt;
-//       var r = confirm("Are you sure you want to delete student?");
-//       if (r == true) {
-//       // location.replace("../../../../Home/index.php");
-//     }
-// }
-</script>
-</head>
-
-<body>
-
-	<nav class="navigation-bar">
-        <a href="../../../../Home/index.php" id="logo"><img class="logo" src="../../../../Images/logo.PNG" width="100" height="100"></a>
-        <a><button id="sign_in" onclick="logout()"><b>Log out</b></button></a>
-        <a href="../ManageUsers.html"><button id="log_in"><b>Back</button></a>
-    </nav>
+            function myFunction2() {
+              var txt;
+              var r = confirm("Are you sure you want to logout?");
+              if (r == true) {
+                location.replace("../Home/index.php");
+              }
+            }
+            </script>
+            
+            <script>
+              /* Set the width of the sidebar to 250px (show it) */
+            function openNav() {
+              document.getElementById("mySidepanel").style.width = "250px";
+            }
+            
+            /* Set the width of the sidebar to 0 (hide it) */
+            function closeNav() {
+              document.getElementById("mySidepanel").style.width = "0";
+            }
+              </script>
+                </head>
+                <body>
+                    <nav class="navigation-bar">
+                        <img class="logo" src="../../../../Images/logo.PNG" width="100" height="100">
+                        <div id="mySidepanel" class="sidepanel">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                          <a href="../../AdminHome.php">Home</a>
+                            <a href="#">View Content</a>
+                            <a href="../../../../Forum/Forum.php">Forum</a>
+                            <a href="../../Submit Content/SubmitContent.html">Submit Content</a>
+                            <a href="../ManageUsers.html">Manage Users</a>
+                            <a href="../../../../Profile/Profile.php">Profile</a>
+                            <a href="#">Notifications</a>
+                            <a onclick="myFunction2()">Log out</a>
+                        </div>
+                        <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
+                        <button id=name_tag><b>Amaya Kinivita<br>#20 (1050xp)</b></button>
+                        <img style="float: right;" class="avatar" src="../../avatar.png" width="70" height="70">
+                    </nav>
 
 	<div class="container">
   <h1 align="center">Manage Teachers</h1>

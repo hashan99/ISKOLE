@@ -1,104 +1,198 @@
 /*Background Settings*/
 body{  
-    margin: 0;  
-    padding: 0;  
-    background:url(homeBackground.JPG) no-repeat; 
-    background-size: cover;
-    height: 100vh; 
-    font-family: 'Arial';  
+  margin: 0;  
+  padding: 0;  
+  background:url(homeBackground.JPG) no-repeat; 
+  background-size: cover;
+  height: 100vh; 
+  font-family: 'Arial';  
 } 
 
 /*Navigation bar settings*/
 .navigation-bar {
-    width: 100%;  /* i'm assuming full width */
-    height: 90px; /* change it to desired width */
-    background-color: rgba(0, 159, 174, 0); /* change to desired color */
+width: 100%;  /* i'm assuming full width */
+height: 90px; /* change it to desired width */
+background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
+}
+
+.p{
+top: 0px;
+}
+
+
+/* The sidepanel menu */
+.sidepanel {
+height: 100%; /* Specify a height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0;
+right: 0;
+background-color: plum; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 20px;
+color: purple;
+display: block;
+transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 30px;
+margin-left: 50px;
 }
 
 .navigation-bar > a {
-    float: right;
-    vertical-align: center;
-    margin-right: 20px;
-    height: 80px;        /* if you want it to take the full height of the bar */
-    line-height: 80px;    /* if you want it vertically middle of the navbar */
+float: right;
+vertical-align: center;
+margin-right: 20px;
+height: 80px;        /* if you want it to take the full height of the bar */
+line-height: 80px;
+overflow: hidden;
 }
 
-/*Profile and log out buttons settings*/
-#profile{
-    width: 200px;  
-    height: 50px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
-    font-size: 17px;
-    transition-duration: 0.4s;
+#logo{
+float: left;
 }
 
-#profile:hover {
-  background-color: #ffbc38;
-  color: white;
+#name_tag{
+float: right;
+width: 150px;  
+height: 70px;  
+border: none; 
+font-size: 15px; 
+text-align: top;
+background-color: rgba(0, 159, 174, 0.001);
 }
 
-#notifications{
-    width: 200px;  
-    height: 50px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
-    font-size: 17px;
-    transition-duration: 0.4s;
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+width: 50px;  
+height: 50px;  
+border: none;  
+border-radius: 17px;  
+padding-right: 7px;  
+color: purple;
+font-size: 20px;
+transition-duration: 0.4s;
 }
 
-#notifications:hover {
-  background-color: #ffbc38;
-  color: white;
+.openbtn:hover {
+background-color: plum;
 }
 
-#log_out{
-    width: 200px;  
-    height: 50px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
-    font-size: 17px;
-    transition-duration: 0.4s;
+div.relative {
+float: right;
+top: 0px;
+position: relative;
+width: 600px;
+height: 500px;
+padding : 50px;
+margin-top : 50px;
+/*border: 3px solid #73AD21;*/
+} 
+
+div.absolute1 {
+position: absolute;
+top: 0px;
+right: 200;
+left: 200;
+width: 600px;
+height: 200px;
+/*border: 3px solid #73AD21;*/
 }
 
-#log_out:hover {
-  background-color:#ffbc38;
-  color: white;
+div.absolute2 {
+position: absolute;
+top: 150px;
+/*right: 200;
+left: 200;*/
+width: 600px;
+height: 200px;
+/*border: 3px solid #73AD21;*/
 }
 
-/*Contained button settings*/
+div.absolute4 {
+position: absolute;
+top: 300px;
+/*right: 200;
+left: 200;*/
+width: 600px;
+height: 200px;
+/*border: 3px solid #73AD21;*/
+}
+
+div.absolute3 {
+position: absolute;
+top: 400px;
+/*padding: 10px 10px;*/
+width: 600px;
+height: 100px;
+/*border: 3px solid #73AD21;*/
+}
+
+
 #button {
-  width: 200px;  
-  height: 40px;
-  border: none;
-  border-radius: 17px;
-  color: rgba(105, 126, 143, 0.99);
-  padding: center;
-  text-align:center;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+width: 200px;  
+  height: 40px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  color: purple;
+  font-size: 17px;
+  border: 3px solid purple;
 }
 
 #button:hover {
-  background-color: #ffbc38;
-  color: white;
+background-color: plum;
+color: white;
+border: 3px solid plum;
+}
+
+.serif {
+font-family: "Times New Roman", Times, serif;
+/*font-weight: 2000;*/
+font-size: 70px;
+color: #ff9900;
+}
+
+.sansserif {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+color: #b3b3cc;
+}
+
+.monospace {
+font-family: "Lucida Console", Courier, monospace;
+font-size: 18px;
+color: plum;
+}
+
+p.thick {
+font-weight: bold;
 }
 
 #center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+margin: 0;
+position: absolute;
+/*top: 50%;
+left: 50%;*/
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
 }
