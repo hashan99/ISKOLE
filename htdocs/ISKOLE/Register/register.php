@@ -45,13 +45,15 @@
         {
           $fName = $_POST['firstName'];
           $lName = $_POST['lastName'];
+          $subject = $_POST['subject'];
+          $medium = $_POST['medium'];
           $email = $_POST['email'];
           $password = $_POST['password'];
           $enPassword = sha1($password);
 
           //echo "$fName $password $enPassword";
 
-          $dbQuery = "INSERT into teacher (first_name, last_name, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
+          $dbQuery = "INSERT into teacher (first_name, last_name, subject, medium, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
 
           $result = mysqli_query($con, $dbQuery);
 
@@ -201,6 +203,27 @@
                 <label for="lname"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
+                <label for="grade"><b>Grade</b></label>
+                <!-- <input type="text" placeholder="Enter Last Name" name="lastName" required> -->
+                <select name="subject" id="grade" required>
+                  <option value=""></option>
+                  <option value="Science">Science</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Geography">Geography</option>
+                  <option value="Music">Music</option>
+                  <option value="Health">Health</option>
+                  <option value="English">English</option>
+                </select>
+
+                <label for="medium"><b>Medium</b></label>
+                <!-- <input type="text" placeholder="Select Grade" name="lastName" required> -->
+                <select name="medium" id="medium" required>
+                  <option value=""></option>
+                  <option value="English">English</option>
+                  <option value="Sinhala">Sinhala</option>
+                  <option value="Tamil">Tamil</option>
+                </select>
+
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
@@ -208,6 +231,9 @@
                 <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
         
                 <button type="submit" name="submitTeacher"  id="submit">Register As Teacher</button>
+
+                <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Already Registerd? <a href="../Home/index.php">Login</a></span>
                 
                 <!-- <div class="error" align="center"> -->
                 <!-- <?php 
@@ -221,10 +247,10 @@
                 </label> -->
             </div>
 
-            <div class="container" style="background-color:#F1F1F1">
+            <!-- <div class="container" style="background-color:#F1F1F1">
                 <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
                 <span class="psw">Already Registerd? <a href="../Home/index.php">Login</a></span>
-            </div>
+            </div> -->
 
           </form>
 

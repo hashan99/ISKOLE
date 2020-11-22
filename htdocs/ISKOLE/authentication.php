@@ -99,7 +99,8 @@
                         $email      = $row['email'];
                         $xp         = $row['xp'];
                         $password   = $row['password'];
-                        // $type       = 1;
+                        $type       = 1;
+                        $link       = "Stu";
 
                         $_SESSION['stuid']  = $StuId;
                         $_SESSION['fname']  = $loggedUser;
@@ -109,7 +110,8 @@
                         $_SESSION['email']  = $email;
                         $_SESSION['xp']     = $xp;
                         $_SESSION['enPwd1'] = $password;
-                        // $_SESSION['type']     = 1;
+                        $_SESSION['type']   = 1;
+                        $_SESSION['link']   = "Stu";
 
                         // echo $loggedUser;
                       }
@@ -134,25 +136,27 @@
                             // echo "<pre>";
                             // print_r($row);
                             // echo "</pre><br>";
-                            $TeaId      = $row['student_id'];
+                            $TeaId      = $row['teacher_id'];
                             $loggedUser = $row['first_name'];
                             $lname      = $row['last_name'];
-                            $grade      = $row['grade'];
+                            $subject    = $row['subject'];
                             $medium     = $row['medium'];
                             $email      = $row['email'];
                             // $password   = $row['password'];
                             // $xp         = $row['xp'];
-                            // $type       = 0;
+                            $type       = 0;
+                            $link       = "Tea";
 
-                            $_SESSION['stuid']  = $StuId;
+                            $_SESSION['teaid']  = $TeaId;
                             $_SESSION['fname']  = $loggedUser;
                             $_SESSION['lname']  = $lname;
-                            $_SESSION['grade']  = $grade;
+                            $_SESSION['subject']= $subject;
                             $_SESSION['medium'] = $medium;
                             $_SESSION['email']  = $email;
                             // $_SESSION['xp']     = $xp;
                             // $_SESSION['enPwd1'] = $password;
-                            // $_SESSION['type']     = 0;
+                            $_SESSION['type']     = 0;
+                            $_SESSION['link']   = "Tea";
                             
                             // echo $loggedUser;
                           }

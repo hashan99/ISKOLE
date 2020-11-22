@@ -84,7 +84,8 @@
         $email      = $row['email'];
         $xp         = $row['xp'];
         $password   = $row['password'];
-        // $type       = 1;
+        $type       = 1;
+        $link       = "Stu";
 
         $_SESSION['stuid']  = $StuId;
         $_SESSION['fname']  = $loggedUser;
@@ -94,7 +95,8 @@
         $_SESSION['email']  = $email;
         $_SESSION['xp']     = $xp;
         $_SESSION['enPwd1'] = $password;
-        // $_SESSION['type']     = 1;
+        $_SESSION['type']     = 1;
+        $_SESSION['link']   = "Stu";
       }
     } 
     ?>
@@ -109,7 +111,7 @@
             <img src="../avatar.png" class="pro-pic">
             <h1 class="name"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></h1>
             <div class="pwd">
-              <form action="ChangePassword.php" method="POST">
+              <form action="StuChangePassword.php" method="POST">
               <label class="pw-label">Current Password:</label>
               <input type="password" class="textbox" name="pwd1" required><br><br>
               <label class="pw-label">New Password:</label>

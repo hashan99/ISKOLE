@@ -17,17 +17,65 @@
           <img src="avatar.png" class="pro-pic">
       </div>
       <div class="name"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></div>
-      <div class="points"><?php echo $_SESSION['xp']; ?> xp | rank #3</div>
+      <div class="points">
+        <?php 
+          if($_SESSION['type'] == 1)
+          {
+            echo $_SESSION['xp']." xp | rank #3"; 
+          }
+          else
+          {
+
+          }
+          
+        ?> 
+      </div>
       <div class="basic-info">
-        <div class="general">General Information:</div>
+        <div class="general">
+          <?php 
+          if($_SESSION['type'] == 1)
+          {
+            echo "General Information:"; 
+          }
+          else
+          {
+            echo "Bio:"; 
+          }
+          
+        ?> 
+          
+        </div>
         <div class="info">
-            <p>Grade: <?php echo $_SESSION['grade']; ?></p>
-            <p>Medium: <?php echo $_SESSION['medium']; ?></p></div>
+            <p> 
+              <?php 
+              if($_SESSION['type'] == 1)
+              {
+                echo "Grade: ".$_SESSION['grade']; 
+              }
+              else
+              {
+                echo "I am a Teaching ".$_SESSION['subject'];
+              }
+              ?>
+            </p>
+            <p>
+              <?php 
+              if($_SESSION['type'] == 1)
+              {
+                echo "Medium: ".$_SESSION['medium']; 
+              }
+              else
+              {
+                echo "My Teaching Medium is ".$_SESSION['medium'];
+              }
+              ?>
+            </p>
+          </div>
       </div>
         <script src="Profile.js"></script>
 
-    <a href="Change Password/ChangePassword.php"><button class="btn"><b>Change Password</b></button></a>
-    <a href="Edit Profile/EditProfile.php"><button class="btn"><b>Edit Profile</b></button></a>
+    <a href="Change Password/<?php echo $_SESSION['link']; ?>ChangePassword.php"><button class="btn"><b>Change Password</b></button></a>
+    <a href="Edit Profile/<?php echo $_SESSION['link']; ?>EditProfile.php"><button class="btn"><b>Edit Profile</b></button></a>
   </div> 
 </body>
 </html>
