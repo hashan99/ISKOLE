@@ -111,11 +111,11 @@
             <div class="pwd">
               <form action="ChangePassword.php" method="POST">
               <label class="pw-label">Current Password:</label>
-              <input type="password" class="textbox" name="pwd1" ><br><br>
+              <input type="password" class="textbox" name="pwd1" required><br><br>
               <label class="pw-label">New Password:</label>
-              <input type="password" class="textbox" name="pwd2" minlength="8"><br><br>
+              <input type="password" class="textbox" name="pwd2" minlength="8" required><br><br>
               <label class="pw-label">Re-Enter Password:</label>
-              <input type="password" class="textbox" name="pwd3" minlength="8"><br><br>
+              <input type="password" class="textbox" name="pwd3" minlength="8" required><br><br>
 
             <div class="error" align="center"><?php echo "$error"; ?></div>
 

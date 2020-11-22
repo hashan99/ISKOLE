@@ -98,13 +98,13 @@
             <div class="pwd">
               <form action="EditProfile.php" method="POST">
               <label class="pw-label">First Name:</label>
-              <input type="text" class="textbox" name="firstname" value="<?php echo $_SESSION['fname']; ?>"><br><br>
+              <input type="text" class="textbox" name="firstname" value="<?php echo $_SESSION['fname']; ?>" required><br><br>
 
               <label class="pw-label">Last Name:</label>
-              <input type="text" class="textbox" name="lastname" value="<?php echo $_SESSION['lname']; ?>"><br><br>
+              <input type="text" class="textbox" name="lastname" value="<?php echo $_SESSION['lname']; ?>" required><br><br>
 
               <label class="pw-label">Email:</label>
-              <input type="text" class="textbox" name="email" value="<?php echo $_SESSION['email']; ?>"><br><br>
+              <input type="text" class="textbox" name="email" value="<?php echo $_SESSION['email']; ?>" required><br><br>
 
               <label class="pw-label">Grade:</label>
               <select class="optionbox" name="grade"  required>
