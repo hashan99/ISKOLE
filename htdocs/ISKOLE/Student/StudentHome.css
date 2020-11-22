@@ -15,6 +15,10 @@ body{
   background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
 }
 
+.p{
+  top: 0px;
+}
+
 
 /* The sidepanel menu */
 .sidepanel {
@@ -63,6 +67,20 @@ body{
   overflow: hidden;
 }
 
+#logo{
+  float: left;
+}
+
+#name_tag{
+  float: right;
+  width: 150px;  
+  height: 70px;  
+  border: none; 
+  font-size: 15px; 
+  text-align: top;
+  background-color: rgba(0, 159, 174, 0.001);
+}
+
 /* Style the button that is used to open the sidepanel */
 .openbtn {
   width: 50px;  
@@ -75,38 +93,106 @@ body{
   transition-duration: 0.4s;
 }
 
-
-
 .openbtn:hover {
   background-color: plum;
 }
 
+div.relative {
+  float: right;
+  top: 0px;
+  position: relative;
+  width: 600px;
+  height: 500px;
+  padding : 50px;
+  margin-top : 50px;
+  /*border: 3px solid #73AD21;*/
+} 
+
+div.absolute1 {
+  position: absolute;
+  top: 0px;
+  right: 200;
+  left: 200;
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute2 {
+  position: absolute;
+  top: 150px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute4 {
+  position: absolute;
+  top: 300px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute3 {
+  position: absolute;
+  top: 400px;
+  /*padding: 10px 10px;*/
+  width: 600px;
+  height: 100px;
+  /*border: 3px solid #73AD21;*/
+}
+
+
 #button {
   width: 200px;  
-  height: 50px;
-  border: none;
-  border-radius: 17px;
-  color: purple;
-  padding: center;
-  text-align:center;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-right: 7px;  
+    color: purple;
+    font-size: 17px;
+    border: 3px solid purple;
 }
 
 #button:hover {
   background-color: plum;
   color: white;
+  border: 3px solid plum;
+}
+
+.serif {
+  font-family: "Times New Roman", Times, serif;
+  /*font-weight: 2000;*/
+  font-size: 70px;
+  color: #ff9900;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #b3b3cc;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 18px;
+  color: plum;
+}
+
+p.thick {
+  font-weight: bold;
 }
 
 #center {
   margin: 0;
   position: absolute;
-  top: 50%;
-  left: 70%;
+  /*top: 50%;
+  left: 50%;*/
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
