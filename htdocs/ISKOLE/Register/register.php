@@ -53,7 +53,7 @@
 
           //echo "$fName $password $enPassword";
 
-          $dbQuery = "INSERT into teacher (first_name, last_name, subject, medium, email, password, status) VALUES ('$fName','$lName','$email', '$enPassword', 1)";
+          $dbQuery = "INSERT into teacher (first_name, last_name, subject, medium, email, password, status) VALUES ('$fName','$lName', '$subject', '$medium', '$email', '$enPassword', 1)";
 
           $result = mysqli_query($con, $dbQuery);
 
@@ -203,7 +203,7 @@
                 <label for="lname"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="lastName" required>
 
-                <label for="grade"><b>Grade</b></label>
+                <label for="grade"><b>Subject</b></label>
                 <!-- <input type="text" placeholder="Enter Last Name" name="lastName" required> -->
                 <select name="subject" id="grade" required>
                   <option value=""></option>
