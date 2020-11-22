@@ -165,7 +165,7 @@
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
         
                 <button type="submit" name="submitStudent" id="submit">Register As Student</button>
                 <!-- <label>
@@ -205,7 +205,7 @@
                 <input type="text" placeholder="Enter Email Address" name="email" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
         
                 <button type="submit" name="submitTeacher"  id="submit">Register As Teacher</button>
                 

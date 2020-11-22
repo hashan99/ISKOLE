@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,18 +16,18 @@
       <div class="section">
           <img src="avatar.png" class="pro-pic">
       </div>
-      <div class="name">Bhagya Gunathilaka</div>
-      <div class="points">1500 xp | rank #3</div>
+      <div class="name"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></div>
+      <div class="points"><?php echo $_SESSION['xp']; ?> xp | rank #3</div>
       <div class="basic-info">
         <div class="general">General Information:</div>
         <div class="info">
-            <p>Grade: 10</p>
-            <p>Medium: English</p></div>
+            <p>Grade: <?php echo $_SESSION['grade']; ?></p>
+            <p>Medium: <?php echo $_SESSION['medium']; ?></p></div>
       </div>
         <script src="Profile.js"></script>
 
-    <a href="Edit Profile/EditProfile.html"><button class="btn"><b>Change Password</b></button></a>
-    <a href="select grade & medium/StudentSelect.html"><button class="btn"><b>Edit Profile</b></button></a>
+    <a href="Change Password/ChangePassword.php"><button class="btn"><b>Change Password</b></button></a>
+    <a href="Edit Profile/EditProfile.php"><button class="btn"><b>Edit Profile</b></button></a>
   </div> 
 </body>
 </html>

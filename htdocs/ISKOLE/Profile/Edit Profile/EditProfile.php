@@ -1,0 +1,138 @@
+<?php include '../../connection.php'; ?>
+<?php session_start() ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>Edit Profile</title>
+        <link href="EditProfile.css" rel="stylesheet" type="text/css">
+        <script src="EditProfile.js"></script>
+  </head>
+  <body>
+    
+    <?php
+    if(isset($_POST['submit']))
+    {
+      $fName = $_POST['firstname'];
+      $lName = $_POST['lastname'];
+      $email = $_POST['email'];
+      $grade = $_POST['grade'];
+      $medium = $_POST['medium'];
+      // $email = $_POST['email'];
+      // $password = $_POST['password'];
+      // $enPassword = sha1($password);
+
+      //echo "$fName $password $enPassword";
+
+      $dbQuery = "UPDATE student SET first_name = '".$fName."', last_name = '".$lName."', email = '".$email."', grade = '".$grade."', medium = '".$medium."' WHERE student_id = '".$_SESSION['stuid']."' ";
+
+      $result = mysqli_query($con, $dbQuery);
+
+      if($result)
+      {
+        // if($_SESSION['type']==1)
+        // {
+        //   header("Location:../../Student/StudentHome.html");
+        // }
+        header("Location:../profile.php");
+      }
+      else
+      {
+        echo "Record is not updated!";
+      }
+    }
+    else
+    {
+      // echo "Faild!";
+    }
+
+    $dbQueryStudent = "SELECT * FROM student WHERE student_id = ".$_SESSION['stuid']." ";
+    
+    $resultStudent = mysqli_query($con, $dbQueryStudent);
+
+    if($resultStudent)
+    {
+      // $count = mysqli_num_rows($resultStudent);
+                    
+      while($row = mysqli_fetch_assoc($resultStudent))
+      {
+        // echo "<pre>";
+        // print_r($row);
+        // echo "</pre><br>";
+        $StuId      = $row['student_id'];
+        $loggedUser = $row['first_name'];
+        $lname      = $row['last_name'];
+        $grade      = $row['grade'];
+        $medium     = $row['medium'];
+        $email      = $row['email'];
+        $xp         = $row['xp'];
+        $password   = $row['password'];
+        // $type       = 1;
+
+        $_SESSION['stuid']  = $StuId;
+        $_SESSION['fname']  = $loggedUser;
+        $_SESSION['lname']  = $lname;
+        $_SESSION['grade']  = $grade;
+        $_SESSION['medium'] = $medium;
+        $_SESSION['email']  = $email;
+        $_SESSION['xp']     = $xp;
+        $_SESSION['enPwd1'] = $password;
+        // $_SESSION['type']     = 1;
+      }
+    }                
+    ?>
+
+    <nav class="navigation-bar">
+        <img class="logo" src="logo.PNG" width="100" height="100">
+        <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
+         <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
+        </nav>
+     
+        <div class="container">
+            <img src="../avatar.png" class="pro-pic">
+            <h1 class="name"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></h1>
+            <div class="pwd">
+              <form action="EditProfile.php" method="POST">
+              <label class="pw-label">First Name:</label>
+              <input type="text" class="textbox" name="firstname" value="<?php echo $_SESSION['fname']; ?>"><br><br>
+
+              <label class="pw-label">Last Name:</label>
+              <input type="text" class="textbox" name="lastname" value="<?php echo $_SESSION['lname']; ?>"><br><br>
+
+              <label class="pw-label">Email:</label>
+              <input type="text" class="textbox" name="email" value="<?php echo $_SESSION['email']; ?>"><br><br>
+
+              <label class="pw-label">Grade:</label>
+              <select class="optionbox" name="grade"  required>
+                <option class="optionlist" value=""></option>
+                <option class="optionlist" value="5">Grade 5</option>
+                <option class="optionlist" value="6">Grade 6</option>
+                <option class="optionlist" value="7">Grade 7</option>
+                <option class="optionlist" value="8">Grade 8</option>
+                <option class="optionlist" value="9">Grade 9</option>
+                <option class="optionlist" value="10">Grade 10</option>
+                <option class="optionlist" value="11">Grade 11</option>
+              </select><br><br>
+
+              <label class="pw-label">Medium:</label>
+              <select class="optionbox" name="medium" required>
+                <option class="optionlist" value=""></option>
+                <option class="optionlist" value="English">English</option>
+                <option class="optionlist" value="Sinhala">Sinhala</option>
+                <option class="optionlist" value="Tamil">Tamil</option>
+              </select><br><br>
+
+            
+            </div>
+          <button class="btn2" type="submit" name="submit">Save</button>
+          </form>
+          <a href="../Profile.php"><button class="btn1">Discard</button></a>
+     
+  </body>
+</html>
+
+<?php mysqli_close($con); ?>

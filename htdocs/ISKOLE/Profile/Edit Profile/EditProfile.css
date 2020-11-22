@@ -71,25 +71,8 @@ body{
   border: 2px solid white;
   
 }
-/*Transparent box*/
-.transbox p {
-  margin: 10%;
-  font-weight: bold;
-  color: #d95525;
-}
-/*Profile card*/
-.card {
-  margin-left: 35%;
-  margin-right: 35%;
-  max-width: 150px;
-  max-height:100px;
-  text-align:top;
-  font-family: arial;
-  font-weight: 200;
-  font-size: 1.0rem;
-  color: black;
-   text-align:right;
-}
+
+
 #center {
   margin: 0;
   position: absolute;
@@ -131,10 +114,6 @@ left: 32%;
 background-color: #ffbc38;
 color: white;
 }
-.container {
-  margin-top: 100px;
-  padding: 32px;
-}
 
 body {
   background-color: #dde2ec;
@@ -150,18 +129,7 @@ body {
   background-color: white;
   box-shadow: 0 4rem 4rem -3rem #495161;
 }
-.edit{
-  background-color: none;
-padding-top: 45px;
-padding-right: 330px;
-padding-bottom: 55px;
-padding-left: 60px;
-position: absolute;
-top: 35%;
-left: 31.5%;
-font-size: 20px;
 
-}
 #fname{
   width: 250px;  
 height: 35px;
@@ -251,6 +219,163 @@ left: 45%;
 #medium:hover {
   background-color:white;
   color:black;
+}
+
+/* Transparent container */
+.container {
+  max-width:700px;
+  height:auto;
+  background: rgba(2, 2, 2, 0.945);
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+
+.pwd {
+background-color:transparent;
+width: auto;
+font-size: 20px;
+text-align:left;
+align-content: center;
+padding-left:20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+.textbox{
+  width: 100%;  
+  height: 20px;
+  border-style: solid;
+  border-color: rgb(165, 165, 165);
+  border-radius: 10px;
+  background-color:transparent;
+  color:  white;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align:left;
+  text-decoration: none;
+  display:flexbox;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: 10px;
+
+}
+
+.optionbox{
+  width: 100%;  
+  height: 35px;
+  border-style: solid;
+  border-color: rgb(165, 165, 165);
+  border-radius: 10px;
+  background-color:transparent;
+  color:  white;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align:left;
+  text-decoration: none;
+  display:flexbox;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: 10px;
+
+}
+
+.optionlist{
+  width: 100%;  
+  height: 40px;
+  border-style: solid;
+  border-color: rgb(165, 165, 165);
+  border-radius: 10px;
+  background-color:rgba(2, 2, 2, 0.945);
+  color:  white;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align:left;
+  text-decoration: none;
+  display:flexbox;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: 10px;
+  /*border-radius: 5px;*/
+}
+
+.optionlist:hover {
+color: white;
+background-color: rgb(7, 148, 141);
+}
+
+
+.name{
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0 5px;
+  color:rgb(7, 148, 141);
+}
+
+.pro-pic{
+  width: auto;
+  height: 110px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.pw-label{
+  font-size: 16px;
+  font-weight: 500;
+  color:rgb(165, 165, 165);
+  text-align: right;
+  width: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn1{
+  float: left;
+  background-color: rgb(7, 148, 141);
+  border-radius: 30px;
+  padding: 15px;
+  width:100px;
+  margin: 10px 10px;
+  color: white;
+  border: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn1:hover{
+  background-color: white;
+  color:rgb(7, 148, 141) ;
+}
+
+.btn2{
+  float: right;
+  background-color: rgb(7, 148, 141);
+  border-radius: 30px;
+  padding: 15px;
+  width:100px;
+  margin: 10px 10px;
+  color: white;
+  border: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn2:hover{
+  background-color: white;
+  color:rgb(7, 148, 141) ;
 }
 
 
