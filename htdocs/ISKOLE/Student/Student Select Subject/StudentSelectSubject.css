@@ -90,7 +90,7 @@ body{
 .card {
   background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  max-width: 250px;
+  max-width: 350px;
   margin: auto;
   text-align: center;
   position:relative;
@@ -246,6 +246,6 @@ a {
   margin: 0;
   position: absolute;
   top: 56%;
-  left: 33%;
+  left: 35%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
