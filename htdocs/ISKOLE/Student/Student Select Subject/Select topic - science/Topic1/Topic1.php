@@ -5,7 +5,7 @@
         <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
         <link href="Topic1.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
+        <!-- <script>
 function myFunction() {
   var txt;
   var r = confirm("Are you sure you want to logout?");
@@ -13,14 +13,15 @@ function myFunction() {
     location.replace("Profile/Profile.html");
   }
 }
-</script>
+</script> -->
     </head>
     <body>
 
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="100" height="100">
-            <a><button id="log_out"><b>Log out</b></button></a>
-            <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
+            <!-- <a><button id="log_out"><b>Log out</b></button></a> -->
+            <a href="../../../../logout.php"><button id="log_out">Log out</button></a>
+            <!-- <a><button id="back" onclick="goBack()"> <b>Back </b></button></a> -->
 
             <script>
                 function goBack() {

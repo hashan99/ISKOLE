@@ -5,7 +5,7 @@
   <head>
     <title>Profile</title>
     <link href="Profile.css" rel="stylesheet" type="text/css">
-  <script>
+  <!-- <script>
 function myFunction2() {
   var txt;
   var r = confirm("Are you sure you want to logout?");
@@ -13,7 +13,7 @@ function myFunction2() {
     location.replace("../Home/index.php");
   }
 }
-</script>
+</script> -->
 
 <script>
   /* Set the width of the sidebar to 250px (show it) */
@@ -38,7 +38,8 @@ function closeNav() {
                 <a href="../Student/LeaderBoard/leaderboard.php">LeaderBoard</a>
                 <a href="../Student/GetHelp/gethelp.php">Get Help</a>
                 <a href="StuProfile.php">Profile</a>
-                <a onclick="myFunction2()">Log out</a>
+                <a href="../logout.php">Log out</a>
+                <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
             

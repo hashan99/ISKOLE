@@ -43,7 +43,8 @@
 
         <nav class="navigation-bar">
                 <img class="logo" src="logo.PNG" width="120" height="120">
-                <a><button id="log_out"><b>Log out</b></button></a>
+                <a href="../logout.php"><button id="log_out">Log out</button></a>
+                <!-- <a><button id="log_out"><b>Log out</b></button></a> -->
                 <a><button id="profile"><b>Profile</b></button></a>
             </nav>
         

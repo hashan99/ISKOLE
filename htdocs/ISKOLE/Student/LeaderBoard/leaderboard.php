@@ -7,7 +7,7 @@
 	
 	<link rel="stylesheet" href="leaderboard.css">
 	<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
-<script>
+<!-- <script>
 			function myFunction2() {
 			  var txt;
 			  var r = confirm("Are you sure you want to logout?");
@@ -15,7 +15,7 @@
 				location.replace("../../Home/index.php");
 			  }
 			}
-			</script>
+			</script> -->
 			
 			<script>
 			  /* Set the width of the sidebar to 250px (show it) */
@@ -40,7 +40,8 @@
 						  <a href="../LeaderBoard/leaderboard.php">LeaderBoard</a>
 						  <a href="../GetHelp/gethelp.php">Get Help</a>
 						  <a href="../../Profile/StuProfile.php">Profile</a>
-							<a onclick="myFunction2()">Log out</a>
+						  <a href="../../logout.php">Log out</a>
+							<!-- <a onclick="myFunction2()">Log out</a> -->
 						</div>
 						<a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
 						<a href="../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
