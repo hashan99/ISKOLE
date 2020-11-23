@@ -128,7 +128,7 @@ function myFunction() {
      {
          while($row = mysqli_fetch_assoc($result))
          {
-            echo '<p>' .$row['Areas']. '</p>';
+            echo '<pre>' .$row['Areas']. '</pre>';
          }
      }
     }
