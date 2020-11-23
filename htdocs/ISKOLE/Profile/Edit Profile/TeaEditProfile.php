@@ -99,7 +99,7 @@
           // {
           //   header("Location:../../Student/StudentHome.html");
           // }
-          header("Location:../profile.php");
+          header("Location:../Teaprofile.php");
         }
         else
         {
@@ -149,9 +149,7 @@
 
     <nav class="navigation-bar">
         <img class="logo" src="logo.PNG" width="100" height="100">
-        <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
-         <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
-        </nav>
+    </nav>
      
         <div class="container">
             <img src="../avatar.png" class="pro-pic">
@@ -202,7 +200,7 @@
             </div>
           <button class="btn2" type="submit" name="submit">Save</button>
           </form>
-          <a href="../Profile.php"><button class="btn1">Discard</button></a>
+          <a href="../TeaProfile.php"><button class="btn1">Discard</button></a>
      
   </body>
 </html>

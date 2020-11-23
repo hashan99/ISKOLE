@@ -38,7 +38,7 @@
           if($result)
           {
             // echo "Password Change Succesfull!!";
-            header("Location:../profile.php");
+            header("Location:../Stuprofile.php");
             // $error = "Password Changed Succesfully!!";
           }
           else
@@ -103,8 +103,6 @@
 
     <nav class="navigation-bar">
         <img class="logo" src="logo.PNG" width="100" height="100">
-        <a><button id="log_out" onclick="myFunction1()"><b>Log out</b></button></a>
-        <a><button id="back" onclick="goBack()"> <b>Back </b></button></a>
     </nav>
 
           <div class="container">
@@ -125,7 +123,7 @@
           
           <button class="btn2" type="submit" name="submit">Save</button>
           </form>
-          <a href="../Profile.php"><button class="btn1">Discard</button></a>
+          <a href="../StuProfile.php"><button class="btn1">Discard</button></a>
 
   
 

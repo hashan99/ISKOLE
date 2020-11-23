@@ -73,7 +73,7 @@
 
                   if($count==1)
                   {
-                    header("Location:Content Manager/ContentManager Home Page/CMHome.html");
+                    header("Location:Content Manager/ContentManager Home Page/CMHome.php");
                     // echo "Logged as ".$loggedUser."!!";
                   }
                   else
@@ -118,7 +118,7 @@
 
                       if($count==1)
                       {
-                        header("Location:Student/StudentHome.html");
+                        header("Location:Student/StudentHome.php");
                         // echo "Logged as ".$loggedUser."!!";
                       }
                       else
@@ -163,7 +163,7 @@
 
                           if($count==1)
                           {
-                            header("Location:Teacher/Teacher Home Page/TeacherHome.html");
+                            header("Location:Teacher/Teacher Home Page/TeacherHome.php");
                             // echo "Logged as ".$loggedUser."!!";
                             // header('Location: http://localhost/HRMS/profile.php');
                           }

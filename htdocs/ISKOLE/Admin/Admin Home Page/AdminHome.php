@@ -12,7 +12,7 @@
               var txt;
               var r = confirm("Are you sure you want to logout?");
               if (r == true) {
-                location.replace("../Home/index.php");
+                location.replace("../../Home/index.php");
               }
             }
             </script>
@@ -34,18 +34,18 @@
                         <img class="logo" src="logo.PNG" width="100" height="100">
                         <div id="mySidepanel" class="sidepanel">
                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                          <a href="AdminHome.html">Home</a>
-                            <a href="#">View Content</a>
+                          <a href="AdminHome.php">Home</a>
+                            <a href="View Contents/StudentSelectSubject.php">View Content</a>
                             <a href="../../Forum/ForumHome.html">Forum</a>
-                            <a href="Submit Content/SubmitContent.html">Submit Content</a>
+                            <a href="Submit Content/SubmitContent.php">Submit Content</a>
                             <a href="Manage Users/ManageUsers.html">Manage Users</a>
-                            <a href="../../Profile/Profile.php">Profile</a>
+                            <!-- <a href="../../Profile/Profile.php">Profile</a> -->
                             <a href="#">Notifications</a>
                             <a onclick="myFunction2()">Log out</a>
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-                        <button id=name_tag><b>Amaya Kinivita<br>#20 (1050xp)</b></button>
-                        <img style="float: right;" class="avatar" src="avatar.png" width="70" height="70">
+                        <button id=name_tag><b>Admin(Super User)<br></b></button>
+                        <img style="float: right; padding-top: 5px;" class="avatar" src="avatar.png" width="60" height="60">
                     </nav>
 	
                     <div class="relative">
@@ -59,7 +59,7 @@
                           <p class="monospace thick">Self learning website for Sri Lankan students</p>
                         </div>
                         <div class="absolute3" align="center">
-                          <a style="text-decoration:none" href="Submit Content/SubmitContent.html"><button id="button"><b>Submit Content</button></a>
+                          <a style="text-decoration:none" href="Submit Content/SubmitContent.php"><button id="button"><b>Submit Content</button></a>
                             &nbsp &nbsp &nbsp
                             <a style="text-decoration:none" href="Manage Users/ManageUsers.html"><button id="button"><b>Manage Users</b></button></a>                       
                         </div>
