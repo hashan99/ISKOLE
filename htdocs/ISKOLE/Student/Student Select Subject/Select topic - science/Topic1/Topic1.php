@@ -165,16 +165,12 @@ function myFunction() {
 
     </div>
     <div class="card">
-      <h3>Marks</h3>
-      
-      <!-- add markes obtained for the quiz here-->
+    <a style="text-decoration:none" href="../Quiz/Quiz.php"><button id="button"><b>Attempt Quiz</b></button></a>
+    
 
     </div>
   </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
     </body>
 </html> 

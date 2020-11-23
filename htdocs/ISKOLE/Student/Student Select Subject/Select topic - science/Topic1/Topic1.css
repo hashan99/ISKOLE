@@ -84,8 +84,7 @@ body{
 
 #center {
   margin: 0;
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -149,6 +148,7 @@ body {
   padding: 20px;
   text-align: center;
   background: #ddd;
+  left: 100px;
   margin-top: 20px;
 }
 
