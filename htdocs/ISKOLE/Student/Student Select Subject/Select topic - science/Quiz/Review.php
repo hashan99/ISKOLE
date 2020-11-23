@@ -64,7 +64,7 @@
     
   </table>
   <div id="center">
-  <a style="text-decoration:none" href="../Topic1/Topic1.php"><button id="back"><b>Back to content</b></button></a>
+  <a style="text-decoration:none" href="../Topic1/Topic1.php?topic_no=1"><button id="back"><b>Back to content</b></button></a>
   </div>
   </div>
 </body>
