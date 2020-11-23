@@ -4,11 +4,25 @@
         <title>Home</title>
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
         <link href="view-question.css" rel="stylesheet" type="text/css">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     </head>
 
     <body>
+
+      <script>
+  /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+  document.getElementById("myReply").style.height = "auto";
+  document.getElementById("myReply").style.paddingBottom = "60px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("myReply").style.height = "0";
+  document.getElementById("myReply").style.paddingBottom = "0";
+}
+        </script>
+
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="120" height="120">
             <a><button id="log_out"><b>Log out</b></button></a>
@@ -33,9 +47,21 @@
             <div class="reply-info">
               Showing all replies
             </div>
-            <button class="reply-button">Reply</button>
+            <a><button class="reply-button" onclick="openNav()">Reply</button></a>
           </section>
         </div>
+        <div id="myReply" class="replybox">
+          <a class="closebtn" onclick="closeNav()">&times;</a>
+            <p class="replying-to">Replying to Bhathiya Gunathilaka</p>
+            <form method="POST">
+              <div>
+              <textarea placeholder="Start typing..." class="reply-message"></textarea>
+              <br><button class="post-button">Post</button>
+              </div>
+
+            </form>
+        </div>
+
         <div class="box3">
           <section class="section">
             <img src="avatar.png" class="question-avatar">
@@ -72,7 +98,7 @@
             <button class="reply-button">Like</button>
           </section> 
         </div>
-      </div>
+        </div>
     </body>
 </html> 
 

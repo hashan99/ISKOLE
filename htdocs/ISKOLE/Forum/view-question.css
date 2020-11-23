@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(41, 41, 41);
+  background-color: rgb(41, 41, 41);
 }
 
 .thread-container {
@@ -17,7 +17,6 @@ body{
 width:auto;
 height:auto;
 background:white;
-/* margin-top:0; */
 margin-bottom: 20px;
 box-sizing: border-box;
 border-radius: 10px;
@@ -26,18 +25,18 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .box3 {
-    width:auto;
-    height:auto;
-    background:rgb(228, 228, 228);
-    margin-top:20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    align-self: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    }
+  width:auto;
+  height:auto;
+  background:rgb(228, 228, 228);
+  margin-top:20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  align-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
 
 .section{
 display:flex;
@@ -99,11 +98,12 @@ color:grey;
 margin-top: 30px;
 margin-bottom: 10px;
 padding:10px 15px 10px 15px;
-border-radius: 10px;
+border-radius: 30px;
 font-weight: 700;
 color:white;
 background-color: rgb(110, 189, 253);
 border:none;
+cursor: pointer;
 }
 
 .reply-button:hover{
@@ -111,59 +111,85 @@ background-color: rgba(100, 100, 100, 0.897) ;
 color:white;
 }
 
-/* Popup container - can be anything you want */
-.popup {
+
+/* Reply form popup */
+.replybox {
+  height: 0;/* 0 height - change this with JavaScript */
+  width: auto; 
   position: relative;
-  display: inline-block;
+  z-index: 1; /* Stay on top */
+  background:rgb(110, 189, 253);
+  overflow: hidden;
+  padding-top: 0; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  margin-top:20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.replybox a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.replybox .closebtn {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  font-size: 25px;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  color: white;
 }
 
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 500px ;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
+.replybox .closebtn:hover {
+  color:rgb(170, 170, 170);
+}
+
+.replying-to{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.reply-message{
+  border-radius: 20px;
+  border-color: grey;
+  border-width: 0.5px;
+  padding: 5px 5px 0 10px;
+  height: 150px;
+  width: 100%;
+  font-size: 13px;
+  border: 1px solid silver;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.post-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding:10px 15px 10px 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  color: rgb(110, 189, 253);
+  background-color:white;
+  border:none;
+  cursor: pointer;
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
+  bottom: 4px;
+  right: 18px;
+  }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+  .post-button:hover{
+    background-color: rgb(170, 170, 170);
+    color: white;
+  }
 
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}

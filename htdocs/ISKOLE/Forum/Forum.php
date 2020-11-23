@@ -1,7 +1,7 @@
 <?php 
         session_start();
         $_SESSION["name"]="Amaya Kinivita";
-    include '../Connection/connection.php';
+    include '../connection.php';
 
 ?>
 <!DOCTYPE html>

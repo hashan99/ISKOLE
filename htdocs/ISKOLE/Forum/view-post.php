@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include '../Connection/connection.php';
+    include '../connection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,13 +11,21 @@
     </head>
 
     <body>
-        <script>
-            // When the user clicks on div, open the popup
-            function myFunction() {
-              var popup = document.getElementById("myPopup");
-              popup.classList.toggle("show");
-            }
+
+    <script>
+  /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+  document.getElementById("myReply").style.height = "auto";
+  document.getElementById("myReply").style.paddingBottom = "60px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("myReply").style.height = "0";
+  document.getElementById("myReply").style.paddingBottom = "0";
+}
         </script>
+
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="120" height="120">
             <a><button id="log_out"><b>Log out</b></button></a>
@@ -42,15 +50,26 @@
             <div class="reply-info">
               Showing all replies
             </div>
-            <button class="reply-button popup" onclick="myFunction()">Reply
-              <span class="popuptext" id="myPopup">A Simple Popup!</span></button>
+            <a><button class="reply-button" onclick="openNav()">Reply</button></a>
           </section>
+        </div>
+        <div id="myReply" class="replybox">
+          <a class="closebtn" onclick="closeNav()">&times;</a>
+            <p class="replying-to">Replying to Bhathiya Gunathilaka</p>
+            <form method="POST">
+              <div>
+              <textarea placeholder="Start typing..." class="reply-message"></textarea>
+              <br><button class="post-button">Post</button>
+              </div>
+
+            </form>
         </div>
         <div class="box3">
           <section class="section">
             <img src="avatar.png" class="question-avatar">
-            <div class="question-name">Dumindu Hendalage</div>
-            <div class="question-date">Posted by a teacher on 10th Nov. 2020</div>
+            <div class="question-name">Dumindu Hebdalage</div>
+            <div class="question-date">Posted by a teacher on 10th Nov. 2020
+            </div>
           </section>
           <section class="section question-description">
             It’s the phenomeon of bla bla bla bla. Notice that white band around our page? That’s a default margin/padding added by your browser. Different browsers have different default styles for all of their HTML elements, making it difficult to create consistent stylesheets . 
@@ -81,7 +100,7 @@
             <button class="reply-button">Like</button>
           </section> 
         </div>
-      </div>
+        </div>
     </body>
 
 </html>
