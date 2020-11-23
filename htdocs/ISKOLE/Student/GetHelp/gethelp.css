@@ -1,11 +1,11 @@
 /*Background Settings*/
 body{  
-    margin: 0;  
-    padding: 0;  
-    background:url(gethelp.JPG) no-repeat; 
-    background-size: cover;
-    height: 100vh; 
-    font-family: 'Arial';  
+  margin: 0;  
+  padding: 0;  
+  background:url(gethelp.JPG) no-repeat; 
+  background-size: cover;
+  height: 100vh; 
+  font-family: 'Arial';  
 } 
 
 /*Navigation bar settings*/
@@ -78,7 +78,8 @@ height: 70px;
 border: none; 
 font-size: 15px; 
 text-align: top;
-background-color: rgba(0, 159, 174, 0.001);
+color: whitesmoke;
+background-color:  rgba(0, 159, 174, 0.001);
 }
 
 /* Style the button that is used to open the sidepanel */
@@ -99,211 +100,202 @@ background-color: rgb(241, 205, 138);
 
 /*Profile and log out buttons settings*/
 #back{
-    width: 200px;  
-    height: 50px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
-    font-size: 17px;
-    transition-duration: 0.4s;
+  width: 200px;  
+  height: 50px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  color: rgba(105, 126, 143, 0.99);
+  font-size: 17px;
+  transition-duration: 0.4s;
 }
 
 #back:hover {
-  background-color: #ffbc38;
-  color: white;
+background-color: #ffbc38;
+color: white;
 }
 
 #log_out{
-    width: 200px;  
-    height: 50px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-right: 7px;  
-    color: rgba(105, 126, 143, 0.99);
-    font-size: 17px;
-    transition-duration: 0.4s;
+  width: 200px;  
+  height: 50px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  color: rgba(105, 126, 143, 0.99);
+  font-size: 17px;
+  transition-duration: 0.4s;
 }
 
 #log_out:hover {
-  background-color:#ffbc38;
-  color: white;
+background-color:#ffbc38;
+color: white;
 }
 
 /*Contained button settings*/
 #button {
-  width: 200px;  
-  height: 40px;
-  border: none;
-  border-radius: 17px;
-  color: rgba(105, 126, 143, 0.99);
-  padding: center;
-  text-align:center;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+width: 200px;  
+height: 40px;
+border: none;
+border-radius: 17px;
+color: rgba(105, 126, 143, 0.99);
+padding: center;
+text-align:center;
+text-decoration: none;
+display: block;
+font-size: 20px;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
 }
 
 #button:hover {
-  background-color:rgba(37, 133, 129);
-  color: white;
-}
-
-#center {
-  margin: 0;
-  position:absolute;
-  top: 55%;
-  left: 25%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+background-color:rgba(37, 133, 129);
+color: white;
 }
 
 .card {
-  background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  max-width: 350px;
-  margin: auto;
-  text-align: center;
-  position:relative;
+background: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+max-width: 350px;
+margin: auto;
+text-align: center;
+position:relative;
 }
 
 .card:hover{
-  transform: scale(1.1);
-  transition-duration: 0.9s;
+transform: scale(1.1);
+transition-duration: 0.9s;
 }
 
 .title {
-  color: grey;
-  font-size: 18px;
+color: grey;
+font-size: 18px;
 }
 
 #button1 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #002233;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #002233;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button1:hover {
-  background-color:#3a8a84;
-  color: white;
+background-color:#3a8a84;
+color: white;
 }
 
 #button2 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #804000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #804000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button2:hover {
-  background-color:#2a313d;
-  color: white;
+background-color:#2a313d;
+color: white;
 }
 
 #button3 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #408000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #408000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button3:hover {
-  background-color:#0f525c;
-  color: white;
+background-color:#0f525c;
+color: white;
 }
 
 #button4 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #33adff;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #33adff;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button4:hover {
-  background-color:#8f1f26;
-  color: white;
+background-color:#8f1f26;
+color: white;
 }
 
 #button5{
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #ff4d4d;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #ff4d4d;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button5:hover {
-  background-color:#99300c;
-  color: white;
+background-color:#99300c;
+color: white;
 }
 
 #button6{
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #ffa366;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition-duration: 0.4s;
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #ffa366;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+transition-duration: 0.4s;
 }
 
 #button6:hover {
-  background-color:#ac634a;
-  color: white;
+background-color:#ac634a;
+color: white;
 }
 
 a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+text-decoration: none;
+font-size: 22px;
+color: black;
 }
 
 .column {
-  float: left;
-  width: 20%;
-  padding: 0 10px;
+float: left;
+width: 20%;
+padding: 0 10px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
@@ -311,15 +303,16 @@ a {
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
 
 #center {
-  margin: 0;
-  position: absolute;
-  top: 56%;
-  left: 35%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+margin: 0;
+position: absolute;
+top: 65%;
+left: 35%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}

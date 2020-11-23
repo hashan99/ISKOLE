@@ -61,7 +61,7 @@
    <div class="row">
     <div class="column">
       <div class="card">
-      <img src="teacher1.jpg" alt="Science" style="width:100%">
+      <img src="teacher1.jpg" alt="Science" style="width: 80%">
       <h3>K H M Perera</h3>
       <p class="title">Science</p>
       <p>English Medium</p>
@@ -71,7 +71,7 @@
    </div>
    <div class="column">
       <div class="card">
-      <img src="teacher2.jpg" alt="Mathematics" style="width:100%">
+      <img src="teacher2.jpg" alt="Mathematics" style="width:80%">
       <h3>P K S Ranabhahu</h3>
       <p class="title">Mathematics</p>
       <p>English Medium</p>
@@ -81,7 +81,7 @@
          </div>
          <div class="column">
       <div class="card">
-      <img src="teacher3.jpg" alt="Geography" style="width:100%">
+      <img src="teacher3.jpg" alt="Geography" style="width:80%">
       <h3>H M D Silva</h3>
       <p class="title">Geography</p>
       <p>English Medium</p>
@@ -93,7 +93,7 @@
    <div class="row">
     <div class="column">
       <div class="card">
-      <img src="teacher4.jpg" alt="Music" style="width:100%">
+      <img src="teacher4.jpg" alt="Music" style="width:80%">
       <h3>C J B Jayasinghe</h3>
       <p class="title">Music</p>
       <p>English Medium</p>
@@ -104,7 +104,7 @@
    </div>
    <div class="column">
       <div class="card">
-      <img src="teacher7.jpg" alt="Health" style="width:100%">
+      <img src="teacher7.jpg" alt="Health" style="width:80%">
       <h3>A K Gunathilaka</h3>
       <p class="title">Health</p>
       <p>English Medium</p>
@@ -114,7 +114,7 @@
          </div>
          <div class="column">
       <div class="card">
-      <img src="teacher8.jpg" alt="English" style="width:100%">
+      <img src="teacher8.jpg" alt="English" style="width:80%">
       <h3>T U L G Wanasinghe</h3>
       <p class="title">English</p>
       <p>General</p>
