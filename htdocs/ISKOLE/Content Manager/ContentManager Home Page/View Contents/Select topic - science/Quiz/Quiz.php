@@ -3,8 +3,8 @@
     <html>
 
         <head>
-            <title>Quiz</title>
-            <link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon">
+            <title>CM Quiz</title>
+            <link rel = "icon" href = "../logo.PNG" type = "image/x-icon">
             <link href="Quiz.css" rel="stylesheet" type="text/css">
         <!-- <script>
       function myFunction2() {

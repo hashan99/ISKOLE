@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>CM Home</title>
         <link href="CMHome.css" rel="stylesheet" type="text/css">
         <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <!-- <script>

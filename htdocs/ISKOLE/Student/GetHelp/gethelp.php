@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>GetHelp</title>
+    <title>Student GetHelp</title>
     <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="gethelp.css" rel="stylesheet" type="text/css">
     <!-- <script>

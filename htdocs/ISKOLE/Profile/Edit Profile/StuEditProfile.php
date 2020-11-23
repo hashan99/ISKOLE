@@ -9,12 +9,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
     <title>Edit Profile</title>
+    <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="EditProfile.css" rel="stylesheet" type="text/css">
         <script src="EditProfile.js"></script>
   </head>
   <body>
     
-    <?php
+    <?php 
+    // $fnameErr = "";
+      // if (empty($_POST["firstname"])) 
+      // {
+      //   $fnameErr = "Name is required";
+      // } 
+      // else
+      // {  
+      //   $fname = test_input($_POST["firstname"]);
+      // }
+
     if(isset($_POST['submit']))
     {
       $fName = $_POST['firstname'];
@@ -26,6 +37,15 @@
       // $email = $_POST['email'];
       // $password = $_POST['password'];
       // $enPassword = sha1($password);
+
+      // if (empty($_POST["firstname"])) 
+      // {
+      //   $fnameErr = "Name is required";
+      // } 
+      // else
+      // {  
+      //   $fname = test_input($_POST["firstname"]);
+      // }
 
       //echo "$fName $password $enPassword";
 
@@ -153,7 +173,13 @@
             <div class="pwd">
               <form action="StuEditProfile.php" method="POST">
               <label class="pw-label">First Name:</label>
-              <input type="text" class="textbox" name="firstname" value="<?php echo $_SESSION['fname']; ?>" required><br><br>
+              <input type="text" class="textbox" name="firstname" value="<?php echo $_SESSION['fname']; ?>" required>
+              <!-- <span class="error">*  -->
+              <!-- <?php 
+              // echo $fnameErr;
+              ?> -->
+              <!-- </span> -->
+              <br><br>
 
               <label class="pw-label">Last Name:</label>
               <input type="text" class="textbox" name="lastname" value="<?php echo $_SESSION['lname']; ?>" required><br><br>

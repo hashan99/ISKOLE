@@ -6,7 +6,7 @@
 <html>
 
 <head>
-	<title>Quiz review</title>
+	<title>Student Quiz review</title>
 	<link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon"> 
     <link href="Review.css" rel="stylesheet" type="text/css">
 

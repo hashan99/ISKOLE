@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Q/A Session</title>
+        <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
         <link href="view-question.css" rel="stylesheet" type="text/css">
         <!-- <script>

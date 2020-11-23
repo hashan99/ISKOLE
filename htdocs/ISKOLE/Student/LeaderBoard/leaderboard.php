@@ -4,7 +4,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	
+	<title>Student Leaderboard</title>
+	<link rel = "icon" href = "../logo.PNG" type = "image/x-icon"> 
 	<link rel="stylesheet" href="leaderboard.css">
 	<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
 <!-- <script>

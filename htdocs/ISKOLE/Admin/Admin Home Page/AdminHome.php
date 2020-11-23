@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Admin Home</title>
         <link href="AdminHome.css" rel="stylesheet" type="text/css">
         <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <!-- <script>

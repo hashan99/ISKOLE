@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>Manage Teachers</title>
+	<title>Admin Manage Teachers</title>
 	<link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon"> 
     <link href="TeacherManage.css" rel="stylesheet" type="text/css">
 

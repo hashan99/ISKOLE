@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Student Home</title>
         <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
         <!-- <script>
@@ -70,7 +70,7 @@ function closeNav() {
           <div class="absolute3" align="center">
             <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.php"><button id="button"><b>Subjects</button></a>
               &nbsp &nbsp &nbsp
-              <a style="text-decoration:none" href="Forum/ForumHome.html"><button id="button"><b>Forum</b></button></a>
+              <a style="text-decoration:none" href="../Forum/Forum.php"><button id="button"><b>Forum</b></button></a>
           </div>
         </div>
 

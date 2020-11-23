@@ -4,8 +4,8 @@
 <html>
 
 <head>
-	<title>Quiz review</title>
-	<link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon"> 
+	<title>Teacher Quiz review</title>
+	<link rel = "icon" href = "../logo.PNG" type = "image/x-icon"> 
     <link href="Review.css" rel="stylesheet" type="text/css">
 
      <!-- <script>

@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Profile</title>
+    <title><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></title>
+    <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
     <link href="Profile.css" rel="stylesheet" type="text/css">
   <!-- <script>
 function myFunction2() {

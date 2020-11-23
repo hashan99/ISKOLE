@@ -402,3 +402,12 @@ left: 55%;
 color: white;
 background-color: #1d6d21;
 }
+
+.error
+{
+  /*align-items: center;*/
+  color : #FF0000;
+  margin-bottom: 5px;
+  font-size: 14px;
+  /*align-items: center;*/
+}

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Teacher Home</title>
         <link href="TeacherHome.css" rel="stylesheet" type="text/css">
         <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <!-- <script>

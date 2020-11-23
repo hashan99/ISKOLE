@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
-        <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
+        <title>Teacher Lesson View</title>
+        <link rel = "icon" href = "../logo.PNG" type = "image/x-icon">
         <link href="Topic1.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <script>

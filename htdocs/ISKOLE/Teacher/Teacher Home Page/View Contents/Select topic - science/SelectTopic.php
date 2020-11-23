@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Subject</title>
+		<title>Teacher Topic View</title>
 		<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="SelectTopic.css" rel="stylesheet" type="text/css">
     <!-- <script>

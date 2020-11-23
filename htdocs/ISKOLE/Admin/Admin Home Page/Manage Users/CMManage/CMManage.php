@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>Manage Content-Managers</title>
+	<title>Admin Manage CM</title>
 	<link rel = "icon" href = "../../../../Images/logo.PNG" type = "image/x-icon"> 
     <link href="CMManage.css" rel="stylesheet" type="text/css">
 

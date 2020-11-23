@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Subject</title>
+        <title>Teacher Submit Content</title>
+        <link rel = "icon" href = "../logo.PNG" type = "image/x-icon"> 
         <link href="SubmitContent.css" rel="stylesheet" type="text/css">
     <!-- <script>
             function myFunction2() {
