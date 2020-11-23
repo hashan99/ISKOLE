@@ -5,7 +5,7 @@
     <head>
         <title>Subject</title>
         <link href="SubmitContent.css" rel="stylesheet" type="text/css">
-    <script>
+    <!-- <script>
             function myFunction2() {
               var txt;
               var r = confirm("Are you sure you want to logout?");
@@ -13,7 +13,7 @@
                 location.replace("../../../Home/index.php");
               }
             }
-            </script>
+            </script> -->
             
             <script>
               /* Set the width of the sidebar to 250px (show it) */
@@ -75,7 +75,8 @@
                                 <input type="checkbox">
                                 <span class="slider round"></span>
                               </label></a>
-                            <a onclick="myFunction2()">Log out</a>
+                              <a href="../../../logout.php">Log out</a>
+                            <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
                         <a href="../../../Profile/TeaProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>

@@ -6,7 +6,7 @@
 		<title>Subject</title>
 		<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="SelectTopic.css" rel="stylesheet" type="text/css">
-    <script>
+    <!-- <script>
       function myFunction2() {
         var txt;
         var r = confirm("Are you sure you want to logout?");
@@ -14,7 +14,7 @@
         location.replace("../../../Home/index.php");
         }
       }
-      </script>
+      </script> -->
       
       <script>
         /* Set the width of the sidebar to 250px (show it) */
@@ -33,11 +33,11 @@
             <img class="logo" src="logo.PNG" width="100" height="100">
             <div id="mySidepanel" class="sidepanel">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                          <a href="TeacherHome.php">Home</a>
-                            <a href="View Contents/StudentSelectSubject.php">View Content</a>
-                            <a href="../../Forum/ForumHome.html">Forum</a>
-                            <a href="../../Content Manager/ContentManager Home Page/Submit Content/SubmitContent.html">Submit Content</a>
-                            <a href="../../Profile/TeaProfile.php">Profile</a>
+                          <a href="../../TeacherHome.php">Home</a>
+                            <a href="../../View Contents/StudentSelectSubject.php">View Content</a>
+                            <a href="../../../../Forum/ForumHome.html">Forum</a>
+                            <a href="../../Submit Content/SubmitContent.php">Submit Content</a>
+                            <a href="../../../../Profile/TeaProfile.php">Profile</a>
                             <a><div class="tooltip">Offline/Online
                                 <span class="tooltiptext">Use the switch to mark you as offline/online, So the students can know whether you are available or not</span>
                             </div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -45,10 +45,11 @@
                                 <input type="checkbox">
                                 <span class="slider round"></span>
                               </label></a>
-                            <a onclick="myFunction2()">Log out</a>
+                            <a href="../../../../logout.php">Log out</a>
+                            <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-            <a href="../../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+            <a href="../../../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
             <br>
             <?php 
                 if($_SESSION['type'] == 1)

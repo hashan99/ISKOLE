@@ -67,6 +67,22 @@ line-height: 80px;
 overflow: hidden;
 }
 
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+width: 50px;  
+height: 50px;  
+border: none;  
+border-radius: 17px;  
+padding-right: 7px;  
+color: brown;
+font-size: 20px;
+transition-duration: 0.4s;
+}
+
+.openbtn:hover {
+background-color: rgb(241, 205, 138);
+}
+
 #logo{
 float: left;
 }

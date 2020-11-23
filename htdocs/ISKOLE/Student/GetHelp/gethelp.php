@@ -104,7 +104,7 @@
    </div>
    <div class="column">
       <div class="card">
-      <img src="teacher7.jpg" alt="Health" style="width:80%">
+      <img src="teacher1.jpg" alt="Health" style="width:80%">
       <h3>A K Gunathilaka</h3>
       <p class="title">Health</p>
       <p>English Medium</p>
@@ -115,7 +115,7 @@
          <div class="column">
       <div class="card">
       <img src="teacher8.jpg" alt="English" style="width:80%">
-      <h3>T U L G Wanasinghe</h3>
+      <h3>T U Wanasinghe</h3>
       <p class="title">English</p>
       <p>General</p>
       <p>tulgiskole@gmail.com</p>

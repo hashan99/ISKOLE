@@ -7,7 +7,7 @@
         <title>Home</title>
         <link href="AdminHome.css" rel="stylesheet" type="text/css">
         <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
-        <script>
+        <!-- <script>
             function myFunction2() {
               var txt;
               var r = confirm("Are you sure you want to logout?");
@@ -15,7 +15,7 @@
                 location.replace("../../Home/index.php");
               }
             }
-            </script>
+            </script> -->
             
             <script>
               /* Set the width of the sidebar to 250px (show it) */
@@ -41,7 +41,8 @@
                             <a href="Manage Users/ManageUsers.html">Manage Users</a>
                             <!-- <a href="../../Profile/Profile.php">Profile</a> -->
                             <a href="#">Notifications</a>
-                            <a onclick="myFunction2()">Log out</a>
+                            <a href="../../logout.php">Log out</a>
+                            <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
                         <button id=name_tag><b>Admin(Super User)<br></b></button>
