@@ -156,7 +156,7 @@ background-color: rgb(241, 205, 138);
 
 /* Transparent container */
 .container {
-  width:50%;
+  width:47%;
   height:100px auto;
   background: rgba(250, 219, 161, 0.7);
   margin:40px auto;
@@ -168,7 +168,7 @@ background-color: rgb(241, 205, 138);
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
-  /*margin-right: 30px;*/
+  margin-right: 30px;
   }
 
 .section{
