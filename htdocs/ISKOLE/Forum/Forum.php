@@ -9,6 +9,7 @@
 <html>
     <head>
         <title>Discussion Forum</title>
+        <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
         <link href="Forum.css" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
