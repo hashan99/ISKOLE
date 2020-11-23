@@ -32,7 +32,7 @@
         <a href="index.php"><img src="../Images/logo.PNG" width="250" height="250"></a> 
       </div>
       <div class="absolute2" align="center">
-        <p class="serif thick">I S K O L E</p>
+        <p class="serif">I S K O L E</p>
       </div>
       <div class="absolute4" align="center">
         <p class="monospace thick">Self learning website for Sri Lankan students</p>
