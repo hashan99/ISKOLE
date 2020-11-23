@@ -1,6 +1,6 @@
 <?php 
         session_start();
-        $_SESSION["name"]="Amaya Kinivita";
+        // $_SESSION["name"]="Amaya Kinivita";
     include '../connection.php';
 
 ?>
@@ -12,6 +12,27 @@
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
         <link href="Forum.css" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!-- <script>
+function myFunction2() {
+  var txt;
+  var r = confirm("Are you sure you want to logout?");
+  if (r == true) {
+    location.replace("../Home/index.php");
+  }
+}
+</script> -->
+
+<script>
+  /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+  </script>
     </head>
     
     <body>
@@ -42,11 +63,32 @@
         ?> 
 
         <nav class="navigation-bar">
-                <img class="logo" src="logo.PNG" width="120" height="120">
-                <a href="../logout.php"><button id="log_out">Log out</button></a>
-                <!-- <a><button id="log_out"><b>Log out</b></button></a> -->
-                <a><button id="profile"><b>Profile</b></button></a>
-            </nav>
+            <img class="logo" src="logo.PNG" width="100" height="100">
+            <div id="mySidepanel" class="sidepanel">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <!-- <a href="StudentHome.php">Home</a> -->
+                <!-- <a href="Student Select Subject/StudentSelectSubject.php">Subjects</a> -->
+                <a href="../Forum/Forum.php">Forum</a>
+                <!-- <a href="LeaderBoard/leaderboard.php">Leaderboard</a> -->
+                <!-- <a href="GetHelp/gethelp.php">Get Help</a> -->
+                <!-- <a href="../Profile/StuProfile.php">Profile</a> -->
+                <a href="../logout.php">Log out</a>
+                <!-- <a onclick="myFunction2()">Log out</a> -->
+            </div>
+            <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
+            <button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?><br>
+              <?php 
+                if($_SESSION['type'] == 1)
+                {
+                   echo $_SESSION['xp']." xp | #3"; 
+                }
+                else
+                {
+
+                }
+              ?></b></button>
+            <img style="float: right; padding-top: 5px;" class="avatar" src="avatar.png" width="60" height="60">        
+        </nav>
         
         <div class="box">
             <h2 style="text-align:center">Discussion Forum</h2><br>

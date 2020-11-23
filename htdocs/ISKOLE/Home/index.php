@@ -35,7 +35,7 @@
         <p class="serif">I S K O L E</p>
       </div>
       <div class="absolute4" align="center">
-        <p class="monospace thick">Self learning website for Sri Lankan students</p>
+        <p class="monospace thick">Where Learning meets passion.</p>
       </div>
       <div class="absolute3" align="center">
         <a><button id="log_in" onclick="document.getElementById('id01').style.display='block' "><b>Login

@@ -44,6 +44,9 @@
                 // echo "</pre><br>";
                 $loggedUser = $row['username'];
                 // $_SESSION['un'] = $loggedUser;
+                $_SESSION['fname']  = "Admin(Super ";
+                $_SESSION['lname']  = "User)";
+                $_SESSION['type']   = 2;
                 // echo $loggedUser;
               }
 
@@ -69,6 +72,9 @@
                     // echo "</pre><br>";
                     $loggedUser = $row['username'];
                     // echo $loggedUser;
+                    $_SESSION['fname']  = "Content";
+                    $_SESSION['lname']  = "Manager";
+                    $_SESSION['type']   = 2;
                   }
 
                   if($count==1)

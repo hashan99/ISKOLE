@@ -5,7 +5,7 @@
     <head>
         <title>Subject</title>
         <link href="SubmitContent.css" rel="stylesheet" type="text/css">
-    <script>
+    <!-- <script>
             function myFunction2() {
               var txt;
               var r = confirm("Are you sure you want to logout?");
@@ -13,7 +13,7 @@
                 location.replace("../../../Home/index.php");
               }
             }
-            </script>
+            </script> -->
             
             <script>
               /* Set the width of the sidebar to 250px (show it) */
@@ -65,7 +65,7 @@
                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                           <a href="../CMHome.php">Home</a>
                             <a href="../View Contents/StudentSelectSubject.php">View Content</a>
-                            <a href="../../../Forum/ForumHome.html">Forum</a>
+                            <a href="../../../Forum/Forum.php">Forum</a>
                             <a href="../Submit Content/SubmitContent.php">Submit Content</a>
                             <!-- <a href="../../../Profile/Profile.php">Profile</a> -->
                             <a href="#">Notifications</a>

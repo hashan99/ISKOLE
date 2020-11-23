@@ -5,7 +5,7 @@
   <head>
     <title>Profile</title>
     <link href="Profile.css" rel="stylesheet" type="text/css">
-  <script>
+  <!-- <script>
 function myFunction2() {
   var txt;
   var r = confirm("Are you sure you want to logout?");
@@ -13,7 +13,7 @@ function myFunction2() {
     location.replace("../Home/index.php");
   }
 }
-</script>
+</script> -->
 
 <script>
   /* Set the width of the sidebar to 250px (show it) */
@@ -34,7 +34,7 @@ function closeNav() {
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="../Teacher/Teacher Home Page/TeacherHome.php">Home</a>
               <a href="../Teacher/Teacher Home Page/View Contents/StudentSelectSubject.php">View Content</a>
-              <a href="../Forum/ForumHome.html">Forum</a>
+              <a href="../Forum/Forum.php">Forum</a>
               <a href="../Teacher/Teacher Home Page/Submit Content/SubmitContent.html">Submit Content</a>
               <a href="TeaProfile.php">Profile</a>
               <a><div class="tooltip">Offline/Online
@@ -44,7 +44,8 @@ function closeNav() {
               <input type="checkbox">
               <span class="slider round"></span>
               </label></a>
-              <a onclick="myFunction2()">Log out</a>
+              <a href="../logout.php">Log out</a>
+              <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
             

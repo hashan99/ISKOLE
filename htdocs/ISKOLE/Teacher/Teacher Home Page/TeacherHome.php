@@ -35,7 +35,7 @@
                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                           <a href="TeacherHome.php">Home</a>
                             <a href="View Contents/StudentSelectSubject.php">View Content</a>
-                            <a href="../../Forum/ForumHome.html">Forum</a>
+                            <a href="../../Forum/Forum.php">Forum</a>
                             <a href="Submit Content/SubmitContent.php">Submit Content</a>
                             <a href="../../Profile/TeaProfile.php">Profile</a>
                             <a><div class="tooltip">Offline/Online
@@ -72,7 +72,7 @@
                           <p class="serif thick">I S K O L E</p>
                         </div>
                         <div class="absolute4" align="center">
-                          <p class="monospace thick">Self learning website for Sri Lankan students</p>
+                          <p class="monospace thick">Where Learning meets passion.</p>
                         </div>
                         <div class="absolute3" align="center">
                           <a style="text-decoration:none" href="Submit Content/SubmitContent.php"><button id="button"><b>Submit Content</button></a>

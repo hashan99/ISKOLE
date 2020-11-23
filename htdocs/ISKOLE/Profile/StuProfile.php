@@ -34,7 +34,7 @@ function closeNav() {
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="../Student/StudentHome.php">Home</a>
                 <a href="../Student/Student Select Subject/StudentSelectSubject.php">Subjects</a>
-                <a href="../Forum/ForumHome.html">Forum</a>
+                <a href="../Forum/Forum.php">Forum</a>
                 <a href="../Student/LeaderBoard/leaderboard.php">LeaderBoard</a>
                 <a href="../Student/GetHelp/gethelp.php">Get Help</a>
                 <a href="StuProfile.php">Profile</a>

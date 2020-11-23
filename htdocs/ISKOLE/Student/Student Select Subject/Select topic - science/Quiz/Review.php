@@ -39,8 +39,8 @@
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="../../../StudentHome.php">Home</a>
               <a href="../../../Student Select Subject/StudentSelectSubject.php">Subjects</a>
-              <a href="../../../../Forum/ForumHome.html">Forum</a>
-              <a href="../../../LeaderBoard/leaderboard.php">LeaderBoard</a>
+              <a href="../../../../Forum/Forum.php">Forum</a>
+              <a href="../../../LeaderBoard/leaderboard.php">Leaderboard</a>
               <a href="../../../GetHelp/gethelp.php">Get Help</a>
               <a href="../../../../Profile/StuProfile.php">Profile</a>
               <a href="../../../../logout.php">Log out</a>
@@ -59,7 +59,7 @@
                     // echo $_SESSION['subject'];
                   }
               ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="../../../avatar.png" width="60" height="60"></a>../
+            <img style="float: right; padding-top: 5px;" class="avatar" src="../../../avatar.png" width="60" height="60"></a>
           </nav>
 
         <div class="container">

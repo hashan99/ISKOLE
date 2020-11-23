@@ -35,7 +35,7 @@
                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                           <a href="../../../CMHome.php">Home</a>
                             <a href="../../../View Contents/StudentSelectSubject.php">View Content</a>
-                            <a href="../../../../../Forum/ForumHome.html">Forum</a>
+                            <a href="../../../../../Forum/Forum.php">Forum</a>
                             <a href="../../../Submit Content/SubmitContent.php">Submit Content</a>
                             <!-- <a href="../../../Profile/Profile.php">Profile</a> -->
                             <a href="#">Notifications</a>

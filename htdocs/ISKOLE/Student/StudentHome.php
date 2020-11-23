@@ -35,8 +35,8 @@ function closeNav() {
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <a href="StudentHome.php">Home</a>
                 <a href="Student Select Subject/StudentSelectSubject.php">Subjects</a>
-                <a href="../Forum/ForumHome.html">Forum</a>
-                <a href="LeaderBoard/leaderboard.php">LeaderBoard</a>
+                <a href="../Forum/Forum.php">Forum</a>
+                <a href="LeaderBoard/leaderboard.php">Leaderboard</a>
                 <a href="GetHelp/gethelp.php">Get Help</a>
                 <a href="../Profile/StuProfile.php">Profile</a>
                 <a href="../logout.php">Log out</a>
@@ -65,7 +65,7 @@ function closeNav() {
             <p class="serif thick">I S K O L E</p>
           </div>
           <div class="absolute4" align="center">
-            <p class="monospace thick">Self learning website for Sri Lankan students</p>
+            <p class="monospace thick">Where Learning meets passion.</p>
           </div>
           <div class="absolute3" align="center">
             <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.php"><button id="button"><b>Subjects</button></a>
