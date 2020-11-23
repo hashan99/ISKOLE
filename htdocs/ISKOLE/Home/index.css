@@ -269,6 +269,7 @@ div.absolute2 {
   width: 600px;
   height: 200px;
   /*border: 3px solid #73AD21;*/
+  font-family: Raleway, "Open Sans", sans-serif;
 }
 
 div.absolute4 {
@@ -292,7 +293,7 @@ div.absolute3 {
 }
 
 .serif {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Raleway, "Open Sans", sans-serif;
   /*font-weight: 2000;*/
   font-size: 70px;
   color: #ff9900;
@@ -308,8 +309,4 @@ div.absolute3 {
   font-family: "Lucida Console", Courier, monospace;
   font-size: 18px;
   color: #b3b3cc;
-}
-
-p.thick {
-  font-weight: bold;
 }
