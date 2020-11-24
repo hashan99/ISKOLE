@@ -160,15 +160,22 @@ body{
 
 .show-btn{
   background: rgb(255, 104, 3);
-  padding: 10px 10px;
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: 500;
   font-weight: bold;
   color:white;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 30px;
 }
+
+.show-btn:hover{
+  background-color: white ;
+  color:rgb(255, 104, 3);
+  cursor: pointer;
+}
+
 .show-btn, .container{
   position: absolute;
   left: 50%;
@@ -222,7 +229,7 @@ form .data label{
 form .data input{
   height: 100%;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 17px;
   border: 1px solid silver;
 }
@@ -233,7 +240,7 @@ form .btn{
   width: 100px;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 form .btn .inner{
   height: 100%;
@@ -321,7 +328,7 @@ form .btn button{
   margin-top: 30px;
   margin-bottom: 10px;
   padding:10px 15px 10px 15px;
-  border-radius: 10px;
+  border-radius: 30px;
   font-weight: 700;
   color:white;
   background-color: rgb(255, 104, 3);
@@ -329,5 +336,7 @@ form .btn button{
 }
 
 .view-button:hover{
-  background-color: rgba(255, 104, 3, 0.788) ;
+  background-color: white ;
+  color:rgb(255, 104, 3);
+  cursor: pointer;
 }

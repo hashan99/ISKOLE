@@ -52,12 +52,12 @@ function closeNav() {
             <img class="logo" src="logo.PNG" width="100" height="100">
             <div id="mySidepanel" class="sidepanel">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
-              <!-- <a href="StudentHome.php">Home</a> -->
+              <a href="../Student/StudentHome.php">Home</a>
                 <!-- <a href="Student Select Subject/StudentSelectSubject.php">Subjects</a> -->
                 <a href="../Forum/Forum.php">Forum</a>
-                <!-- <a href="LeaderBoard/leaderboard.php">Leaderboard</a> -->
+                <a href="LeaderBoard/leaderboard.php">Leaderboard</a>
                 <!-- <a href="GetHelp/gethelp.php">Get Help</a> -->
-                <!-- <a href="../Profile/StuProfile.php">Profile</a> -->
+                <a href="../Profile/StuProfile.php">Profile</a>
                 <a href="../logout.php">Log out</a>
                 <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
