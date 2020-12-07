@@ -180,7 +180,7 @@ input[type=text], input[type=password] {
   border: none;
   border-radius: 17px;
   padding-right: 12px;
-  color: #4cd5db;
+  color: #0066ff;
   padding: center;
   text-align:center;
   text-decoration: none;
@@ -189,11 +189,11 @@ input[type=text], input[type=password] {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  border: 3px solid #4cd5db;
+  border: 3px solid #0066ff;
 }
 
 #button:hover {
-  background-color: #4cd5db;
+  background-color: #0066ff;
   color: white;
 }
 
@@ -407,5 +407,73 @@ div.relative {
   height: 200px;
   padding : 100px;
   margin-top : 100px;
+} 
+
+div.relative {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  padding : 50px;
+  margin-top : 0px;
   /*border: 3px solid #73AD21;*/
 } 
+
+div.absolute1 {
+  position: absolute;
+  top: 50px;
+  right: 200;
+  left: 200;
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute2 {
+  position: absolute;
+  top: 200px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+  font-family: Raleway, "Open Sans", sans-serif;
+}
+
+div.absolute4 {
+  position: absolute;
+  top: 360px;
+  /*right: 200;
+  left: 200;*/
+  width: 600px;
+  height: 200px;
+  /*border: 3px solid #73AD21;*/
+}
+
+div.absolute3 {
+  position: absolute;
+  top: 420px;
+  /*padding: 10px 10px;*/
+  padding-top: 15px;
+  width: 600px;
+  height: 100px;
+  /*border: 3px solid #73AD21;*/
+}
+
+.serif {
+  font-family: Raleway, "Open Sans", sans-serif;
+  /*font-weight: 2000;*/
+  font-size: 70px;
+  color: #ff9900;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #b3b3cc;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 18px;
+  color: #b3b3cc;
+}

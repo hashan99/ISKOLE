@@ -34,6 +34,7 @@
           if($result)
           {
             //echo "Record is Added!";
+            header("Location:../Home/index.php");
           }
           else
           {
@@ -60,7 +61,8 @@
           if($result)
           {
             // echo "Record is Added!";
-            $success = "Record is Added!";
+            // $success = "Record is Added!";
+            header("Location:../Home/index.php");
           }
           else
           {
@@ -71,12 +73,12 @@
         // session_destroy();
       ?>  
       
-      <nav class="navigation-bar">
+      <!-- <nav class="navigation-bar">
           <a href="../Home/index.php" id="logo"><img class="logo" src="../Images/logo.PNG" width="100" height="100"></a>
           <a href="register.php"><button id="sign_in"><b>Register for Free</b></button></a>
           <a><button id="log_in" onclick="document.getElementById('id01').style.display='block' "><b>Login
           </button></a>
-      </nav>
+      </nav> -->
 
       <!-- login model -->
       <div id="id01"  class="modal">
@@ -256,21 +258,32 @@
 
       </div>
 	
-
-	    
-  		<div  id="center" class="relative" align="center">
-    	
-          <!-- <table id="center"> -->
-            <!-- <td> -->
-              <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a><br>
-            <!-- </td> -->
-            <!-- <td></td><td><div class="vl"></div></td><td></td> -->
-            <!-- <td> -->
-              <a><button id="button" onclick="document.getElementById('id03').style.display='block' "> Register as Teacher </button></a>
-            <!-- </td> -->
-          <!-- </table> -->
-          
+      <div class="relative">
+      <div class="absolute1" align="center">
+        <a href="../Home/index.php"><img src="../Images/logo.PNG" width="250" height="250"></a> 
       </div>
+      <div class="absolute2" align="center">
+        <p class="serif">I S K O L E</p>
+      </div>
+      <div class="absolute4" align="center">
+        <p class="monospace thick">Where Learning meets passion.</p>
+      </div>
+      <div class="absolute3" align="center">
+        <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a>
+        &nbsp &nbsp 
+        <a><button id="button" onclick="document.getElementById('id03').style.display='block' "> Register as Teacher </button></a>
+      </div>
+    </div>
+	    
+  		<!-- <div  id="center" class="relative" align="center">
+    	
+          
+              <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a><br>
+            
+              <a><button id="button" onclick="document.getElementById('id03').style.display='block' "> Register as Teacher </button></a>
+      
+          
+      </div> -->
 	       
 <script>
 // Get the modal
