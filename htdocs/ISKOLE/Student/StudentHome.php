@@ -59,7 +59,7 @@ function closeNav() {
 
         <div class="relative">
           <div class="absolute1" align="center">
-            <a><img src="logo.PNG" width="250" height="250"></a> 
+            <a href="StudentHome.php"><img src="logo.PNG" width="250" height="250"></a> 
           </div>
           <div class="absolute2" align="center">
             <p class="serif">I S K O L E</p>
