@@ -62,10 +62,10 @@ function closeNav() {
             <a><img src="logo.PNG" width="250" height="250"></a> 
           </div>
           <div class="absolute2" align="center">
-            <p class="serif thick">I S K O L E</p>
+            <p class="serif">I S K O L E</p>
           </div>
           <div class="absolute4" align="center">
-            <p class="monospace thick">Where Learning meets passion.</p>
+            <p class="monospace thick">Where Learning Meets Passion.</p>
           </div>
           <div class="absolute3" align="center">
             <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.php"><button id="button"><b>Subjects</button></a>

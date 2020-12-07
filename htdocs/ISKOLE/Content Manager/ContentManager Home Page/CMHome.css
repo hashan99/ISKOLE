@@ -181,13 +181,13 @@ color: #b3b3cc;
 .monospace {
 font-family: "Lucida Console", Courier, monospace;
 font-size: 18px;
-color: plum;
+color: #b3b3cc;
 }
 
-p.thick {
+/*p.thick {
 font-weight: bold;
 }
-
+*/
 #center {
 margin: 0;
 position: absolute;

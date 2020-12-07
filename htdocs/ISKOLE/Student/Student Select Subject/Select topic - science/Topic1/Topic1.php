@@ -58,7 +58,7 @@
                     // echo $_SESSION['subject'];
                   }
               ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="../../../avatar.png" width="60" height="60"></a>../
+            <img style="float: right; padding-top: 5px;" class="avatar" src="../../../avatar.png" width="60" height="60"></a>
           </nav>
 
 

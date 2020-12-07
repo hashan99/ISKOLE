@@ -266,7 +266,7 @@
         <p class="serif">I S K O L E</p>
       </div>
       <div class="absolute4" align="center">
-        <p class="monospace thick">Where Learning meets passion.</p>
+        <p class="monospace thick">Where Learning Meets Passion.</p>
       </div>
       <div class="absolute3" align="center">
         <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a>
