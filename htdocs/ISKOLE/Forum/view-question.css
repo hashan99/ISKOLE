@@ -1,12 +1,12 @@
 body{
-  background-color:lightblue;
+  background-image: url('view-post.jpg');
 }
 
 /*Navigation bar settings*/
 .navigation-bar {
 width: 100%;  /* i'm assuming full width */
 height: 90px; /* change it to desired width */
-background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
+background-color: transparent; /* change to desired color */
 }
 
 .p{
@@ -65,15 +65,66 @@ overflow: hidden;
 float: left;
 }
 
-#name_tag{
-float: right;
-width: 150px;  
-height: 70px;  
-border: none; 
-font-size: 15px; 
-text-align: top;
-background-color: rgba(0, 159, 174, 0.001);
+.name-button{
+  float: right;
+  width: auto;  
+  height: 50px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-top: 14px;
+  margin-right: 100px;
+  cursor: pointer;
+  }
+
+  .name-button:hover{
+    background-color: turquoise;
+  }
+
+.avatar{
+  float: right; 
+  width: 36px;
+  height: auto;
 }
+
+.name-tag{
+width: auto;  
+height: auto;  
+border-radius:30px; 
+border-color: transparent;
+font-size: 14px; 
+color: rgb(13, 42, 102);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+padding: 0 0 0 5px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+
+.back-button{
+  width: auto;  
+  height: 30px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  }
+
+  .back-icon{
+    float: right; 
+    width: 20px;
+    height: auto;
+  }
 
 /* Style the button that is used to open the sidepanel */
 .openbtn {
@@ -81,7 +132,7 @@ width: 50px;
 height: 50px;  
 border: none;  
 border-radius: 17px;  
-padding-right: 7px;  
+/* padding-right: 7px;   */
 color: purple;
 font-size: 20px;
 transition-duration: 0.4s;
@@ -95,7 +146,7 @@ background-color: plum;
   width:80%;
   height:100px auto;
   background:white;
-  margin:40px auto;
+  margin:20px auto;
   box-sizing: border-box;
   border-radius: 10px;
   align-items: center;
@@ -140,8 +191,8 @@ height:auto;
 width:70%;
 height: auto;
 padding-top: 15px;
-font-style: italic;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* font-style: italic; */
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 15px;
 color:black;
 }

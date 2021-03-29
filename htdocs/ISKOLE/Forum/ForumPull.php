@@ -1,5 +1,6 @@
 <?php 
         session_start();
+        // $_SESSION["name"]="Amaya Kinivita";
     include '../connection.php';
 
 ?>
@@ -9,8 +10,8 @@
     <head>
         <title>Discussion Forum</title>
         <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
-        <link href="StudentHome.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-        <link href="Forum.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+        <link href="StudentHome.css" rel="stylesheet" type="text/css">
+        <link href="Forum.css" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <!-- <script>
 function myFunction2() {
@@ -42,9 +43,8 @@ function closeNav() {
 
                 $heading = $_POST['heading'];
                 $description = $_POST['description'];
-                $id = $_SESSION['stuid'];
 
-                $dbQuery = "INSERT INTO thread (t_date, t_title, t_description, student_id) VALUES (now(),'$heading', '$description', '$id')";
+                $dbQuery = "INSERT INTO thread (t_date, t_title, t_description) VALUES (now(),'$heading', '$description')"; //forum_id is hard coded to '1'
 
                 $result = mysqli_query($con, $dbQuery);
 
@@ -57,7 +57,7 @@ function closeNav() {
                     echo "Record is not Added!";
                 }
 
-                // After this operation we update and refresh the forum
+                // After this operation we go back to the Forum 
 
                 header ("refresh:1; url=Forum.php");  
             }
@@ -65,7 +65,6 @@ function closeNav() {
 
         <nav class="navigation-bar">
             <img class="logo" src="logo.PNG" width="100" height="100">
-
             <div id="mySidepanel" class="sidepanel">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="../Student/StudentHome.php">Home</a>
@@ -78,10 +77,7 @@ function closeNav() {
                 <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-            <button class="name-button"> 
-              <img class="avatar" src="avatar.png">  
-              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-              <br>
+            <button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?><br>
               <?php 
                 if($_SESSION['type'] == 1)
                 {
@@ -91,13 +87,13 @@ function closeNav() {
                 {
 
                 }
-              ?></div>
-          </button>  
+              ?></b></button>
+            <img style="float: right; padding-top: 5px;" class="avatar" src="avatar.png" width="60" height="60">        
         </nav>
         
         <div class="box">
             <h2 style="text-align:center">Discussion Forum</h2><br>
-            <p> Have a question? Get answers from the ISKOLE community right here. </p>
+            <p style="text-align:center"> Have a question? Get answers from the ISKOLE community right here. </p>
             <br>
         </div>
 
@@ -116,7 +112,7 @@ function closeNav() {
                     </div>
                     <div class="data">
                     <label>Description:</label><br>
-                    <textarea id="content" name="description" placeholder="Describe your question" class="ask_question-description" required></textarea>
+                    <textarea id="content" name="description" placeholder="Describe your question" style="width:100%; height: 100px;" required></textarea>
                     </div>
                     <br><br>
 
@@ -166,8 +162,8 @@ function closeNav() {
                   <div class="reply-info">
                     10 replies
                   </div> 
-                  <a href="view-post.php?x='.$row['thread_id'].'"><button class="view-button">View</button></a>
-                </section>
+                  <a href="view-post.php"><button class="view-button">View</button></a>
+                </section> 
               </div>';
              }
             }

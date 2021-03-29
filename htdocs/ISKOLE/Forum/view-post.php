@@ -1,14 +1,17 @@
 <?php
     session_start();
     include '../connection.php';
+    $question = $_GET["x"];
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Q/A Session</title>
+        <title>Question Answers</title>
         <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
         <link href="StudentHome.css" rel="stylesheet" type="text/css">
-        <link href="view-question.css" rel="stylesheet" type="text/css">
+        <!-- echo time fixes the css loading issue -->
+        <link href="view-question.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+        
         <!-- <script>
 function myFunction2() {
   var txt;
@@ -62,7 +65,11 @@ function closeNav() {
                 <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNavMenu()">&#9776;</button></a>
-            <button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?><br>
+            
+            <button class="name-button"> 
+              <img class="avatar" src="avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
               <?php 
                 if($_SESSION['type'] == 1)
                 {
@@ -72,23 +79,114 @@ function closeNav() {
                 {
 
                 }
-              ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="avatar.png" width="60" height="60">        
+              ?></div>
+          </button>
+                  
         </nav>
+
+        <?php 
+
+        //posting replies
+
+            if(isset($_POST['post_reply'])){
+
+                $reply = $_POST['reply'];
+                $id = $_SESSION['stuid'];
+
+                $dbQuery = "INSERT INTO reply (reply_date, reply_message, thread_id, student_id) VALUES (now(),'$reply', '$question', '$id')";
+
+                $result = mysqli_query($con, $dbQuery);
+
+                if($result)
+                {
+                    echo "Record is Added!";
+                }
+                else
+                {
+                    echo "Record is not Added!";
+                }
+
+                // After this operation we update and refresh the forum
+
+                header ("refresh:1; url=view-post.php?x=$question");  
+            }
+
+        //when like button is clicked increments respective reply's up_votes by 1
+
+            if(isset($_POST['like'])){
+              //likes+1 is a temporary solution, need to create sperate table for likes
+              $dbQuery2 = "UPDATE reply SET up_votes=up_votes+1  WHERE reply_id=17";
+
+              $result_like = mysqli_query($con, $dbQuery2);
+
+              if($result_like)
+              {
+                  echo "Record is Added!";
+              }
+              else
+              {
+                  echo "Record is not Added!";
+              }
+
+              // After this operation we update and refresh the forum
+
+              header ("refresh:1; url=view-post.php?x=$question");  
+          }
+
+            
+        ?> 
+
+          <?php $previous = "javascript:history.go(-1)";
+          if(isset($_SERVER['HTTP_REFERER'])) {
+              $previous = $_SERVER['HTTP_REFERER'];
+          }
+
+          ?>
+
+         <a href="<?= $previous?>"> <button class="back-button"> 
+              <img class="back-icon" src="back-icon.png">
+              <div class="name-tag">Go back to forum</div>
+          </button></a>
+
+      
+
 	
-      <div class="thread-container"> 
+      <div class="thread-container">
+      <?php
+        
+        $result1 = mysqli_query($con,"SELECT * FROM thread WHERE thread_id=$question");
+        
+        if(!$result1)
+        {
+         echo 'Could not load the data from database! ';
+        }
+        else
+        {
+         if(mysqli_num_rows($result1) == 0)
+         {
+             echo 'This question is not available';
+         }
+         else
+         {
+          $row = mysqli_fetch_assoc($result1);
+          $thread_student_id = $row['student_id'];
+          $result_student = mysqli_query($con,"SELECT * FROM student WHERE student_id = $thread_student_id");
+          $row2 = mysqli_fetch_assoc($result_student);
+         }
+        }
+        ?>
         <div class="box2">
           <section class="section">
             <img src="avatar.png" class="question-avatar">
-            <div class="question-name">Bhathiya Gunathilaka</div>
-            <div class="question-date">Posted by a student on 10th Nov. 2020
+            <div class="question-name"><?php echo $row2['first_name'].' '.$row2['last_name']; ?></div>
+            <div class="question-date">Posted by a student on <?php echo $row['t_date']; ?>
             </div>
           </section>
           <section class="section question-title">
-            What is evaporation?
+            <?php echo $row['t_title']; ?>
           </section>
           <section class="section question-description">
-            Can someone explain me the basics of water cycle? How much should I know about it as a Grade 8 student?
+          <?php echo $row['t_description']; ?>
           </section>
           <section class="section">
             <div class="reply-info">
@@ -99,16 +197,60 @@ function closeNav() {
         </div>
         <div id="myReply" class="replybox">
           <a class="closebtn" onclick="closeNav()">&times;</a>
-            <p class="replying-to">Replying to Bhathiya Gunathilaka</p>
+            <p class="replying-to">Replying to <?php echo  $row2['first_name'].' '.$row2['last_name']; ?></p>
             <form method="POST">
               <div>
-              <textarea placeholder="Start typing..." class="reply-message"></textarea>
-              <br><button class="post-button">Post</button>
+              <textarea placeholder="Start typing..." class="reply-message" name="reply"></textarea>
+              <br><button class="post-button" name="post_reply">Post</button>
               </div>
 
             </form>
         </div>
-        <div class="box3">
+
+        <?php
+        
+        $result_replies = mysqli_query($con,"SELECT * FROM reply WHERE thread_id=$question ORDER BY up_votes DESC");
+        
+        if(!$result_replies)
+        {
+         echo 'Could not load the data from database! ';
+        }
+        else
+        {
+         if(mysqli_num_rows($result_replies) == 0)
+         {
+             echo '<div class="box3">No replies for this question yet.</div>';
+         }
+         else
+         {
+             while($row = mysqli_fetch_assoc($result_replies))
+             {
+                echo'
+                <div class="box3">
+                <section class="section">
+                <img src="avatar.png" class="question-avatar">
+                <div class="question-name">Dumindu Hebdalage</div>
+                <div class="question-date">Posted by a teacher on '.$row['reply_date'].'
+                </div>
+              </section>
+              <section class="section question-description">
+              '.$row['reply_message'].'
+              </section>
+              <section class="section">
+                <div class="reply-info">
+                '.$row['up_votes'].' Likes
+                </div>
+                <form method="POST">
+                  <button class="reply-button" name="like">Like</button>
+                </form>
+              </section> 
+              </div>';
+             }
+            }
+        }
+        ?>
+
+        <!-- <div class="box3">
           <section class="section">
             <img src="avatar.png" class="question-avatar">
             <div class="question-name">Dumindu Hebdalage</div>
@@ -126,8 +268,9 @@ function closeNav() {
             </div>
             <button class="reply-button">Like</button>
           </section> 
-        </div>
-        <div class="box3">
+        </div> -->
+
+        <!-- <div class="box3">
           <section class="section">
             <img src="admin.png" class="question-avatar">
             <div class="question-name">Admin</div>
@@ -142,10 +285,13 @@ function closeNav() {
               6 likes
             </div>
             <button class="reply-button">Like</button>
-          </section> 
+          </section>  -->
         </div>
         </div>
     </body>
 
 </html>
 <?php mysqli_close($con); ?>
+
+
+
