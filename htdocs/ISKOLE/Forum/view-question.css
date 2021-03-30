@@ -237,6 +237,7 @@ color:grey;
 .reply-button{
 margin-top: 30px;
 margin-bottom: 10px;
+margin-left: 10px;
 padding:10px 15px 10px 15px;
 border-radius: 30px;
 font-weight: 700;
@@ -333,3 +334,19 @@ color:white;
     color: white;
   }
 
+  .delete-reply-button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding:10px 15px 10px 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    color:white;
+    background-color: rgb(110, 189, 253);
+    border:none;
+    cursor: pointer;
+    }
+    
+    .delete-reply-button:hover{
+    background-color: rgba(100, 100, 100, 0.897) ;
+    color:white;
+    }

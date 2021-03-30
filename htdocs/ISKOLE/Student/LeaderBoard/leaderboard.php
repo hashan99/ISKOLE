@@ -6,17 +6,9 @@
 	<meta charset="UTF-8">
 	<title>Student Leaderboard</title>
 	<link rel = "icon" href = "../logo.PNG" type = "image/x-icon"> 
-	<link rel="stylesheet" href="leaderboard.css">
+	<link rel="stylesheet" href="leaderboard.css?v=<?php echo time();?>">
 	<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
-<!-- <script>
-			function myFunction2() {
-			  var txt;
-			  var r = confirm("Are you sure you want to logout?");
-			  if (r == true) {
-				location.replace("../../Home/index.php");
-			  }
-			}
-			</script> -->
+
 			
 			<script>
 			  /* Set the width of the sidebar to 250px (show it) */
@@ -45,257 +37,90 @@
 							<!-- <a onclick="myFunction2()">Log out</a> -->
 						</div>
 						<a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-						<a href="../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-						<br>
-						<?php 
-                			if($_SESSION['type'] == 1)
-                			{
-                   				echo $_SESSION['xp']." xp | #3"; 
-                			}
-                			else
-                			{
-                				// echo $_SESSION['subject'];
-                			}
-              			?></b></button>
-						<img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60"></a>
+						<a href="../../Profile/StuProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
+              <?php 
+                if($_SESSION['type'] == 1)
+                {
+                   echo $_SESSION['xp']." xp"; 
+                }
+                else
+                {
+
+                }
+              ?></div>
+          </button></a>  
 					</nav>
 
-	<div id="center">
-	<img class="logo" src="logo.PNG" width="100" height="100">
-	  <span class="label success">Leaderboard</span>
-<div class="wrapper">
-	<div class="lboard_section">
-		<div class="lboard_tabs">
-			<div class="tabs">
-				<ul>
-					<li data-li="today">Today</li>
-					<li class="active" data-li="month">Month</li>
-					<li data-li="year">Year</li>
-				</ul>
-			</div>
-		</div>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "iskole");
+$grade=$_SESSION['grade'];
+$result = mysqli_query($conn, "SELECT student_id,first_name,last_name,xp FROM student WHERE grade=$grade order by xp DESC");
 
-		<div class="lboard_wrap">
-			<div class="lboard_item today" style="display: none;">
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_1.jpg" alt="picture_1">
-					</div>
-					<div class="name_bar">
-						<p><span>1.</span>Hashan Kumarasinghe</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 95%"></div>
-						</div>
-					</div>
-					<div class="points">
-						125 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_2.jpg" alt="picture_2">
-					</div>
-					<div class="name_bar">
-						<p><span>2.</span>Amaya Kinivita</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 80%"></div>
-						</div>
-					</div>
-					<div class="points">
-						110 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_3.jpg" alt="picture_2">
-					</div>
-					<div class="name_bar">
-						<p><span>3.</span>Bhagaya Gunathilaka</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 60%;"></div>
-						</div>
-					</div>
-					<div class="points">
-						95 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_4.jpg" alt="picture_1">
-					</div>
-					<div class="name_bar">
-						<p><span>4.</span>Nirushi Wijesiri</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 30%"></div>
-						</div>
-					</div>
-					<div class="points">
-						90 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_5.jpg" alt="picture_2">
-					</div>
-					<div class="name_bar">
-						<p><span>5.</span>Shamali Pthirana</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 10%"></div>
-						</div>
-					</div>
-					<div class="points">
-						70 points
-					</div>
-				</div>
-			</div>
-			<div class="lboard_item month" style="display: block;">
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_2.jpg" alt="picture_2">
-					</div>
-					<div class="name_bar">
-						<p><span>1.</span> Amaya Kinivita</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 95%"></div>
-						</div>
-					</div>
-					<div class="points">
-						1195 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_3.jpg" alt="picture_3">
-					</div>
-					<div class="name_bar">
-						<p><span>2.</span>Bhagaya Gunathilaka</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 80%"></div>
-						</div>
-					</div>
-					<div class="points">
-						1185 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_1.jpg" alt="picture_1">
-					</div>
-					<div class="name_bar">
-						<p><span>3.</span>Hashan Kumarasinghe</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 70%;"></div>
-						</div>
-					</div>
-					<div class="points">
-						1160 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_5.jpg" alt="picture_5">
-					</div>
-					<div class="name_bar">
-						<p><span>4.</span>Shamali Pathirana</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 50%"></div>
-						</div>
-					</div>
-					<div class="points">
-						1130 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_4.jpg" alt="picture_4">
-					</div>
-					<div class="name_bar">
-						<p><span>5.</span>Nirushi Wijesiri</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 30%"></div>
-						</div>
-					</div>
-					<div class="points">
-						1110 points
-					</div>
-				</div>
-			</div>
-			<div class="lboard_item year" style="display: none;">
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_5.jpg" alt="picture_5">
-					</div>
-					<div class="name_bar">
-						<p><span>1.</span>Shamali Pathirana</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 90%"></div>
-						</div>
-					</div>
-					<div class="points">
-						2195 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_4.jpg" alt="picture_4">
-					</div>
-					<div class="name_bar">
-						<p><span>2.</span>Nirushi Wijesiri</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 85%"></div>
-						</div>
-					</div>
-					<div class="points">
-						2185 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_3.jpg" alt="picture_3">
-					</div>
-					<div class="name_bar">
-						<p><span>3.</span>Bhagaya Gunathilaka</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 65%;"></div>
-						</div>
-					</div>
-					<div class="points">
-						2160 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_1.jpg" alt="picture_1">
-					</div>
-					<div class="name_bar">
-						<p><span>4.</span>Hashan Kumarasinghe</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 30%"></div>
-						</div>
-					</div>
-					<div class="points">
-						2130 points
-					</div>
-				</div>
-				<div class="lboard_mem">
-					<div class="img">
-						<img src="pic_2.jpg" alt="picture_2">
-					</div>
-					<div class="name_bar">
-						<p><span>5.</span>Bhagaya Gunathilaka</p>
-						<div class="bar_wrap">
-							<div class="inner_bar" style="width: 10%"></div>
-						</div>
-					</div>
-					<div class="points">
-						2110 points
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>	
-</div>
+
+//$data = array();
+while ($row = mysqli_fetch_array($result))
+{
+
+    $dataset[]=$row;
+}
+//print_r( $dataset);
+?>
+<div class="label">Leaderboard Grade <?php echo $grade ?></div>
+
+        <div class="outerL">
+            <div class="innerL">
+                <div class="headerL">
+                    <li>
+                        <div>Rank </div>
+                        <div>Name </div>
+                        <div>Score</div>  
+                    </li>
+                </div>
+                <div class="bodyL">
+
+                    <?php
+                    $count=1;// init counter
+                    $rank=1;// init rank counter
+//rank counter counts from 1 but if the scores are same it doesn't update.when scores are different ,it updates with the counter
+					
+                    $privious_xp=0;//initial previous score
+                    foreach($dataset as  $datarow){
+                        if($datarow['xp']!=$privious_xp){
+                            $rank =$count;
+                            $count= $count+1;
+                        
+                        }else{
+                            $count= $count+1;
+
+                        }
+
+                        if($_SESSION['stuid']==$datarow['student_id'])
+                        {
+                            echo "<li class='our-user'>
+                                <div>".$rank."</div>
+                                <div>".$datarow['first_name'].' '.$datarow['last_name']."</div>
+                                <div>".$datarow['xp']."</div>  
+                             </li>";
+                        }else
+                        {
+                            echo "<li>
+                                    <div>".$rank."</div>
+                                    <div>".$datarow['first_name'].' '.$datarow['last_name']."</div>
+                                    <div>".$datarow['xp']."</div>  
+                                </li>";
+                        }
+                           $privious_xp=$datarow['xp'];
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+     
+
 <script src="leaderboard.js"></script>
 </body>
 </html>

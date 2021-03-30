@@ -1,0 +1,115 @@
+/*Background Settings*/
+body{  
+  margin: 0;  
+  padding: 0;  
+  /*background:url(QuizBackground.JPG) no-repeat;*/
+  background:url(quiz.JPG) no-repeat; 
+  background-size: cover;
+  height: 100vh; 
+  font-family: 'Arial';  
+} 
+
+/*Navigation bar settings*/
+.navigation-bar {
+width: 100%;  /* i'm assuming full width */
+height: 90px; /* change it to desired width */
+background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
+}
+
+.p{
+top: 0px;
+}
+
+.navigation-bar > a {
+  float: right;
+  vertical-align: center;
+  margin-right: 20px;
+  height: 80px;        /* if you want it to take the full height of the bar */
+  line-height: 80px;
+  overflow: hidden;
+}
+
+/*logo settings*/
+#logo{
+float: left;
+}
+
+/*nametag settings*/
+#name_tag{
+float: right;
+width: 150px;  
+height: 70px;  
+border: none; 
+font-size: 15px; 
+text-align: top;
+background-color: rgba(0, 159, 174, 0.001);
+}
+
+/*position settings*/
+#center {
+margin: 0;
+position: absolute;
+top: 50%;
+left: 70%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+/*font settings*/
+.h1{
+  font-size: 2.5em;
+}
+
+.h2{
+  font-size: 1.875em;
+}
+
+.h3{
+  font-size: 1.675em;
+}
+
+.h4{
+  font-size: 1.575em;
+}
+
+/*next button settings*/
+#next {
+  width: 200px;  
+  height: 40px;
+  border-radius: 17px;
+  padding: center;
+  display: block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(23, 118, 226, 0.966);
+    border: 2px solid white;
+    color: whitesmoke; 
+}
+
+#next:hover {
+    background-color: #ffbc38;
+    color: whitesmoke;
+}
+
+/*recview button settings*/
+#review{
+  width: 200px;  
+  height: 50px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  color: rgba(23, 118, 226, 0.966);
+  font-size: 17px;
+  transition-duration: 0.4s;
+}
+
+#review:hover {
+background-color: #ffbc38;
+color: white;
+}

@@ -43,8 +43,11 @@
                             <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-                        <button id=name_tag><b>Content Manager<br></b></button>
-                        <img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60">
+                        <a><button class="name-button"><img class="avatar" src="../avatar.png">  
+              <div class="name-tag"><?php echo 'Content Manager'; ?>
+              <br>
+              </div>
+          </button></a>
                     </nav>
 				
 <div id="center">

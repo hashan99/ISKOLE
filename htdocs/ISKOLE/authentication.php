@@ -162,7 +162,7 @@
                             // $_SESSION['xp']     = $xp;
                             // $_SESSION['enPwd1'] = $password;
                             $_SESSION['type']     = 0;
-                            $_SESSION['link']   = "Tea";
+                            $_SESSION['link']     = "Tea";
                             
                             // echo $loggedUser;
                           }
@@ -176,9 +176,10 @@
                           else
                           {
                             // $error="email or password is invalid";
+                            echo "<script>alert('Login Failed!!');</script>";#
                             header("Location: Home/index.php");
-                            echo "Login Failed!!";
-                            $error = 'Login Failed!!';
+                            //echo "Login Failed!!";
+                            //$error = 'Login Failed!!';
                             // $_SESSION['error'] = "Login Failed!!";
                           }
                         }  
@@ -187,6 +188,10 @@
                   }
                 }
               }
+            }
+            else
+            {
+              echo "<script>alert('Login Failed!!');</script>";
             }  
             
         }      

@@ -169,7 +169,7 @@ background-color: plum;
     width:100%; 
     height: 100px;
     border-color: gray;
-    border-style: hidden;
+    
   }
 
   .box {
@@ -395,6 +395,7 @@ form .btn button{
 .view-button{
   margin-top: 30px;
   margin-bottom: 10px;
+  margin-left: 10px;
   padding:10px 15px 10px 15px;
   border-radius: 30px;
   font-weight: 700;
@@ -404,6 +405,43 @@ form .btn button{
 }
 
 .view-button:hover{
+  background-color: white ;
+  color:rgb(255, 104, 3);
+  cursor: pointer;
+}
+
+.delete-button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding:10px 15px 10px 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  color:white;
+  background-color: rgb(255, 104, 3);
+  border:none;
+}
+
+.delete-button:hover{
+  background-color: white ;
+  color:rgb(255, 104, 3);
+  cursor: pointer;
+}
+
+.report-button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding:7px 10px 7px 10px;
+  border-radius: 30px;
+  font-weight: 700;
+  color:white;
+  background-color: rgb(255, 104, 3);
+  border:none;
+  font-size: larger;
+}
+
+.report-button:hover{
   background-color: white ;
   color:rgb(255, 104, 3);
   cursor: pointer;

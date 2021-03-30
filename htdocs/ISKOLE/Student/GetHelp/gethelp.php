@@ -1,11 +1,13 @@
-<?php session_start() ?>
+<?php session_start();;
+      include '../../connection.php';
+?>
 
 <!DOCTYPE html>
 <html>
     <head>
     <title>Student GetHelp</title>
     <link rel = "icon" href = "logo.PNG" type = "image/x-icon">
-        <link href="gethelp.css" rel="stylesheet" type="text/css">
+        <link href="gethelp.css?v=<?php echo time()?>" rel="stylesheet" type="text/css">
     <!-- <script>
       function myFunction2() {
         var txt;
@@ -43,86 +45,58 @@
               <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-            <a href="../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-            <br>
-            <?php 
-                      if($_SESSION['type'] == 1)
-                      {
-                          echo $_SESSION['xp']." xp | #3"; 
-                      }
-                      else
-                      {
-                        // echo $_SESSION['subject'];
-                      }
-                    ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60"></a>
-          </nav>
-<div id="center">
-   <div class="row">
-    <div class="column">
-      <div class="card">
-      <img src="teacher1.jpg" alt="Science" style="width: 80%">
-      <h3>K H M Perera</h3>
-      <p class="title">Science</p>
-      <p>English Medium</p>
-      <p>khmiskole@gmail.com</p>    
-    <p><button id="button1" >Get Help</button></p>
-      </div> 
-   </div>
-   <div class="column">
-      <div class="card">
-      <img src="teacher2.jpg" alt="Mathematics" style="width:80%">
-      <h3>P K S Ranabhahu</h3>
-      <p class="title">Mathematics</p>
-      <p>English Medium</p>
-      <p>pksiskole@gmail.com</p>
-          <p><button id="button2" >Get Help</button></p>
-      </div> 
-         </div>
-         <div class="column">
-      <div class="card">
-      <img src="teacher3.jpg" alt="Geography" style="width:80%">
-      <h3>H M D Silva</h3>
-      <p class="title">Geography</p>
-      <p>English Medium</p>
-      <p>hmdiskole@gmail.com</p>
-          <p><button id="button3" >Get Help</button></p>
-      </div> 
-         </div>
-   </div>
-   <div class="row">
-    <div class="column">
-      <div class="card">
-      <img src="teacher4.jpg" alt="Music" style="width:80%">
-      <h3>C J B Jayasinghe</h3>
-      <p class="title">Music</p>
-      <p>English Medium</p>
-      <p>cjbiskole@gmail.com</p>
-          
-    <p><button id="button4" >Get Help</button></p>
-      </div> 
-   </div>
-   <div class="column">
-      <div class="card">
-      <img src="teacher1.jpg" alt="Health" style="width:80%">
-      <h3>A K Gunathilaka</h3>
-      <p class="title">Health</p>
-      <p>English Medium</p>
-      <p>akgiskole@gmail.com</p>
-          <p><button id="button5" >Get Help</button></p>
-      </div> 
-         </div>
-         <div class="column">
-      <div class="card">
-      <img src="teacher8.jpg" alt="English" style="width:80%">
-      <h3>T U Wanasinghe</h3>
-      <p class="title">English</p>
-      <p>General</p>
-      <p>tulgiskole@gmail.com</p>
-          <p><button id="button6" >Get Help</button></p>
-      </div> 
-         </div>
-   </div>
-</div>
+            <a href="../../Profile/StuProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="../avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
+              <?php 
+                if($_SESSION['type'] == 1)
+                {
+                   echo $_SESSION['xp']." xp"; 
+                }
+                else
+                {
+
+                }
+              ?></div>
+          </button></a> 
+        </nav>
+
+    <div class="thread-container">
+
+      <?php
+        
+        $dbQuery = "SELECT * FROM teacher";
+        $result = mysqli_query($con, $dbQuery);
+
+        if(!$result)
+        {
+         echo 'Could not load the data from database! ';
+        }
+        else
+        {
+         if(mysqli_num_rows($result) == 0)
+         {
+             echo 'No teachers in database yet.';
+         }
+         else
+         {
+             while($row = mysqli_fetch_assoc($result))
+             {
+                echo'
+                   <div class="card">
+                   <img src="teacher1.jpg" style="width: 60%">
+                   <h3>'.$row['first_name'].' '.$row['last_name'].'</h3>
+                   <p class="title">Science</p>
+                   <p>English Medium</p>
+                   <p>'.$row['email'].'</p>    
+                 <p><button id="button1" >Get Help</button></p>
+             </div>';
+            }
+            }
+          }
+      ?>
+      </div>
     </body>
 </html>
+

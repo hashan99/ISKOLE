@@ -1,5 +1,18 @@
 <?php include '../../../../connection.php'; 
   session_start();
+  $topic_no=$_GET["topic_no"];
+
+  $grade='';
+  $subject='';
+  $topic='';
+
+  $res=mysqli_query($con,"SELECT * FROM content WHERE Topic_no=$topic_no");
+while($row=mysqli_fetch_array($res)){
+  $grade=$row["Grade"];
+  $subject=$row["Subject"];
+  $topic=$row["Topic"];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -46,20 +59,22 @@
               <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-            <a href="../../../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-            <br>
-            <?php 
+            <a href="../../../../Profile/StuProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="../../../avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
+              <?php 
                 if($_SESSION['type'] == 1)
-                  {
-                    echo $_SESSION['xp']." xp | #3"; 
-                  }
-                  else
-                  {
-                    // echo $_SESSION['subject'];
-                  }
-              ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="../../../avatar.png" width="60" height="60"></a>
-          </nav>
+                {
+                   echo $_SESSION['xp']." xp"; 
+                }
+                else
+                {
+
+                }
+              ?></div>
+          </button></a>
+        </nav>
 
 
      
@@ -196,9 +211,19 @@
 
     </div>
     <div class="card">
-    <a style="text-decoration:none" href="../Quiz/Quiz.php"><button id="button"><b>Attempt Quiz</b></button></a>
-    
-
+    <?php 
+   $student_id=$_SESSION['stuid'];
+    $result2 = mysqli_query($con,"SELECT * FROM student_quiz WHERE student_id='$student_id' AND subject='$subject' AND topic='$topic'");
+    if(mysqli_num_rows($result2) == 0){
+    echo'
+    <a style="text-decoration:none" href="../../../Quiz/start.php?grade='.$grade.' &subject='.$subject.' &topic='.$topic.' &topic_no='.$Topic_No.'" ><button id="button"><b>Attempt Quiz</b></button></a>
+   ' ;}
+    else{
+      echo '
+      <a style="text-decoration:none" ><button id="button3"><b>Quiz Attemted</b></button></a>
+      ';
+    }                   
+    ?>
     </div>
   </div>
 </div>

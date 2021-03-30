@@ -1,13 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap'); */
 
-
- *{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-}
 
 body{
 	  background:#c9cd55; 
@@ -18,166 +9,11 @@ body{
     height: 100vh; 
 }
 
-.wrapper{
-	width: 100%;
-	height: 100%;
-}
-
-.lboard_section{
-	width: 600px;
-	height: 500px;
-	position: absolute;
-	margin-top: 1%;
-	margin-left:59%;
-	 /* margin: 70px auto 0;  */
-	background:#2fa17b;
-	padding: 25px 40px;
-	position: relative;
-	 border-radius: 17px; 
-
-	/* border: 17px solid transparent;
-  /* padding: 15px; */
-  /* border-image: url(e.JPG) 10% round; */ 
-}
-
-.lboard_section .lboard_tabs ul{
-	display: flex;
-}
-
-.lboard_section .lboard_tabs ul li{
-	margin-right: 50px;
-	font-size: 18px;
-	font-weight: 600;
-	color: #3a3d51;
-	cursor: pointer;
-}
-
-.lboard_section .lboard_tabs ul li:hover,
-.lboard_section .lboard_tabs ul li.active{
-	color: #fff;
-}
-
-.lboard_wrap{
-	position: absolute;
-	top: 70px;
-	left: 40px;
-	background: #9cd7c3;
-	width: 100%;
-	height: 100%;
-	border-radius: 17px;
-	/* border: 17px solid transparent; */
-  /* padding: 15px; */
-  /* border-image: url(e.JPG) 10% round;
-  border: 5px solid red; */
-}
-
-.lboard_wrap .lboard_item{
-	padding: 25px;
-}
-
-.lboard_wrap .lboard_mem{
-	display: flex;
-	align-items: center;
-	padding: 17px 3px;
-	border-bottom: 1px solid white;
-}
-
-.lboard_wrap .lboard_mem:first-child{
-	padding-top: 0;
-}
-
-.lboard_wrap .lboard_mem:last-child{
-	padding-bottom: 0;
-	border-bottom: 0;
-}
-
-.lboard_wrap .lboard_mem .img{
-	width: 50px;
-}
-
-.lboard_wrap .lboard_mem img{
-	display: block;
-	width: 100%;
-}
-
-.lboard_wrap .lboard_mem .name_bar{
-	margin: 0 20px;
-	width: calc(100% - 150px);
-}
-
-.lboard_wrap .lboard_mem .name_bar p{
-	color: #3a3d51;
-}
-
-.lboard_wrap .lboard_mem .name_bar p span{
-	margin-right: 5px;
-}
-
-.lboard_wrap .lboard_mem .points{
-	width: 100px;
-	color: #3a3d51;
-}
-
-.lboard_wrap .lboard_mem .name_bar .bar_wrap{
-	width: 100%;
-	height: 5px;
-	background: white;
-	margin-top: 5px;
-	border-radius: 5px;
-	position: relative;
-	overflow: hidden;
-}
-
-.lboard_wrap .lboard_mem .name_bar .bar_wrap .inner_bar{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 5px;
-	background:#e65924;
-	border-radius: 5px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-.label {
-	color: white;
-	padding: 8px;
-	border-radius:12PX;
-	width: 250px;  
-  height: 50px;
-  border: none;
-  ;
-  color:white;
-  position: absolute;
-  top:9%;
-  left:59%;
-  text-align:center;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  margin: 4px 2px;
-  
-  }
-
-  #center {
-	margin: 0;
-	position: absolute;
-	top: 43%;
-	left: 2%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-  }
-  
-  .success {background-color: #033323;}
-
   /*Navigation bar settings*/
 .navigation-bar {
 width: 100%;  /* i'm assuming full width */
 height: 90px; /* change it to desired width */
 background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
-}
-
-.p{
-top: 0px;
 }
 
 
@@ -189,7 +25,8 @@ position: fixed; /* Stay in place */
 z-index: 1; /* Stay on top */
 top: 0;
 right: 0;
-background-color: rgb(240, 194, 110); /* Black*/
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: #d9db6d; /* Black*/
 overflow-x: hidden; /* Disable horizontal scroll */
 padding-top: 60px; /* Place content 60px from the top */
 transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -200,7 +37,7 @@ transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 20px;
-color: brown;
+color:#497d3d;
 display: block;
 transition: 0.3s;
 }
@@ -232,15 +69,6 @@ overflow: hidden;
 float: left;
 }
 
-#name_tag{
-float: right;
-width: 150px;  
-height: 70px;  
-border: none; 
-font-size: 15px; 
-text-align: top;
-background-color: rgba(0, 159, 174, 0.001);
-}
 
 /* Style the button that is used to open the sidepanel */
 .openbtn {
@@ -249,11 +77,128 @@ height: 50px;
 border: none;  
 border-radius: 17px;  
 padding-right: 7px;  
-color: brown;
+color: #497d3d;
 font-size: 20px;
 transition-duration: 0.4s;
 }
 
 .openbtn:hover {
-background-color: rgb(241, 205, 138);
+background-color: #2fa17b;
 }
+
+/* The next three classes are for the name dislay button
+in nav bar */
+
+.name-button{
+  float: right;
+  width: auto;  
+  height: 50px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-top: 14px;
+  margin-right: 100px;
+  cursor: pointer;
+  }
+
+  .name-button:hover{
+    background-color: #a2c55c;
+  }
+
+.avatar{
+  float: right; 
+  width: 36px;
+  height: auto;
+}
+
+.name-tag{
+width: auto;  
+height: auto;  
+border-radius:30px; 
+border-color: transparent;
+font-size: 14px; 
+color:#497d3d;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+padding: 0 0 0 5px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+/*display leaderboard and grade using this label*/
+.label {
+  padding: 8px 20px 8px 20px;
+  width: auto;
+  height:auto;
+  background:#497d3d ;
+  color: white;
+  font-size: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top:9%;
+  left:19%;
+  text-align:center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+/*box outerline*/
+.outerL{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgba(255, 255, 255, 0.541);
+  padding:10px;
+	box-sizing: border-box;
+  position: absolute;
+  margin-left: 50px;
+  border-radius: 10px;
+  width: 50%;
+  height: 80%;
+  overflow: auto;
+  margin-top:50px;
+}
+
+.outerL::-webkit-scrollbar{
+  background:  #2fa17b2c;
+  width:12px;
+}
+
+.outerL::-webkit-scrollbar-thumb{
+  background: #a2c55c;
+  border-radius: 20px;
+
+}
+
+.innerL{
+   display:block; 
+}
+.outerL li{
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.outerL .headerL{
+  background-color:#a2c55c ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #f1f1f1;
+  font-size: 18px;
+  border-radius: 30px;
+
+}
+.outerL .bodyL{
+  background-color:  rgba(255, 255, 255, 0.486);
+  font-size: 16px;
+  color: #2fa17b;
+}
+
+.our-user{
+  background-color: #d9db6d;
+  color: white;
+  border-radius: 30px;
+  font-size: 19px;
+}
+ 

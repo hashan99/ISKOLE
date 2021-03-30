@@ -5,7 +5,7 @@
     <head>
 		<title>CM Topic View</title>
 		<link rel = "icon" href = "logo.PNG" type = "image/x-icon">
-        <link href="SelectTopic.css" rel="stylesheet" type="text/css">
+        <link href="SelectTopic.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
     <!-- <script>
       function myFunction2() {
         var txt;
@@ -43,8 +43,11 @@
                             <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-                        <button id=name_tag><b>Content Manager<br></b></button>
-                        <img style="float: right; padding-top: 5px;" class="avatar" src="../../avatar.png" width="60" height="60">
+                        <a><button class="name-button"><img class="avatar" src="../../avatar.png">  
+              <div class="name-tag"><?php echo 'Content Manager'; ?>
+              <br>
+              </div>
+          </button></a>
           </nav>
 <div id="center">
    <div class="row">

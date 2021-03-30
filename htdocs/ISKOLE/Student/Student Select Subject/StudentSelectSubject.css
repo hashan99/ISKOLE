@@ -28,6 +28,7 @@ position: fixed; /* Stay in place */
 z-index: 1; /* Stay on top */
 top: 0;
 right: 0;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 background-color: rgb(240, 194, 110); /* Black*/
 overflow-x: hidden; /* Disable horizontal scroll */
 padding-top: 60px; /* Place content 60px from the top */
@@ -87,14 +88,47 @@ background-color: rgb(241, 205, 138);
 float: left;
 }
 
-#name_tag{
-float: right;
-width: 150px;  
-height: 70px;  
-border: none; 
-font-size: 15px; 
-text-align: top;
-background-color: rgba(0, 159, 174, 0.001);
+/* The next three classes are for the name dislay button
+in nav bar */
+
+.name-button{
+  float: right;
+  width: auto;  
+  height: 50px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-top: 14px;
+  margin-right: 100px;
+  cursor: pointer;
+  }
+
+.name-button:hover{
+    background-color: rgb(128, 198, 255);
+}
+
+.avatar{
+  float: right; 
+  width: 36px;
+  height: auto;
+}
+
+.name-tag{
+width: auto;  
+height: auto;  
+border-radius:30px; 
+border-color: transparent;
+font-size: 14px; 
+color: rgb(13, 42, 102);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+padding: 0 0 0 5px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
 }
 
 /* Style the button that is used to open the sidepanel */

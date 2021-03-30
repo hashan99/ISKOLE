@@ -5,7 +5,7 @@
     <head>
         <title>Student Home</title>
         <link rel = "icon" href = "../Images/logo.PNG" type = "image/x-icon">
-        <link href="StudentHome.css" rel="stylesheet" type="text/css">
+        <link href="StudentHome.css?v=<?php echo time();?>" rel="stylesheet" type="text/css">
         <!-- <script>
 function myFunction2() {
   var txt;
@@ -43,34 +43,47 @@ function closeNav() {
                 <!-- <a onclick="myFunction2()">Log out</a> -->
             </div>
             <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-            <a href="../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?><br>
+            <a href="../Profile/StuProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
               <?php 
                 if($_SESSION['type'] == 1)
                 {
-                   echo $_SESSION['xp']." xp | #3"; 
+                   echo $_SESSION['xp']." xp"; 
                 }
                 else
                 {
 
                 }
-              ?></b></button>
-            <img style="float: right; padding-top: 5px;" class="avatar" src="avatar.png" width="60" height="60"></a> 
+              ?></div>
+          </button></a> 
         </nav>  
 
+        <?php
+	          $connection = new mysqli('localhost','root','','iskole');
+	            if($connection->connect_error){
+		          echo "$connection->connect_error";
+		          die("Connection Failed : ". $connection->connect_error);
+              } 
+        ?>
+          
         <div class="relative">
+
+          <div class="todays_topic">
+              Today's topic </div>
+
           <div class="absolute1" align="center">
-            <a href="StudentHome.php"><img src="logo.PNG" width="250" height="250"></a> 
+          <iframe width="500" height="285" src="https://www.youtube.com/embed/UPBMG5EYydo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+
           <div class="absolute2" align="center">
-            <p class="serif">I S K O L E</p>
+            <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.php"><button id="button"><b>Start Learning</button></a>
           </div>
-          <div class="absolute4" align="center">
-            <p class="monospace thick">Where Learning Meets Passion.</p>
-          </div>
-          <div class="absolute3" align="center">
-            <a style="text-decoration:none" href="Student Select Subject/StudentSelectSubject.php"><button id="button"><b>Subjects</button></a>
-              &nbsp &nbsp &nbsp
-              <a style="text-decoration:none" href="../Forum/Forum.php"><button id="button"><b>Forum</b></button></a>
+          <!-- <div class="absolute6" align="center">
+           
+          <p class="handwritten"><i class="arrow up"></i>&nbsp Today's topic</p> -->
+            
           </div>
         </div>
 

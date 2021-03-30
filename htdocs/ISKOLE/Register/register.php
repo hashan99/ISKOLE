@@ -12,8 +12,12 @@
 
       <!-- php code here -->
       <?php
-        // session_start();
-        // $success = "";
+        function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+}
         //register
         if(isset($_POST['submitStudent']))
         {
@@ -23,23 +27,47 @@
           $medium = $_POST['medium'];
           $email = $_POST['email'];
           $password = $_POST['password'];
+          $c_password = $_POST['c_password'];
           $enPassword = sha1($password);
+          $c_enPassword = sha1($c_password);
 
-          //echo "$fName $password $enPassword";
+          $fname = test_input($_POST["firstName"]);
+          $lname = test_input($_POST["lastName"]);
+          $email = test_input($_POST["email"]);
 
-          $dbQuery = "INSERT into student (first_name, last_name, grade, medium, email, password, status) VALUES ('$fName','$lName', '$grade', '$medium', '$email', '$enPassword', 1)";
-
-          $result = mysqli_query($con, $dbQuery);
-
-          if($result)
+          // check if name only contains letters and whitespace
+          if (!preg_match("/^[a-zA-Z-' ]*$/",$fname) || !preg_match("/^[a-zA-Z-' ]*$/",$lname))
           {
-            //echo "Record is Added!";
-            header("Location:../Home/index.php");
+            echo "<script>alert('Only letters and white space allowed for the first name and last name.');</script>";
+          }
+          // check if e-mail address is well-formed
+          else if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+          {
+            echo "<script>alert('Invalid email format.');</script>";
+          }
+          else if($password == $c_password)
+          {
+            $dbQuery = "INSERT into student (first_name, last_name, grade, medium, email, password, status) VALUES ('$fName','$lName', '$grade', '$medium', '$email', '$enPassword', 1)";
+
+            $result = mysqli_query($con, $dbQuery);
+
+            if($result)
+            {
+              echo "<script>alert('Registration Succesfull. You can log in to the system now !');</script>";
+              // header("Location:../Home/index.php");
+            }
+            else
+            {
+              echo "<script>alert('Registration Unsuccesfull.');</script>";
+            }
           }
           else
           {
-            echo "Record is not Added!";
+              echo "<script>alert('Your passwords doesn't matched !');</script>";
           }
+
+          
+          // header("Location:../Home/index.php");
         }
 
         if(isset($_POST['submitTeacher']))
@@ -50,24 +78,47 @@
           $medium = $_POST['medium'];
           $email = $_POST['email'];
           $password = $_POST['password'];
+          $c_password = $_POST['c_password'];
           $enPassword = sha1($password);
+          $c_enPassword = sha1($c_password);
+          $date = date('Y-m-d H:i:s');
 
-          //echo "$fName $password $enPassword";
+          $fname = test_input($_POST["firstName"]);
+          $lname = test_input($_POST["lastName"]);
+          $email = test_input($_POST["email"]);
 
-          $dbQuery = "INSERT into teacher (first_name, last_name, subject, medium, email, password, status) VALUES ('$fName','$lName', '$subject', '$medium', '$email', '$enPassword', 1)";
-
-          $result = mysqli_query($con, $dbQuery);
-
-          if($result)
+          // check if name only contains letters and whitespace
+          if (!preg_match("/^[a-zA-Z-' ]*$/",$fname) || !preg_match("/^[a-zA-Z-' ]*$/",$lname))
           {
-            // echo "Record is Added!";
-            // $success = "Record is Added!";
-            header("Location:../Home/index.php");
+            echo "<script>alert('Only letters and white space allowed for the first name and last name.');</script>";
+          }
+          // check if e-mail address is well-formed
+          else if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+          {
+            echo "<script>alert('Invalid email format.');</script>";
+          }
+          else if($password == $c_password)
+          {
+            $dbQuery = "INSERT into new_teacher_notifications (first_name, last_name, subject, medium, email, password, cr_date) VALUES ('$fName','$lName', '$subject', '$medium', '$email', '$enPassword', '$date')";
+
+            $result = mysqli_query($con, $dbQuery);
+
+            if($result)
+            {
+              // echo "Record is Added!";
+              // $success = "Record is Added!";
+              echo "<script>alert('Registration Succesfull. You need an admin approval to log in to the system. When admin accept your registration you will be informed via email !');</script>";
+              // header("Location:../Home/index.php");
+            }
+            else
+            {
+              echo "<script>alert('Registration Unsuccesfull.');</script>";
+            }
           }
           else
           {
-            echo "Record is not Added!";
-          }
+              echo "<script>alert('Your passwords doesn't matched !');</script>";
+          } 
         }
 
         // session_destroy();
@@ -122,7 +173,7 @@
       <!-- register as student model -->
       <div id="id02"  class="modal_stu">
   
-          <form class="modal-content animate" style="background-color:#F1F1FF" action="register.php" method="POST">
+          <form class="modal-content animate" style="background-color:#F1F1FF" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -170,6 +221,9 @@
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
+
+                <label for="c_psw"><b>Re-Enter Password</b></label>
+                <input type="password" placeholder="Re-Enter Password" name="c_password" minlength="8" required>
         
                 <button type="submit" name="submitStudent" id="submit">Register As Student</button>
                 <!-- <label>
@@ -231,6 +285,9 @@
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" minlength="8" required>
+
+                <label for="c_psw"><b>Re-Enter Password</b></label>
+                <input type="password" placeholder="Re-Enter Password" name="c_password" minlength="8" required>
         
                 <button type="submit" name="submitTeacher"  id="submit">Register As Teacher</button>
 
@@ -269,6 +326,9 @@
         <p class="monospace thick">Where Learning Meets Passion.</p>
       </div>
       <div class="absolute3" align="center">
+        <a><button id="button" onclick="document.getElementById('id01').style.display='block' "><b>Login
+        </button></a>
+        &nbsp &nbsp
         <a><button id="button" onclick="document.getElementById('id02').style.display='block' ">Register as Student</button></a>
         &nbsp &nbsp 
         <a><button id="button" onclick="document.getElementById('id03').style.display='block' "> Register as Teacher </button></a>

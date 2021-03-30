@@ -14,7 +14,7 @@
                 location.replace("../../../Home/index.php");
               }
             }
-            </script> -->
+          </script> -->
             
             <script>
               /* Set the width of the sidebar to 250px (show it) */
@@ -27,19 +27,22 @@
               document.getElementById("mySidepanel").style.width = "0";
             }
               </script>
-                </head>
-                <body>
+    </head>
+    <body>
 
   <?php
     if(isset($_POST['submit']))
     {
+      $fName = $_SESSION['fname'];
+      $lName = $_SESSION['lname'];
       $Grade = $_POST['Grade'];
-    $Subject = $_POST['Subject'];
-    $Topic_no = $_POST['Topic_no'];
-    $Topic = $_POST['Topic'];
-    $Further_Reading = $_POST['Further_Reading'];
-    $Presentation = $_POST['Presentation'];
-    $Areas = $_POST['Areas'];
+      $Subject = $_POST['Subject'];
+      $Topic_no = $_POST['Topic_no'];
+      $Topic = $_POST['Topic'];
+      $Further_Reading = $_POST['Further_Reading'];
+      $Presentation = $_POST['Presentation'];
+      $Areas = $_POST['Areas'];
+      $date = date('Y-m-d H:i:s');
 
     // Database connection
     $connection = new mysqli('localhost','root','','iskole');
@@ -47,12 +50,12 @@
       echo "$connection->connect_error";
       die("Connection Failed : ". $connection->connect_error);
     } else {
-      $stmt = $connection->prepare("insert into content(Grade, Subject, Topic_no, Topic, Further_Reading, Presentation, Areas) values(?, ?, ?, ?, ?, ?, ?)");
-      $stmt->bind_param("isissss", $Grade, $Subject, $Topic_no, $Topic, $Further_Reading, $Presentation, $Areas);
+      $stmt = $connection->prepare("insert into new_content_notifications(first_name, last_name, Grade, Subject, Topic_no, Topic, Further_Reading, Presentation, Areas, cr_date) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+      $stmt->bind_param("ssisisssss", $fName, $lName, $Grade, $Subject, $Topic_no, $Topic, $Further_Reading, $Presentation, $Areas, $date);
       $execval = $stmt->execute(); 
       // echo $execval;
-      // echo "Content added successfully!";
-      header("Location:../TeacherHome.php");
+      echo "<script>alert('Submission Succesfull. You need an admin or content-manager approval to accept the content. When accept your content it will be appear in prefered lesson !');</script>";
+      // header("Location:../TeacherHome.php");
       $stmt->close();
       $connection->close();
     }
@@ -80,20 +83,13 @@
                             <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-                        <a href="../../../Profile/TeaProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-                        <br>
-                        <?php 
-                          if($_SESSION['type'] == 1)
-                          {
-                            echo $_SESSION['xp']." xp | #3"; 
-                          }
-                          else
-                          {
-
-                          }
-                        ?></b></button>
-                        <img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60"></a>
-                    </nav>
+                        <a href="../../../Profile/TeaProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="../avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
+              </div>
+          </button></a>
+        </nav>
 
       <form action="SubmitContent.php" method="POST">  
 
@@ -203,8 +199,7 @@
                   </div>
                 </div>
                 </form>
-              </div>
-            
+              </div>    
         </div> 
       </form>    
     </body>

@@ -66,15 +66,18 @@
                             <a href="../View Contents/StudentSelectSubject.php">View Content</a>
                             <a href="../../../Forum/Forum.php">Forum</a>
                             <a href="../Submit Content/SubmitContent.php">Submit Content</a>
-                            <a href="../Manage Users/ManageUsers.html">Manage Users</a>
+                            <a href="../Manage Users/ManageUsers.php">Manage Users</a>
                             <!-- <a href="../../../Profile/Profile.php">Profile</a> -->
                             <a href="#">Notifications</a>
                             <a href="../../../logout.php">Log out</a>
                             <!-- <a onclick="myFunction2()">Log out</a> -->
                         </div>
                         <a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-                        <button id=name_tag><b>Admin(Super User)<br></b></button>
-                        <img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60">
+                        <a><button class="name-button"><img class="avatar" src="../avatar.png">  
+              <div class="name-tag"><?php echo 'Admin(Super User)'; ?>
+              <br>
+              </div>
+          </button></a>
                     </nav>
 
       <form action="SubmitContent.php" method="POST">  

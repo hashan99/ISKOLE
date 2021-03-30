@@ -2,6 +2,17 @@
         session_start();
     include '../connection.php';
 
+        //assigning user to user-type variable
+
+        if ($_SESSION['type']==1){
+          $user_type="student";
+        }
+        elseif($_SESSION['type']==0){
+          $user_type="teacher";
+        }
+        else{
+          $user_type="admin";
+        }
 ?>
 <!DOCTYPE html>
 
@@ -42,25 +53,33 @@ function closeNav() {
 
                 $heading = $_POST['heading'];
                 $description = $_POST['description'];
-                $id = $_SESSION['stuid'];
 
-                $dbQuery = "INSERT INTO thread (t_date, t_title, t_description, student_id) VALUES (now(),'$heading', '$description', '$id')";
+                if ($user_type=="student"){
+                  $id = $_SESSION['stuid'];
+                }
+
+                elseif($user_type=="teacher"){
+                  $id = $_SESSION['teaid'];
+                }
+                  //still the admin insertion is not defined
+                $dbQuery = "INSERT INTO thread (t_date, t_title, t_description, ".$user_type."_id) VALUES (now(),'$heading', '$description', '$id')";
 
                 $result = mysqli_query($con, $dbQuery);
 
-                if($result)
-                {
-                    echo "Record is Added!";
-                }
-                else
-                {
-                    echo "Record is not Added!";
-                }
-
+                // if($result)
+                // {
+                //     // echo "Record is Added!";
+                // }
+                // else
+                // {
+                //     // echo "Record is not Added!";
+                // }
+              
                 // After this operation we update and refresh the forum
 
                 header ("refresh:1; url=Forum.php");  
             }
+
         ?> 
 
         <nav class="navigation-bar">
@@ -85,7 +104,7 @@ function closeNav() {
               <?php 
                 if($_SESSION['type'] == 1)
                 {
-                   echo $_SESSION['xp']." xp | #3"; 
+                   echo $_SESSION['xp']." xp"; 
                 }
                 else
                 {
@@ -133,7 +152,7 @@ function closeNav() {
         <?php
         
         $result1 = mysqli_query($con,"SELECT * FROM thread ORDER BY thread_id DESC");
-        
+
         if(!$result1)
         {
          echo 'Could not load the data from database! ';
@@ -148,12 +167,31 @@ function closeNav() {
          {
              while($row = mysqli_fetch_assoc($result1))
              {
+              if ($row['student_id']!=NULL){
+                $id=$row['student_id'];
+                $result2 = mysqli_query ($con,"SELECT * FROM student WHERE student_id='$id'");
+                $row2 = mysqli_fetch_assoc($result2);
+                $name=$row2['first_name'].' '.$row2['last_name'];
+                $thread_user_type="student";
+              }
+              elseif ($row['teacher_id']!=NULL){
+                $id=$row['teacher_id'];
+                $result2 = mysqli_query ($con,"SELECT * FROM teacher WHERE teacher_id='$id'");
+                $row2 = mysqli_fetch_assoc($result2);
+                $name=$row2['first_name'].' '.$row2['last_name'];
+                $thread_user_type="teacher";
+              }
+              
+              $current_thread = $row['thread_id'];
+              $result3 = mysqli_query($con,"SELECT * FROM reply WHERE thread_id='$current_thread'");
+
+              $reply_count = mysqli_num_rows($result3);
                 echo'
                 <div class="box2">
                 <section class="section">
                   <img src="avatar.png" class="question-avatar">
-                  <div class="question-name">Bhagya Gunathilaka</div>
-                  <div class="question-date">Posted by a student on '.$row['t_date'].'
+                  <div class="question-name"> '.$name.' </div>
+                  <div class="question-date">Posted by a '.$thread_user_type.' on '.$row['t_date'].'
                   </div>
                 </section>
                 <section class="section question-title">
@@ -164,11 +202,28 @@ function closeNav() {
                 </section>
                 <section class="section">
                   <div class="reply-info">
-                    10 replies
-                  </div> 
-                  <a href="view-post.php?x='.$row['thread_id'].'"><button class="view-button">View</button></a>
-                </section>
-              </div>';
+                  '.$reply_count.' replies
+                  </div>
+                  <a href="report-post.php?id='.$row['thread_id'].'">
+                    <button class="report-button" name="report" title="Report post!"><i class="fas fa-exclamation-circle"></i></button></a>
+                  ';
+                  
+                  if($user_type=="teacher"){
+                    if ($id == $_SESSION['teaid']){
+                    echo '<a href="delete-post.php?id='.$row['thread_id'].'">
+                    <button class="delete-button" name="delete" title="Delete question"><i class="fas fa-trash-alt"></i></button></a>';
+                  }  
+                }
+                  elseif($user_type=="student"){
+                    if ($id == $_SESSION['stuid']){
+                    echo '<a href="delete-post.php?id='.$row['thread_id'].'">
+                    <button class="delete-button" name="delete" title="Delete question"><i class="fas fa-trash-alt"></i></button></a>';
+                  }
+                }
+                  echo '<a href="view-post.php?x='.$row['thread_id'].'"><button class="view-button">View</button></a>
+                  </section>
+                </div>';
+
              }
             }
         }

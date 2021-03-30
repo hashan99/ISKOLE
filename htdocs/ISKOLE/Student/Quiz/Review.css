@@ -1,0 +1,182 @@
+body 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background:url(review.JPG) no-repeat;
+    
+    background-size: cover;
+
+ }
+
+ /*Navigation bar settings*/
+.navigation-bar {
+width: 100%;  /* i'm assuming full width */
+height: 90px; /* change it to desired width */
+background-color: rgba(0, 159, 174, 0.001); /* change to desired color */
+}
+
+.p{
+top: 0px;
+}
+
+
+/* The sidepanel menu */
+.sidepanel {
+height: 100%; /* Specify a height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0;
+right: 0;
+background-color: skyblue; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 20px;
+color: blue;
+display: block;
+transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+color: #f1f1f1;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  width: 50px;  
+  height: 50px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  color: blue;
+  font-size: 20px;
+  transition-duration: 0.4s;
+}
+    
+.openbtn:hover {
+  background-color: skyblue;
+}
+  
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 30px;
+margin-left: 50px;
+}
+
+.navigation-bar > a {
+float: right;
+vertical-align: center;
+margin-right: 20px;
+height: 80px;        /* if you want it to take the full height of the bar */
+line-height: 80px;
+overflow: hidden;
+}
+
+/*logo settings*/
+#logo{
+float: left;
+}
+
+/* The next three classes are for the name dislay button
+in nav bar */
+.name-button{
+  float: right;
+  width: auto;  
+  height: 50px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-top: 14px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.name-button:hover{
+    background-color: rgb(128, 198, 255);
+}
+
+.avatar{
+  float: right; 
+  width: 36px;
+  height: auto;
+}
+
+/*name tag settings*/
+#name_tag{
+float: right;
+width: 150px;  
+height: 70px;  
+border: none; 
+font-size: 15px; 
+text-align: top;
+background-color: rgba(0, 159, 174, 0.001);
+}
+
+/*table settings*/
+#answers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#answers td, #answers th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#answers tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
+#answers tr:hover{
+  background-color: #ddd;
+}
+
+#answers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: rgba(0, 159, 174, 0.8);
+  color: White;
+}
+
+/*position settings*/
+#center {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*back button settings*/
+#back{
+  width: 200px;  
+  height: 50px;  
+  border: none;  
+  border-radius: 17px;  
+  padding-right: 7px;  
+  background-color: rgba(0, 159, 174, 0.8);
+  color: white;
+  font-size: 20px;
+  transition-duration: 0.4s;
+}
+
+#back:hover {
+  background-color: #ffbc38;
+  color: white;
+}

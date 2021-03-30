@@ -2,7 +2,7 @@
 body{  
   margin: 0;  
   padding: 0;  
-  background:url(homeBackground.JPG) no-repeat; 
+  background:url(homeBackground.JPG) no-repeat;
   background-size: cover;
   height: 100vh; 
   font-family: 'Arial';  
@@ -28,6 +28,7 @@ body{
   z-index: 1; /* Stay on top */
   top: 0;
   right: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: plum; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
@@ -71,16 +72,6 @@ body{
   float: left;
 }
 
-#name_tag{
-  float: right;
-  width: 150px;  
-  height: 70px;  
-  border: none; 
-  font-size: 15px; 
-  text-align: top;
-  background-color: rgba(0, 159, 174, 0.001);
-}
-
 /* Style the button that is used to open the sidepanel */
 .openbtn {
   width: 50px;  
@@ -104,69 +95,52 @@ div.relative {
   width: 600px;
   height: 500px;
   padding : 25px;
-  margin-top : 50px;
+  /* margin-top : 50px; */
   /*border: 3px solid #73AD21;*/
 } 
 
-div.absolute1 {
-  position: absolute;
-  top: 0px;
-  right: 200;
-  left: 200;
-  width: 600px;
-  height: 200px;
-  /*border: 3px solid #73AD21;*/
-}
 
 div.absolute2 {
   position: absolute;
-  top: 150px;
-  /*right: 200;
-  left: 200;*/
-  width: 600px;
-  height: 200px;
-  /*border: 3px solid #73AD21;*/
-}
-
-div.absolute4 {
-  position: absolute;
-  top: 300px;
-  /*right: 200;
-  left: 200;*/
-  width: 600px;
-  height: 200px;
-  /*border: 3px solid #73AD21;*/
-}
-
-div.absolute3 {
-  position: absolute;
-  top: 400px;
+  top: 475px;
   /*padding: 10px 10px;*/
   width: 600px;
   height: 100px;
+  
   /*border: 3px solid #73AD21;*/
 }
 
+div.absolute1 {
+  position: absolute;
+  top: 80px;
+  background-color:#635aa96c;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top:30px ;
+  margin-left: 50px;
+  
+  /*border: 3px solid #73AD21;*/
+}
 
 #button {
   width: 200px;  
-    height: 40px;  
+    height: 60px;  
     border: none;  
-    border-radius: 17px;  
+    border-radius: 30px;  
     padding-right: 7px;  
-    color: purple;
-    font-size: 17px;
-    border: 3px solid purple;
+    color: #212252;
+    font-size: 22px;
+    
 }
 
 #button:hover {
-  background-color: plum;
+  background-color: #635aa9;
   color: white;
-  border: 3px solid plum;
+  transition-duration: 2s;
 }
 
 .serif {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Raleway, "Open Sans", sans-serif;
   /*font-weight: 2000;*/
   font-size: 70px;
   color: #ff9900;
@@ -184,6 +158,12 @@ div.absolute3 {
   color: #b3b3cc;
 }
 
+.handwritten {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
 /*p.thick {
   font-weight: bold;
 }*/
@@ -195,4 +175,72 @@ div.absolute3 {
   left: 50%;*/
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.todays_topic{
+  font-family:cursive;
+  font-size:40px;
+  font-weight: 500;
+  color:#3f1066;
+  margin-left: 100px;
+}
+
+/* The next three classes are for the name dislay button
+in nav bar */
+
+.name-button{
+  float: right;
+  width: auto;  
+  height: 50px;  
+  border-radius: 30px; 
+  border-color: transparent;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  margin-top: 14px;
+  margin-right: 100px;
+  cursor: pointer;
+  }
+
+.name-button:hover{
+    background-color: rgb(128, 198, 255);
+}
+
+.avatar{
+  float: right; 
+  width: 36px;
+  height: auto;
+}
+
+.name-tag{
+width: auto;  
+height: auto;  
+border-radius:30px; 
+border-color: transparent;
+font-size: 14px; 
+color: rgb(13, 42, 102);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+padding: 0 0 0 5px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
 }

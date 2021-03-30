@@ -49,20 +49,13 @@
                             <!-- <a onclick="myFunction2()">Log out</a> -->
 						</div>
 						<a><button class="openbtn" onclick="openNav()">&#9776;</button></a>
-						<a href="../../../Profile/StuProfile.php"><button id=name_tag><b><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
-						<br>
-						<?php 
-                			if($_SESSION['type'] == 1)
-                			{
-                   				echo $_SESSION['xp']." xp | #3"; 
-                			}
-                			else
-                			{
-                				// echo $_SESSION['subject'];
-                			}
-              			?></b></button>
-						<img style="float: right; padding-top: 5px;" class="avatar" src="../avatar.png" width="60" height="60"></a>
-					</nav>
+						<a href="../../../Profile/TeaProfile.php">            <button class="name-button"> 
+              <img class="avatar" src="../avatar.png">  
+              <div class="name-tag"><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
+              <br>
+              </div>
+          </button></a> 
+		</nav>
 <div id="center">
    <div class="row">
   	<div class="column">

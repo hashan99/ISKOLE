@@ -16,15 +16,14 @@
   <body>
     
     <?php 
-    // $fnameErr = "";
-      // if (empty($_POST["firstname"])) 
-      // {
-      //   $fnameErr = "Name is required";
-      // } 
-      // else
-      // {  
-      //   $fname = test_input($_POST["firstname"]);
-      // }
+
+    function test_input($data) 
+      {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
 
     if(isset($_POST['submit']))
     {
@@ -38,18 +37,24 @@
       // $password = $_POST['password'];
       // $enPassword = sha1($password);
 
-      // if (empty($_POST["firstname"])) 
-      // {
-      //   $fnameErr = "Name is required";
-      // } 
-      // else
-      // {  
-      //   $fname = test_input($_POST["firstname"]);
-      // }
-
       //echo "$fName $password $enPassword";
 
-      if($_SESSION['type'] == 1)
+      $fName = test_input($_POST["firstname"]);
+      $lName = test_input($_POST["lastname"]);
+      $email = test_input($_POST["email"]);
+
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z-' ]*$/",$fName) || !preg_match("/^[a-zA-Z-' ]*$/",$lName))
+      {
+        echo "<script>alert('Only letters and white space allowed for the first name and last name.');</script>";
+      }
+      // check if e-mail address is well-formed
+      else if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+      {
+        echo "<script>alert('Invalid email format.');</script>";
+      }
+
+      else if($_SESSION['type'] == 1)
       {
         $dbQuery = "UPDATE student SET first_name = '".$fName."', last_name = '".$lName."', email = '".$email."', grade = '".$grade."', medium = '".$medium."' WHERE student_id = '".$_SESSION['stuid']."' ";
 
